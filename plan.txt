@@ -1,0 +1,14 @@
+Plan : 
+    -Make a website for:
+        -Automatic coverpage
+        -Social Tracker
+        -Seeing Syllabus
+        -Seeing Notes
+        -etc.
+    -Design:
+        -Nav bar
+        -Search section
+            -project search
+            -Note search
+            -Syllabus search
+        -Greetings and Quotes
