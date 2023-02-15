@@ -57,6 +57,7 @@ function openClickablePage(index)
 
 function closeEveryPage()
 {
+    emptyChecker = 0
     closeHeroPage()
     closeSearchPage()
     closeClickablePage()

@@ -17,6 +17,11 @@
 
 </head>
 <body>
+    <!--Start of Loading page-->
+    <section class="loading-screen">
+        <div class="loading-animation"></div>
+    </section>
+    <!--End of Loading page-->
     
     <!--Start of everything-->
     <section class="everything">
@@ -28,9 +33,9 @@
                     <li class="logo">SXC</li>
                     <!--For pc only-->
                     <div class="pc-options">
-                        <li class="nav-option">Projects</li>
-                        <li class="nav-option">Syllabus</li>
-                        <li class="nav-option">Notes</li>
+                        <li class="nav-option" id="clickable-tag">Projects</li>
+                        <li class="nav-option" id="clickable">Syllabus</li>
+                        <li class="nav-option" id="clickable-tag">Notes</li>
                         <li class="nav-option">Help</li>
                     </div>
                     <!--For mobile only-->
@@ -77,8 +82,8 @@
                 </div>
             </div>
             <div class="recommended-body">
-                <div class="recommendation" id="clickable">Coverpage Generator</div>
-                <div class="recommendation" id="clickable">Syllabus BIM</div>
+                <div class="recommendation" data-tag="projects" id="clickable">Coverpage Generator</div>
+                <div class="recommendation" id="clickable">Syllabus</div>
                 <div class="recommendation" id="clickable">About BIM</div>
             </div>
         </section>
@@ -95,9 +100,9 @@
                 </div>
             </div>
             <div class="recommended-body">
-                <div class="recommendation" id="clickable">C Course</div>
-                <div class="recommendation" id="clickable">Java Course</div>
-                <div class="recommendation" id="clickable">Python Course</div>
+                <div class="recommendation" data-tag="notes" id="clickable">C Course</div>
+                <div class="recommendation" data-tag="notes" id="clickable">Java Course</div>
+                <div class="recommendation" data-tag="notes" id="clickable">Python Course</div>
             </div>
         </section>
         <!--End of Helping Hand-->
@@ -111,12 +116,15 @@
                 <div class="sub-header"></div>
             </div>
             <div class="search-results">
+                <div class="search-item" data-tag="notes" id="clickable">C Course</div>
+                <div class="search-item" data-tag="notes" id="clickable">Java Course</div>
+                <div class="search-item" data-tag="notes" id="clickable">Python Course</div>
                 <div class="search-item" id="clickable">Syllabus BIM</div>
-                <div class="search-item" id="clickable">Coverpage Generator</div>
-                <div class="search-item" id="clickable">Color Picker</div>
+                <div class="search-item" data-tag="projects" id="clickable">Coverpage Generator</div>
+                <div class="search-item" data-tag="projects" id="clickable">Color Picker</div>
                 <div class="search-item" id="clickable">About Page</div>
-                <div class="search-item" id="clickable">Social Picker</div>
-                <div class="search-item" id="clickable">Tarantual Killer</div>
+                <div class="search-item" data-tag="projects" id="clickable">Social Picker</div>
+                <div class="search-item" data-tag="projects" id="clickable">Tarantula Killer</div>
             </div>
         </section>
         <!--End of Search page-->
@@ -138,7 +146,7 @@
         <section class="syllabus-page" id="page">
             <div class="header">
                 <div class="main-header">
-                    Syllabus BIM
+                    Syllabus
                 </div>
                 <div class="sub-header">
                     Syllabus for 1-8 semesters
@@ -164,6 +172,7 @@
     <!--End of everything-->
 
 </body>
+    <script src="Scripts/loader.js"></script>
     <script src="Scripts/projects.js"></script>
     <script src="Scripts/search.js"></script>
     <script src="Scripts/menu.js"></script>
