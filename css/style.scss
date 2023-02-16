@@ -448,6 +448,94 @@ body{
         }
         //End of All Pages
 
+        //Start of Coverpage Generator
+        .cover-page-generator-page{
+            .generator-whole{
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+            background: var(--s1-color);
+            gap:2vh;
+            padding: var(--padding-whole);
+            .header{
+                width: 100%;
+                text-align: center;
+                font-size: 3vh;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .input-field{
+                width: 100%;
+                padding: 2vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2vh;
+                .roll-no, .subject{
+                    width: 100%;    
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1vh;
+                    .header{
+                        width: 100%;
+                        font-size: var(--header-font-size);
+                        text-align: left;
+                    }
+                    .select-wraper{
+                        height: 50px;
+                        overflow: visible;
+                    }
+                    select{
+                        width: 100%;
+                        min-height: 50px;
+                        padding:1vh 2vh;
+                        font-size: var(--text-font-size);
+                        optgroup{
+                            color: var(--p1-color);
+                            font-size: 2vh;
+                            width: 100%;
+                            option{
+                                width: 100%;
+                                font-size: var(--text-font-size);
+                            }
+                        }
+                    }
+                }
+                .title{
+                    width: 100%;
+                    height: 5vh;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1vh;
+                    .header{
+                        width: 100%;
+                        text-align: left;
+                        font-size: 2vh;
+                    }
+                    input{
+                        padding: 1vh 2vh;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .download{
+                    cursor: pointer;
+                    width: 100%;
+                    padding: 2vh 0;
+                    background: var(--p1-color);
+                    color: var(--s1-color);
+                    font-size: 2vh;
+                    margin: 2vh;
+                    text-align: center;
+                }
+                }
+            }
+        }
+        //End of CoverpageGenerator
+
         //Start of Syllabus page
         .syllabus-page{
             .syllabus-body{

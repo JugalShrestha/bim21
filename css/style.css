@@ -406,6 +406,89 @@ body .everything #page .header .sub-header {
   font-weight: bold;
   opacity: 50%;
 }
+body .everything .cover-page-generator-page .generator-whole {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--s1-color);
+  gap: 2vh;
+  padding: var(--padding-whole);
+}
+body .everything .cover-page-generator-page .generator-whole .header {
+  width: 100%;
+  text-align: center;
+  font-size: 3vh;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field {
+  width: 100%;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .roll-no, body .everything .cover-page-generator-page .generator-whole .input-field .subject {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .roll-no .header, body .everything .cover-page-generator-page .generator-whole .input-field .subject .header {
+  width: 100%;
+  font-size: var(--header-font-size);
+  text-align: left;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .roll-no .select-wraper, body .everything .cover-page-generator-page .generator-whole .input-field .subject .select-wraper {
+  height: 50px;
+  overflow: visible;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .roll-no select, body .everything .cover-page-generator-page .generator-whole .input-field .subject select {
+  width: 100%;
+  min-height: 50px;
+  padding: 1vh 2vh;
+  font-size: var(--text-font-size);
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .roll-no select optgroup, body .everything .cover-page-generator-page .generator-whole .input-field .subject select optgroup {
+  color: var(--p1-color);
+  font-size: 2vh;
+  width: 100%;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .roll-no select optgroup option, body .everything .cover-page-generator-page .generator-whole .input-field .subject select optgroup option {
+  width: 100%;
+  font-size: var(--text-font-size);
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .title {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .title .header {
+  width: 100%;
+  text-align: left;
+  font-size: 2vh;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .title input {
+  padding: 1vh 2vh;
+  width: 100%;
+  height: 100%;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .download {
+  cursor: pointer;
+  width: 100%;
+  padding: 2vh 0;
+  background: var(--p1-color);
+  color: var(--s1-color);
+  font-size: 2vh;
+  margin: 2vh;
+  text-align: center;
+}
 body .everything .syllabus-page .syllabus-body {
   width: 100%;
 }
