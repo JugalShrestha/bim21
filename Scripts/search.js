@@ -11,6 +11,15 @@ var emptyChecker = 0
 
 const searchItems = document.querySelectorAll('.search-item')
 
+searchField.addEventListener('onkeydown',function(btn){
+    let key = btn.keyCode   
+    if(key=='10')
+    {
+        openSearchPage()
+    }
+    console.log("Key:"+key)
+})
+
 //Opens Search page
 search.addEventListener('click',openSearchPage)
 

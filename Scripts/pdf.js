@@ -35,12 +35,12 @@ function savePdf()
   //-------------Subject Title Part----------------
   doc.setFont("times","bold")
   doc.setFontSize(bigSize)
-  doc.text(subjectNameToShow.toUpperCase(),105,120,null,null,"center")
+  doc.text(titleSelector.value.toUpperCase(),105,120,null,null,"center")
   doc.setFont("times","normal")
   doc.setFontSize(textSize)
   doc.text("(Bachelor of Information Management)",105,127,null,null,"center")
   doc.setFont("times","bold")
-  doc.text(titleSelector.value,105,134,null,null,"center")
+  doc.text(subjectNameToShow,105,134,null,null,"center")
 
   //----------------Submitted To Part---------------
   doc.setFont("times","bold")

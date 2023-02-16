@@ -11,7 +11,7 @@
   --p1-color: #0e0e0e;
   --s1-color: #F2F2F2;
   --s2-color: #595959;
-  --n1-color: #262626;
+  --n1-color: #003f8b;
   --n2-color: #2F7EDE;
   --shadow: black;
   --p-margin: 50%;
@@ -104,11 +104,11 @@ body .everything .landing-page-background {
   align-items: center;
   justify-content: flex-start;
   background-attachment: fixed;
-  background: var(--n2-color);
+  background: linear-gradient(45deg, var(--n2-color), var(--n1-color));
 }
 body .everything .nav-bar {
   width: var(--p-margin);
-  height: 10vh;
+  height: auto;
 }
 body .everything .nav-bar .nav-options {
   width: 100%;
@@ -126,6 +126,18 @@ body .everything .nav-bar .nav-options .logo {
   font-size: var(--big-font-size);
   font-weight: bold;
   color: var(--s1-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vh;
+  height: 15vh;
+  overflow: hidden;
+}
+body .everything .nav-bar .nav-options .logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body .everything .nav-bar .nav-options .pc-options {
   display: flex;
@@ -171,6 +183,7 @@ body .everything .hero-page .search-part {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 0 1vh var(--shadow);
 }
 body .everything .hero-page .search-part .text-input {
   width: 100%;
@@ -182,17 +195,15 @@ body .everything .hero-page .search-part .text-input #search-id {
   height: 100%;
   padding-left: 2vh;
   background: var(--s1-color);
-  border: none;
+  border: 0.5vh solid var(--n2-color);
   outline: none;
   font-size: var(--text-font-size);
-  border: 0.5vh solid var(--p1-color);
 }
 body .everything .hero-page .search-part .search-btn {
   cursor: pointer;
   padding: 0.5vh;
   width: 5vh;
   height: 100%;
-  border: 0.5vh solid var(--p1-color);
   border-left: none;
   overflow: hidden;
   background: var(--n2-color);
@@ -254,10 +265,11 @@ body .everything .recommended-link .recommended-body, body .everything .helping-
   gap: 2vh;
 }
 body .everything .recommended-link .recommended-body .recommendation, body .everything .helping-hand-part .recommended-body .recommendation {
+  transition: 0.2s ease-in-out;
   cursor: pointer;
   position: relative;
   width: 30%;
-  height: 30vh;
+  height: 20vh;
   padding: 2vh;
   display: flex;
   align-items: center;
@@ -271,36 +283,11 @@ body .everything .recommended-link .recommended-body .recommendation, body .ever
   border: 0.5vh solid var(--p1-color);
   box-shadow: 1vh 1vh var(--shadow);
 }
-body .everything .recommended-link .recommended-body .recommendation a, body .everything .helping-hand-part .recommended-body .recommendation a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-weight: bold;
-  font-size: var(--header-font-size);
-  color: var(--text-color);
-}
-body .everything .recommended-link .recommended-body .recommendation:hover::before, body .everything .helping-hand-part .recommended-body .recommendation:hover::before {
-  height: 97%;
-}
-body .everything .recommended-link .recommended-body .recommendation::before, body .everything .helping-hand-part .recommended-body .recommendation::before {
-  transition: 0.3s ease-in-out;
-  content: " ";
-  pointer-events: none;
-  opacity: 100%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(to bottom, transparent 70%, var(--n2-color));
+body .everything .recommended-link .recommended-body .recommendation:hover, body .everything .helping-hand-part .recommended-body .recommendation:hover {
+  transform: scale(1.1);
+  box-shadow: 1vh 1vh var(--n1-color);
+  background: var(--n2-color);
+  color: var(--s1-color);
 }
 body .everything .search-page {
   transition: 0.2s ease-in-out;
@@ -333,10 +320,11 @@ body .everything .search-page .search-results {
   gap: 2vh;
 }
 body .everything .search-page .search-results .search-item {
+  transition: 0.2s ease-in-out;
   cursor: pointer;
   position: relative;
   width: 30%;
-  height: 30vh;
+  height: 20vh;
   padding: 2vh;
   display: flex;
   align-items: center;
@@ -350,6 +338,12 @@ body .everything .search-page .search-results .search-item {
   border: 0.5vh solid var(--p1-color);
   box-shadow: 1vh 1vh var(--shadow);
 }
+body .everything .search-page .search-results .search-item:hover {
+  transform: scale(1.1);
+  box-shadow: 1vh 1vh var(--n1-color);
+  background: var(--n2-color);
+  color: var(--s1-color);
+}
 body .everything .search-page .search-results .search-item a {
   width: 100%;
   height: 100%;
@@ -362,25 +356,6 @@ body .everything .search-page .search-results .search-item a {
   font-size: var(--header-font-size);
   color: var(--text-color);
 }
-body .everything .search-page .search-results .search-item:hover::before {
-  height: 97%;
-}
-body .everything .search-page .search-results .search-item::before {
-  transition: 0.3s ease-in-out;
-  content: " ";
-  pointer-events: none;
-  opacity: 100%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(to bottom, transparent 70%, var(--n2-color));
-}
 body .everything #page {
   transition: 0.5s ease-in-out;
   display: none;
@@ -389,7 +364,7 @@ body .everything #page {
   padding: var(--padding-whole);
   opacity: 0;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 2vh;
 }
@@ -410,11 +385,10 @@ body .everything .cover-page-generator-page .generator-whole {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   background: var(--s1-color);
   gap: 2vh;
-  padding: var(--padding-whole);
 }
 body .everything .cover-page-generator-page .generator-whole .header {
   width: 100%;
@@ -423,9 +397,31 @@ body .everything .cover-page-generator-page .generator-whole .header {
   text-transform: uppercase;
   font-weight: bold;
 }
-body .everything .cover-page-generator-page .generator-whole .input-field {
+body .everything .cover-page-generator-page .generator-whole .generator-body {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf {
+  width: 35vh;
+  height: 50vh;
+  overflow: hidden;
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf .header {
+  font-size: var(--header-font-size);
+  font-weight: bold;
   padding: 2vh;
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field {
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -472,22 +468,26 @@ body .everything .cover-page-generator-page .generator-whole .input-field .title
 body .everything .cover-page-generator-page .generator-whole .input-field .title .header {
   width: 100%;
   text-align: left;
-  font-size: 2vh;
+  font-size: var(--header-font-size);
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .title input {
   padding: 1vh 2vh;
+  font-size: var(--text-font-size);
   width: 100%;
   height: 100%;
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .download {
   cursor: pointer;
+  border: none;
+  outline: none;
   width: 100%;
-  padding: 2vh 0;
-  background: var(--p1-color);
+  margin: 4vh 0;
+  padding: 2vh;
+  background: var(--n2-color);
   color: var(--s1-color);
-  font-size: 2vh;
-  margin: 2vh;
+  font-size: var(--header-font-size);
   text-align: center;
+  text-transform: uppercase;
 }
 body .everything .syllabus-page .syllabus-body {
   width: 100%;
@@ -551,12 +551,12 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   color: var(--s1-color);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 940px) {
   .mobile-options {
     display: none;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   :root {
     --p-margin: 100%;
     --header-font-size:2vh;
@@ -565,6 +565,10 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   }
   .landing-page-background {
     max-height: 25vh;
+  }
+  .landing-page-background .logo {
+    max-height: 6vh;
+    max-width: 6vh;
   }
   .landing-page-background .hero-page-slogan {
     text-align: center;
@@ -579,5 +583,11 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   .recommendation, .search-item {
     max-width: 29%;
     max-height: 15vh;
+  }
+  .generator-body .input-field {
+    min-width: 100%;
+  }
+  .generator-body .sample-pdf {
+    min-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
