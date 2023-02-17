@@ -18,7 +18,8 @@
     --padding-whole: 1vh 2vh;
     --text-font-size: 1.5vh;
     --header-font-size: 2.5vh;
-    --big-font-size: 6vh;
+    --object-font-size: 2.5vh;
+    --big-font-size: 4vh;
     --text: 'Open Sans', sans-serif;
     --text-color: #1d1d1d;
 }
@@ -109,6 +110,7 @@ body{
             position: relative;
             width: 100%;
             height: 30vh;
+            padding: 1vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -133,16 +135,15 @@ body{
                 padding: var(--padding-whole);
                 .logo{
                     cursor: pointer;
-                    text-decoration: .5vh underline var(--s1-color);
-                    font-size: var(--big-font-size);
+                    font-size: var(--header-font-size);
                     font-weight: bold;
                     color: var(--s1-color);
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 10vh;
-                    height: 15vh;
-                    overflow: hidden;
+                    text-transform: capitalize;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    // width: 10vh;
+                    // height: 15vh;
                     img{
                         width: 100%;
                         height: 100%;   
@@ -156,14 +157,65 @@ body{
                     gap: 3vh;
                     .nav-option{
                         cursor: pointer;
+                        font-weight: bold;
                         color: var(--s1-color);
                         font-size: var(--text-font-size);
                     }
                 }
                 .mobile-options{
                     .nav-mobile{
-                        font-size: var(--big-font-size);
+                        font-size: var(--header-font-size);
                         color: var(--s1-color);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 5vh;
+                        height: 100%;
+                        img{
+                            width: 100%;
+                            height: 100%;   
+                            object-fit: contain;
+                        }
+                    }
+                    .mobile-menu{
+                        transition: .2s ease-in-out;
+                        z-index: 1;
+                        position: fixed;
+                        top:0;
+                        right: 0;
+                        bottom: 0;
+                        width: 20vh;
+                        background: linear-gradient(45deg,var(--n2-color),var(--n1-color));
+                        display: none;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 2vh;
+                        padding: var(--padding-whole);
+                        .close-nav-mobile{
+                            position: absolute;
+                            top:0;
+                            left: 0;   
+                            color: var(--s1-color);
+                            width: 5vh;
+                            height: 5vh;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: var(--big-font-size);
+                            font-weight: bold;
+                        }
+                        .nav-option-m{
+                            color: var(--s1-color);
+                            width: 100%;
+                            height: 10%;
+                            display: flex;
+                            align-items: center;
+                            background: var(--n2-color);
+                            justify-content: center;
+                            font-size: var(--big-font-size);
+                            font-weight: bold;
+                        }
                     }
                 }
             }
@@ -187,6 +239,8 @@ body{
                 width: var(--p-margin);
                 color: var(--s1-color);
                 font-size: var(--header-font-size);
+                height: 10vh;
+                padding-left: 1vh;
                 span{
                     color: var(--s1-color);
                     font-size: var(--big-font-size);
@@ -201,7 +255,6 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                box-shadow: 0 0 1vh var(--shadow);
                 .text-input{
                     width: 100%;
                     height: 100%;
@@ -215,16 +268,30 @@ body{
                         outline: none;
                         font-size: var(--text-font-size);
                     }
+                    &:hover{
+                        border: .1vh solid var(--n2-color);
+                    }
                     
                 }
                 .search-btn{
                     cursor: pointer;
-                    padding: .5vh;
-                    width: 5vh;
+                    transition: .2s ease-in-out;
+                    padding: 1vh;
                     height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     border-left: none;
                     overflow: hidden;
-                    background: var(--n2-color);
+                    color: var(--n1-color);
+                    font-weight: bold;
+                    font-size: var(--text-font-size);
+                    background: var(--s1-color);
+                    border: .5vh solid var(--n2-color);
+                    &:hover{
+                        background: var(--n2-color);
+                        color: var(--s1-color);
+                    }
                     img{
                         width: 100%;
                         height: 100%;
@@ -249,7 +316,7 @@ body{
                 background: radial-gradient(circle closest-side,#000000 90%,#0000) 0%   50%,
                     radial-gradient(circle closest-side,#000000 90%,#0000) 50%  50%,
                     radial-gradient(circle closest-side,#000000 90%,#0000) 100% 50%;
-                background-size: calc(100%/3) 17.3px;
+                background-size: calc(100%/3) 1.5vh;
                 background-repeat: no-repeat;
                 animation: dots 1s infinite linear;
             }
@@ -303,13 +370,10 @@ body{
                     text-decoration: none;   
                     text-transform: capitalize;
                     font-weight: bold;
-                    font-size: var(--header-font-size);
+                    font-size: var(--object-font-size);
                     background: var(--s1-color);
-                    border: .5vh solid var(--p1-color);
-                    box-shadow: 1vh 1vh var(--shadow);
+                    border: .1vh solid var(--p1-color);
                     &:hover{
-                        transform: scale(1.1);
-                        box-shadow: 1vh 1vh var(--n1-color);
                         background: var(--n2-color);
                         color: var(--s1-color);
                     }
@@ -318,7 +382,7 @@ body{
         }
         //End of Recommended link and helping hand part
 
-        //Start of Search page
+        //--------------------------Start of Search page
         .search-page{
             transition: .2s ease-in-out;
             width: var(--p-margin);
@@ -365,11 +429,8 @@ body{
                     font-weight: bold;
                     font-size: var(--header-font-size);
                     background: var(--s1-color);
-                    border: .5vh solid var(--p1-color);
-                    box-shadow: 1vh 1vh var(--shadow);
+                    border: .1vh solid var(--p1-color);
                     &:hover{
-                        transform: scale(1.1);  
-                        box-shadow: 1vh 1vh var(--n1-color);
                         background: var(--n2-color);
                         color: var(--s1-color);
                     }
@@ -388,7 +449,7 @@ body{
                 }
             }
         }
-        //End of Search page
+        //------------------------------------End of Search page
 
         //Start of All Pages
         #page{
@@ -418,7 +479,7 @@ body{
         }
         //End of All Pages
 
-        //Start of Coverpage Generator
+        //-------------------------Start of Coverpage Generator
         .cover-page-generator-page{
             .generator-whole{
             width: 100%;
@@ -531,7 +592,51 @@ body{
         }
         //End of CoverpageGenerator
 
-        //Start of Syllabus page
+        //-----------------------------Start of Class Routine Page
+        .class-routine-page{
+            width: 100%;
+            .class-routine-body{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .routine {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .routine-row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
+            .routine-cell {
+                width: 20%;
+                height: 6vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: var(--text-font-size);
+                border: .1vh solid var(--n1-color);
+            }
+            .routine-header, .routine-time {
+                font-weight: bold;
+                background: var(--n2-color);
+                color: var(--s1-color);
+            }
+            .routine-base{
+                font-weight: bold;
+                background: var(--n1-color);
+                color: var(--s1-color);
+            }
+        }
+        //--------------------------End Of Class Routine Page
+
+        //------------------------------Start of Syllabus page
         .syllabus-page{
             .syllabus-body{
                 width: 100%;
@@ -542,36 +647,16 @@ body{
                     grid-template-columns: auto auto auto auto;
                     .semester-option{
                         cursor: pointer;
+                        transition: .2s ease-in-out;
                         position: relative;
                         background: var(--s1-color);
-                        border: .5vh solid var(--p1-color);
-                        width: auto;
+                        border: .2vh solid var(--p1-color);
                         height: 15vh;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        &::before{
-                            transition: .3s ease-in-out;
-                            content: " ";
-                            pointer-events: none;
-                            opacity: 100%;
-                            position: absolute;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            overflow: hidden;
-                            left: 0;
-                            bottom: 0;
-                            width: 100%;
-                            height: 0%; 
-                            background: linear-gradient(to bottom, transparent 70%, var(--n2-color));
-                        }
-                        &:hover{
-                            &::before{
-                                height: 100%;
-                            }
-                        }
                         a{
+                            transition: .2s ease-in-out;
                             color: var(--p1-color);
                             background: var(--s1-color);
                             font-size: var(--big-font-size);
@@ -582,6 +667,10 @@ body{
                             align-items: center;
                             justify-content: center;
                             text-decoration: none;
+                            &:hover{
+                                background: var(--n2-color);
+                                color: var(--s1-color);
+                            }
                         }
                     }
                     .syllabus-1-8{
@@ -596,7 +685,7 @@ body{
                 }
             }
         }
-        //End of Syllabus page
+        //--------------------------------End of Syllabus page
     }
 }
 @media (min-width: 940px) {
@@ -607,19 +696,15 @@ body{
 @media (max-width: 940px) {
     :root{
         --p-margin: 100%;
-        --header-font-size:2vh;
-        --big-font-size: 4vh;
+        --header-font-size:2vh; 
+        --object-font-size: 1.5vh;
+        --big-font-size: 3vh;
         --top-margin: 4vh;
     }
     .landing-page-background{
         max-height: 25vh;
-        .logo{
-            max-height: 6vh;
-            max-width: 6vh;
-        }
         .hero-page-slogan{
-            text-align: center;
-            padding: 2vh;
+            max-height: 10vh;
         }
     }
     .nav-option{
@@ -630,7 +715,7 @@ body{
     }
     .recommendation, .search-item{
         max-width: 29%;
-        max-height: 15vh;
+        max-height: 10vh;
     }
     .generator-body{
         .input-field{
@@ -638,6 +723,13 @@ body{
         }
         .sample-pdf{
             min-width: 100%;
+        }
+    }
+    .class-routine-body{
+        .routine{
+            .routine__cell{
+                max-width: 17%;
+            }
         }
     }
 }

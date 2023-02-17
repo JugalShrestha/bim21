@@ -19,7 +19,8 @@
   --padding-whole: 1vh 2vh;
   --text-font-size: 1.5vh;
   --header-font-size: 2.5vh;
-  --big-font-size: 6vh;
+  --object-font-size: 2.5vh;
+  --big-font-size: 4vh;
   --text: "Open Sans", sans-serif;
   --text-color: #1d1d1d;
 }
@@ -99,6 +100,7 @@ body .everything .landing-page-background {
   position: relative;
   width: 100%;
   height: 30vh;
+  padding: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,17 +123,10 @@ body .everything .nav-bar .nav-options {
 }
 body .everything .nav-bar .nav-options .logo {
   cursor: pointer;
-  -webkit-text-decoration: 0.5vh underline var(--s1-color);
-          text-decoration: 0.5vh underline var(--s1-color);
-  font-size: var(--big-font-size);
+  font-size: var(--header-font-size);
   font-weight: bold;
   color: var(--s1-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 10vh;
-  height: 15vh;
-  overflow: hidden;
+  text-transform: capitalize;
 }
 body .everything .nav-bar .nav-options .logo img {
   width: 100%;
@@ -147,12 +142,64 @@ body .everything .nav-bar .nav-options .pc-options {
 }
 body .everything .nav-bar .nav-options .pc-options .nav-option {
   cursor: pointer;
+  font-weight: bold;
   color: var(--s1-color);
   font-size: var(--text-font-size);
 }
 body .everything .nav-bar .nav-options .mobile-options .nav-mobile {
-  font-size: var(--big-font-size);
+  font-size: var(--header-font-size);
   color: var(--s1-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5vh;
+  height: 100%;
+}
+body .everything .nav-bar .nav-options .mobile-options .nav-mobile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .everything .nav-bar .nav-options .mobile-options .mobile-menu {
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20vh;
+  background: linear-gradient(45deg, var(--n2-color), var(--n1-color));
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  padding: var(--padding-whole);
+}
+body .everything .nav-bar .nav-options .mobile-options .mobile-menu .close-nav-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--s1-color);
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--big-font-size);
+  font-weight: bold;
+}
+body .everything .nav-bar .nav-options .mobile-options .mobile-menu .nav-option-m {
+  color: var(--s1-color);
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  background: var(--n2-color);
+  justify-content: center;
+  font-size: var(--big-font-size);
+  font-weight: bold;
 }
 body .everything .hero-page {
   transition: 0.2s ease-in-out;
@@ -170,6 +217,8 @@ body .everything .hero-page .hero-page-slogan {
   width: var(--p-margin);
   color: var(--s1-color);
   font-size: var(--header-font-size);
+  height: 10vh;
+  padding-left: 1vh;
 }
 body .everything .hero-page .hero-page-slogan span {
   color: var(--s1-color);
@@ -183,7 +232,6 @@ body .everything .hero-page .search-part {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 0 1vh var(--shadow);
 }
 body .everything .hero-page .search-part .text-input {
   width: 100%;
@@ -199,14 +247,28 @@ body .everything .hero-page .search-part .text-input #search-id {
   outline: none;
   font-size: var(--text-font-size);
 }
+body .everything .hero-page .search-part .text-input:hover {
+  border: 0.1vh solid var(--n2-color);
+}
 body .everything .hero-page .search-part .search-btn {
   cursor: pointer;
-  padding: 0.5vh;
-  width: 5vh;
+  transition: 0.2s ease-in-out;
+  padding: 1vh;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-left: none;
   overflow: hidden;
+  color: var(--n1-color);
+  font-weight: bold;
+  font-size: var(--text-font-size);
+  background: var(--s1-color);
+  border: 0.5vh solid var(--n2-color);
+}
+body .everything .hero-page .search-part .search-btn:hover {
   background: var(--n2-color);
+  color: var(--s1-color);
 }
 body .everything .hero-page .search-part .search-btn img {
   width: 100%;
@@ -226,7 +288,7 @@ body .everything .loading-page .loading-animation {
   width: 72px;
   height: 34.6px;
   background: radial-gradient(circle closest-side, #000000 90%, rgba(0, 0, 0, 0)) 0% 50%, radial-gradient(circle closest-side, #000000 90%, rgba(0, 0, 0, 0)) 50% 50%, radial-gradient(circle closest-side, #000000 90%, rgba(0, 0, 0, 0)) 100% 50%;
-  background-size: 33.3333333333% 17.3px;
+  background-size: 33.3333333333% 1.5vh;
   background-repeat: no-repeat;
   animation: dots 1s infinite linear;
 }
@@ -278,14 +340,11 @@ body .everything .recommended-link .recommended-body .recommendation, body .ever
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
-  font-size: var(--header-font-size);
+  font-size: var(--object-font-size);
   background: var(--s1-color);
-  border: 0.5vh solid var(--p1-color);
-  box-shadow: 1vh 1vh var(--shadow);
+  border: 0.1vh solid var(--p1-color);
 }
 body .everything .recommended-link .recommended-body .recommendation:hover, body .everything .helping-hand-part .recommended-body .recommendation:hover {
-  transform: scale(1.1);
-  box-shadow: 1vh 1vh var(--n1-color);
   background: var(--n2-color);
   color: var(--s1-color);
 }
@@ -335,12 +394,9 @@ body .everything .search-page .search-results .search-item {
   font-weight: bold;
   font-size: var(--header-font-size);
   background: var(--s1-color);
-  border: 0.5vh solid var(--p1-color);
-  box-shadow: 1vh 1vh var(--shadow);
+  border: 0.1vh solid var(--p1-color);
 }
 body .everything .search-page .search-results .search-item:hover {
-  transform: scale(1.1);
-  box-shadow: 1vh 1vh var(--n1-color);
   background: var(--n2-color);
   color: var(--s1-color);
 }
@@ -489,6 +545,47 @@ body .everything .cover-page-generator-page .generator-whole .input-field .downl
   text-align: center;
   text-transform: uppercase;
 }
+body .everything .class-routine-page {
+  width: 100%;
+}
+body .everything .class-routine-page .class-routine-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .everything .class-routine-page .routine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body .everything .class-routine-page .routine-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+body .everything .class-routine-page .routine-cell {
+  width: 20%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-font-size);
+  border: 0.1vh solid var(--n1-color);
+}
+body .everything .class-routine-page .routine-header, body .everything .class-routine-page .routine-time {
+  font-weight: bold;
+  background: var(--n2-color);
+  color: var(--s1-color);
+}
+body .everything .class-routine-page .routine-base {
+  font-weight: bold;
+  background: var(--n1-color);
+  color: var(--s1-color);
+}
 body .everything .syllabus-page .syllabus-body {
   width: 100%;
 }
@@ -501,35 +598,17 @@ body .everything .syllabus-page .syllabus-body .semester-options {
 }
 body .everything .syllabus-page .syllabus-body .semester-options .semester-option {
   cursor: pointer;
+  transition: 0.2s ease-in-out;
   position: relative;
   background: var(--s1-color);
-  border: 0.5vh solid var(--p1-color);
-  width: auto;
+  border: 0.2vh solid var(--p1-color);
   height: 15vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-body .everything .syllabus-page .syllabus-body .semester-options .semester-option::before {
-  transition: 0.3s ease-in-out;
-  content: " ";
-  pointer-events: none;
-  opacity: 100%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 0%;
-  background: linear-gradient(to bottom, transparent 70%, var(--n2-color));
-}
-body .everything .syllabus-page .syllabus-body .semester-options .semester-option:hover::before {
-  height: 100%;
-}
 body .everything .syllabus-page .syllabus-body .semester-options .semester-option a {
+  transition: 0.2s ease-in-out;
   color: var(--p1-color);
   background: var(--s1-color);
   font-size: var(--big-font-size);
@@ -540,6 +619,10 @@ body .everything .syllabus-page .syllabus-body .semester-options .semester-optio
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+body .everything .syllabus-page .syllabus-body .semester-options .semester-option a:hover {
+  background: var(--n2-color);
+  color: var(--s1-color);
 }
 body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 {
   grid-column-start: 1;
@@ -560,19 +643,15 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   :root {
     --p-margin: 100%;
     --header-font-size:2vh;
-    --big-font-size: 4vh;
+    --object-font-size: 1.5vh;
+    --big-font-size: 3vh;
     --top-margin: 4vh;
   }
   .landing-page-background {
     max-height: 25vh;
   }
-  .landing-page-background .logo {
-    max-height: 6vh;
-    max-width: 6vh;
-  }
   .landing-page-background .hero-page-slogan {
-    text-align: center;
-    padding: 2vh;
+    max-height: 10vh;
   }
   .nav-option {
     display: none;
@@ -582,12 +661,15 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   }
   .recommendation, .search-item {
     max-width: 29%;
-    max-height: 15vh;
+    max-height: 10vh;
   }
   .generator-body .input-field {
     min-width: 100%;
   }
   .generator-body .sample-pdf {
     min-width: 100%;
+  }
+  .class-routine-body .routine .routine__cell {
+    max-width: 17%;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -11,13 +11,12 @@ var emptyChecker = 0
 
 const searchItems = document.querySelectorAll('.search-item')
 
-searchField.addEventListener('onkeydown',function(btn){
+searchField.addEventListener('keydown',function(btn){
     let key = btn.keyCode   
-    if(key=='10')
+    if(key=='13')
     {
         openSearchPage()
     }
-    console.log("Key:"+key)
 })
 
 //Opens Search page
@@ -100,5 +99,6 @@ tags.forEach(tag=>{
     tag.addEventListener('click',()=>{
         tagText = tag.innerText.toUpperCase()
         openSearchPage()
+        closeMobileMenuFunction()
     })
 })

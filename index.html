@@ -34,18 +34,28 @@
             <section class="nav-bar">
                 <ul class="nav-options">
                     <li class="logo">
-                        <img src="images/logo-white.png" alt="">
+                        Bim Nerds
+                        <!-- <img src="images/logo-white.png" alt=""> -->
                     </li>
                     <!--For pc only-->
                     <div class="pc-options">
                         <li class="nav-option" id="clickable-tag">Projects</li>
-                        <li class="nav-option" id="clickable">Syllabus</li>
+                        <li class="nav-option" id="clickable">Routine</li>
                         <li class="nav-option" id="clickable-tag">Notes</li>
                         <li class="nav-option">Help</li>
                     </div>
                     <!--For mobile only-->
                     <div class="mobile-options">
-                        <li class="nav-mobile">▨</li>
+                        <li class="nav-mobile">
+                            <img src="images/menu-bar.png" alt="">
+                        </li>
+                        <div class="mobile-menu">
+                            <div class="close-nav-mobile">&Cross;</div>
+                            <div class="nav-option-m" id="clickable-tag">Projects</div>
+                            <div class="nav-option-m" id="clickable">Syllabus</div>
+                            <div class="nav-option-m" id="clickable-tag">Notes</div>
+                            <div class="nav-option-m">Help</div>
+                        </div>
                     </div>
                 </ul>
             </section>
@@ -54,15 +64,17 @@
             <!--Start of landing page-->
             <section class="hero-page">
                 <div class="hero-page-slogan">
-                    <span>Search</span> anything here!
+                    <span>Search here ↓</span><br>
+                    become one with the nerd
                 </div>
                 <!--Start of Search part-->
                 <section class="search-part">
                     <div class="text-input">
-                        <input type="text" name="search" id="search-id">
+                        <input placeholder="For eg. Class Routine" type="text" name="search" id="search-id">
                     </div>
                     <div class="search-btn">
-                        <img src="images/search.png" alt="">
+                        <!-- <img src="images/search.png" alt=""> -->
+                        Search
                     </div>
                 </section>
                 <!--End of Search part-->
@@ -88,8 +100,8 @@
             </div>
             <div class="recommended-body">
                 <div class="recommendation" data-tag="projects" id="clickable">Coverpage Generator</div>
+                <div class="recommendation" id="clickable">Class Routine</div>
                 <div class="recommendation" id="clickable">Syllabus</div>
-                <div class="recommendation" id="clickable">About BIM</div>
             </div>
         </section>
         <!--End of Recommended link-->
@@ -112,7 +124,7 @@
         </section>
         <!--End of Helping Hand-->
 
-        <!--Start of Search page-->
+        <!-----------------------Start of Search page------------------->
         <section class="search-page">
             <div class="header">
                 <div class="main-header">
@@ -124,17 +136,17 @@
                 <div class="search-item" data-tag="notes" id="clickable">C Course</div>
                 <div class="search-item" data-tag="notes" id="clickable">Java Course</div>
                 <div class="search-item" data-tag="notes" id="clickable">Python Course</div>
-                <div class="search-item" id="clickable">Syllabus BIM</div>
+                <div class="search-item" id="clickable">Syllabus</div>
                 <div class="search-item" data-tag="projects" id="clickable">Coverpage Generator</div>
                 <div class="search-item" data-tag="projects" id="clickable">Color Picker</div>
                 <div class="search-item" id="clickable">About Page</div>
-                <div class="search-item" data-tag="projects" id="clickable">Social Picker</div>
-                <div class="search-item" data-tag="projects" id="clickable">Tarantula Killer</div>
+                <div class="search-item" id="clickable">Class Routine</div>
+                <div class="search-item" data-tag="projects" id="clickable">Calculator</div>
             </div>
         </section>
-        <!--End of Search page-->
+        <!------------------------End of Search page------------------------->
 
-        <!--Start of Coverpage Generator-->
+        <!-----------Start of Coverpage Generator------------------------------->
         <section class="cover-page-generator-page" id="page">
             <div class="header">
                 <div class="main-header">
@@ -278,9 +290,58 @@
             </div>
             <!--End of Generator Card-->
         </section>
-        <!--End of Coverpage Generator-->
+        <!---------------------------------End of Coverpage Generator---------------------------->
 
-        <!--Start of Syllabus page-->
+        <!---------------------------------Start of Class Routine Page--------------------------->
+        <section class="class-routine-page" id="page">
+            <div class="header">
+                <div class="main-header">
+                    Class Routine
+                </div>
+                <div class="sub-header">
+                    Class routine for BIM 2nd Sem section A
+                </div>
+            </div>
+            <div class="class-routine-body">
+            <div class="routine">
+                <div class="routine-row">
+                    <div class="routine-cell routine-base">Time</div>
+                    <div class="routine-cell routine-header routine-day">Mon</div>
+                    <div class="routine-cell routine-header routine-day">Tue</div>
+                    <div class="routine-cell routine-header routine-day">Wed</div>
+                    <div class="routine-cell routine-header routine-day">Thu</div>
+                    <div class="routine-cell routine-header routine-day">Fri</div>
+                </div>
+                <div class="routine-row">
+                    <div class="routine-cell routine-time">6:15 - 7:30</div>
+                    <div class="routine-cell">DS</div>
+                    <div class="routine-cell">DS</div>
+                    <div class="routine-cell">DS</div>
+                    <div class="routine-cell">Java</div>
+                    <div class="routine-cell">DL</div>
+                </div>
+                <div class="routine-row">
+                    <div class="routine-cell routine-time">7:35 - 9:05</div>
+                    <div class="routine-cell">DL</div>
+                    <div class="routine-cell">DS</div>
+                    <div class="routine-cell">Java</div>
+                    <div class="routine-cell">Art</div>
+                    <div class="routine-cell">English</div>
+                </div>
+                <div class="routine-row">
+                    <div class="routine-cell routine-time">9:30 - 11:00</div>
+                    <div class="routine-cell">Java</div>
+                    <div class="routine-cell">DL</div>
+                    <div class="routine-cell">Art</div>
+                    <div class="routine-cell">Dance</div>
+                    <div class="routine-cell">Math</div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!---------------------------------End of Class Routine Page----------------------------->
+
+        <!----------------------------------Start of Syllabus page---------------------------------->
         <section class="syllabus-page" id="page">
             <div class="header">
                 <div class="main-header">
@@ -304,7 +365,7 @@
                 </ul>
             </div>
         </section>
-        <!--End of Syllabus page-->
+        <!--------------------------------------End of Syllabus page--------------------------------->
 
     </section>
     <!--End of everything-->
@@ -315,7 +376,8 @@
     <script src="Scripts/search.js"></script>
     <script src="Scripts/menu.js"></script>
     <script src="Scripts/page.js"></script>
-    <script src="Scripts/pdf.js"></script>
-    <script src="Scripts/option.js"></script>
-    <script src="Scripts/data.js"></script>
+    <script src="Scripts/coverpage-js/pdf.js"></script>
+    <script src="Scripts/coverpage-js/option.js"></script>
+    <script src="Scripts/coverpage-js/data.js"></script>
+    <script src="Scripts/class-routine-js/routine.js"></script>
 </html>
