@@ -249,7 +249,6 @@ body{
             }
             //Start of Search part
             .search-part{
-                cursor: text;
                 width: var(--p-margin);
                 height: 5vh;
                 display: flex;
@@ -260,6 +259,7 @@ body{
                     height: 100%;
                     display: flex;
                     #search-id{
+                        cursor: pointer;
                         width: 100%;
                         height: 100%;
                         padding-left: 2vh;
@@ -361,7 +361,7 @@ body{
                     cursor: pointer;
                     position: relative;
                     width: 30%;
-                    height: 20vh;
+                    height: 15vh;
                     padding: 2vh;
                     display: flex;
                     align-items: center;
@@ -418,7 +418,7 @@ body{
                     cursor: pointer;
                     position: relative;
                     width: 30%;
-                    height: 20vh;
+                    height: 15vh;
                     padding: 2vh;
                     display: flex;
                     align-items: center;
@@ -492,8 +492,8 @@ body{
             .header{
                 width: 100%;
                 text-align: center;
-                font-size: 3vh;
-                text-transform: uppercase;
+                font-size: var(--header-font-size);
+                text-transform: capitalize;
                 font-weight: bold;
             }
             .generator-body{
@@ -504,12 +504,11 @@ body{
                 justify-content: space-between;
                  //Start of Sample png
                 .sample-pdf{
-                    width: 35vh;
+                    width: max-content;
                     height: 50vh;
                     overflow: hidden;
                     .header{
-                        font-size: var(--header-font-size);
-                        font-weight: bold;
+                        font-size: var(--text-font-size);
                         padding: 2vh;
                     }
                     img{
@@ -576,6 +575,7 @@ body{
                 }
                 .download{
                     cursor: pointer;
+                    transition: .2s ease-in-out;
                     border: none;
                     outline: none;
                     width: 100%;
@@ -586,6 +586,9 @@ body{
                     font-size: var(--header-font-size);
                     text-align: center;
                     text-transform: uppercase;
+                    &:hover{
+                        background: var(--n1-color);
+                    }
                 }
                 }
             }

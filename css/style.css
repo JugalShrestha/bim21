@@ -226,7 +226,6 @@ body .everything .hero-page .hero-page-slogan span {
   font-weight: bold;
 }
 body .everything .hero-page .search-part {
-  cursor: text;
   width: var(--p-margin);
   height: 5vh;
   display: flex;
@@ -239,6 +238,7 @@ body .everything .hero-page .search-part .text-input {
   display: flex;
 }
 body .everything .hero-page .search-part .text-input #search-id {
+  cursor: pointer;
   width: 100%;
   height: 100%;
   padding-left: 2vh;
@@ -331,7 +331,7 @@ body .everything .recommended-link .recommended-body .recommendation, body .ever
   cursor: pointer;
   position: relative;
   width: 30%;
-  height: 20vh;
+  height: 15vh;
   padding: 2vh;
   display: flex;
   align-items: center;
@@ -383,7 +383,7 @@ body .everything .search-page .search-results .search-item {
   cursor: pointer;
   position: relative;
   width: 30%;
-  height: 20vh;
+  height: 15vh;
   padding: 2vh;
   display: flex;
   align-items: center;
@@ -449,8 +449,8 @@ body .everything .cover-page-generator-page .generator-whole {
 body .everything .cover-page-generator-page .generator-whole .header {
   width: 100%;
   text-align: center;
-  font-size: 3vh;
-  text-transform: uppercase;
+  font-size: var(--header-font-size);
+  text-transform: capitalize;
   font-weight: bold;
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body {
@@ -461,13 +461,13 @@ body .everything .cover-page-generator-page .generator-whole .generator-body {
   justify-content: space-between;
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf {
-  width: 35vh;
+  width: -moz-max-content;
+  width: max-content;
   height: 50vh;
   overflow: hidden;
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf .header {
-  font-size: var(--header-font-size);
-  font-weight: bold;
+  font-size: var(--text-font-size);
   padding: 2vh;
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf img {
@@ -534,6 +534,7 @@ body .everything .cover-page-generator-page .generator-whole .input-field .title
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .download {
   cursor: pointer;
+  transition: 0.2s ease-in-out;
   border: none;
   outline: none;
   width: 100%;
@@ -544,6 +545,9 @@ body .everything .cover-page-generator-page .generator-whole .input-field .downl
   font-size: var(--header-font-size);
   text-align: center;
   text-transform: uppercase;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .download:hover {
+  background: var(--n1-color);
 }
 body .everything .class-routine-page {
   width: 100%;
