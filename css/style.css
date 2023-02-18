@@ -4,15 +4,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--n2-color);
+  background: var(--n1-color);
 }
 
 :root {
   --p1-color: #0e0e0e;
   --s1-color: #F2F2F2;
-  --s2-color: #595959;
+  --s2-color: #dfdfdf;
   --n1-color: #003f8b;
-  --n2-color: #2F7EDE;
+  --n2-color: red;
   --shadow: black;
   --p-margin: 50%;
   --top-margin: 10vh;
@@ -67,7 +67,9 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background: var(--s1-color);
+  background-image: linear-gradient(var(--s2-color) 0.1vh, transparent 0.1vh), linear-gradient(to right, var(--s2-color) 0.1vh, transparent 0.1vh);
+  background-size: 2vh 2vh;
+  background-color: var(--s1-color);
 }
 body .loading-screen {
   transition: 0.2s ease-in-out;
@@ -76,13 +78,15 @@ body .loading-screen {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: var(--s1-color);
+  background-image: linear-gradient(var(--s2-color) 0.1vh, transparent 0.1vh), linear-gradient(to right, var(--s2-color) 0.1vh, transparent 0.1vh);
+  background-size: 2vh 2vh;
+  background-color: var(--s1-color);
 }
 body .loading-screen .loading-animation {
   width: 8vh;
   height: 8vh;
   padding: 1vh;
-  background: radial-gradient(farthest-side, var(--p1-color) 98%, transparent) 0/2vh 2vh no-repeat, conic-gradient(from 90deg at 1vh 1vh, var(--p1-color), var(--n2-color)) content-box, conic-gradient(from -90deg at 1vh 1vh, var(--p1-color), var(--n2-color)) content-box, transparent;
+  background: radial-gradient(farthest-side, var(--n2-color) 98%, transparent) 0/2vh 2vh no-repeat, conic-gradient(from 90deg at 1vh 1vh, var(--p1-color), var(--n1-color)) content-box, conic-gradient(from -90deg at 1vh 1vh, var(--p1-color), var(--n1-color)) content-box, transparent;
   animation: blob 2s infinite;
 }
 body .everything {
@@ -105,8 +109,6 @@ body .everything .landing-page-background {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-attachment: fixed;
-  background: linear-gradient(45deg, var(--n2-color), var(--n1-color));
 }
 body .everything .nav-bar {
   width: var(--p-margin);
@@ -125,8 +127,8 @@ body .everything .nav-bar .nav-options .logo {
   cursor: pointer;
   font-size: var(--header-font-size);
   font-weight: bold;
-  color: var(--s1-color);
   text-transform: capitalize;
+  color: var(--n1-color);
 }
 body .everything .nav-bar .nav-options .logo img {
   width: 100%;
@@ -143,17 +145,16 @@ body .everything .nav-bar .nav-options .pc-options {
 body .everything .nav-bar .nav-options .pc-options .nav-option {
   cursor: pointer;
   font-weight: bold;
-  color: var(--s1-color);
   font-size: var(--text-font-size);
 }
 body .everything .nav-bar .nav-options .mobile-options .nav-mobile {
   font-size: var(--header-font-size);
-  color: var(--s1-color);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 5vh;
   height: 100%;
+  padding: 1vh;
 }
 body .everything .nav-bar .nav-options .mobile-options .nav-mobile img {
   width: 100%;
@@ -169,11 +170,15 @@ body .everything .nav-bar .nav-options .mobile-options .mobile-menu {
   right: 0;
   bottom: 0;
   width: 20vh;
-  background: linear-gradient(45deg, var(--n2-color), var(--n1-color));
-  display: none;
+  background-image: linear-gradient(var(--s2-color) 0.1vh, transparent 0.1vh), linear-gradient(to right, var(--s2-color) 0.1vh, transparent 0.1vh);
+  background-size: 2vh 2vh;
+  background-color: var(--s1-color);
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateX(500vh);
+  border-left: 0.3vh solid var(--p1-color);
   gap: 2vh;
   padding: var(--padding-whole);
 }
@@ -181,7 +186,6 @@ body .everything .nav-bar .nav-options .mobile-options .mobile-menu .close-nav-m
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--s1-color);
   width: 5vh;
   height: 5vh;
   display: flex;
@@ -191,12 +195,10 @@ body .everything .nav-bar .nav-options .mobile-options .mobile-menu .close-nav-m
   font-weight: bold;
 }
 body .everything .nav-bar .nav-options .mobile-options .mobile-menu .nav-option-m {
-  color: var(--s1-color);
   width: 100%;
   height: 10%;
   display: flex;
   align-items: center;
-  background: var(--n2-color);
   justify-content: center;
   font-size: var(--big-font-size);
   font-weight: bold;
@@ -215,18 +217,16 @@ body .everything .hero-page {
 }
 body .everything .hero-page .hero-page-slogan {
   width: var(--p-margin);
-  color: var(--s1-color);
   font-size: var(--header-font-size);
   height: 10vh;
   padding-left: 1vh;
 }
 body .everything .hero-page .hero-page-slogan span {
-  color: var(--s1-color);
   font-size: var(--big-font-size);
   font-weight: bold;
 }
 body .everything .hero-page .search-part {
-  width: var(--p-margin);
+  width: 49%;
   height: 5vh;
   display: flex;
   align-items: center;
@@ -239,38 +239,40 @@ body .everything .hero-page .search-part .text-input {
 }
 body .everything .hero-page .search-part .text-input #search-id {
   cursor: pointer;
-  width: 100%;
+  width: 95%;
   height: 100%;
   padding-left: 2vh;
   background: var(--s1-color);
-  border: 0.5vh solid var(--n2-color);
+  border: 0.3vh solid var(--p1-color);
   outline: none;
   font-size: var(--text-font-size);
+  border-radius: 0.5vh;
 }
-body .everything .hero-page .search-part .text-input:hover {
-  border: 0.1vh solid var(--n2-color);
+body .everything .hero-page .search-part .text-input:hover #search-id {
+  border: 0.5vh solid var(--p1-color);
 }
 body .everything .hero-page .search-part .search-btn {
   cursor: pointer;
   transition: 0.2s ease-in-out;
   padding: 1vh;
+  width: 20%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-left: none;
-  overflow: hidden;
-  color: var(--n1-color);
+  justify-content: space-between;
+  background: var(--s1-color);
+  border: 0.3vh solid var(--p1-color);
+  border-radius: 0.5vh;
+}
+body .everything .hero-page .search-part .search-btn .search-txt {
   font-weight: bold;
   font-size: var(--text-font-size);
-  background: var(--s1-color);
-  border: 0.5vh solid var(--n2-color);
 }
-body .everything .hero-page .search-part .search-btn:hover {
-  background: var(--n2-color);
-  color: var(--s1-color);
+body .everything .hero-page .search-part .search-btn .search-image {
+  width: 20%;
+  height: 100%;
 }
-body .everything .hero-page .search-part .search-btn img {
+body .everything .hero-page .search-part .search-btn .search-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
@@ -342,11 +344,11 @@ body .everything .recommended-link .recommended-body .recommendation, body .ever
   font-weight: bold;
   font-size: var(--object-font-size);
   background: var(--s1-color);
-  border: 0.1vh solid var(--p1-color);
+  border-radius: 0.5vh;
+  border: 0.3vh solid var(--p1-color);
 }
-body .everything .recommended-link .recommended-body .recommendation:hover, body .everything .helping-hand-part .recommended-body .recommendation:hover {
+body .everything .recommended-link .recommended-body .recommendation:hover::after, body .everything .helping-hand-part .recommended-body .recommendation:hover::after {
   background: var(--n2-color);
-  color: var(--s1-color);
 }
 body .everything .search-page {
   transition: 0.2s ease-in-out;
@@ -392,13 +394,13 @@ body .everything .search-page .search-results .search-item {
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
-  font-size: var(--header-font-size);
+  font-size: var(--object-font-size);
   background: var(--s1-color);
-  border: 0.1vh solid var(--p1-color);
+  border-radius: 0.5vh;
+  border: 0.3vh solid var(--p1-color);
 }
-body .everything .search-page .search-results .search-item:hover {
+body .everything .search-page .search-results .search-item:hover::after {
   background: var(--n2-color);
-  color: var(--s1-color);
 }
 body .everything .search-page .search-results .search-item a {
   width: 100%;
@@ -437,13 +439,21 @@ body .everything #page .header .sub-header {
   font-weight: bold;
   opacity: 50%;
 }
+body .everything .nothing-page-found-page {
+  display: none;
+  margin-top: var(--top-margin);
+  align-items: center;
+  justify-content: center;
+  padding: 2vh;
+  font-size: var(--header-font-size);
+  font-weight: bold;
+}
 body .everything .cover-page-generator-page .generator-whole {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background: var(--s1-color);
   gap: 2vh;
 }
 body .everything .cover-page-generator-page .generator-whole .header {
@@ -459,16 +469,22 @@ body .everything .cover-page-generator-page .generator-whole .generator-body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 2vh;
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf {
   width: -moz-max-content;
   width: max-content;
   height: 50vh;
   overflow: hidden;
+  border: 0.3vh solid var(--p1-color);
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf .header {
   font-size: var(--text-font-size);
+  font-weight: bold;
+  color: var(--s1-color);
   padding: 2vh;
+  width: 100%;
+  background: var(--n2-color);
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .sample-pdf img {
   width: 100%;
@@ -502,6 +518,9 @@ body .everything .cover-page-generator-page .generator-whole .input-field .roll-
 body .everything .cover-page-generator-page .generator-whole .input-field .roll-no select, body .everything .cover-page-generator-page .generator-whole .input-field .subject select {
   width: 100%;
   min-height: 50px;
+  border-radius: 0.5vh;
+  background: var(--s1-color);
+  border: 0.3vh solid var(--p1-color);
   padding: 1vh 2vh;
   font-size: var(--text-font-size);
 }
@@ -531,6 +550,9 @@ body .everything .cover-page-generator-page .generator-whole .input-field .title
   font-size: var(--text-font-size);
   width: 100%;
   height: 100%;
+  border-radius: 0.5vh;
+  background: var(--s1-color);
+  border: 0.3vh solid var(--p1-color);
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .download {
   cursor: pointer;
@@ -540,14 +562,35 @@ body .everything .cover-page-generator-page .generator-whole .input-field .downl
   width: 100%;
   margin: 4vh 0;
   padding: 2vh;
-  background: var(--n2-color);
+  background: var(--n1-color);
   color: var(--s1-color);
   font-size: var(--header-font-size);
+  font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  border-radius: 0.5vh;
+  border: 0.3vh solid var(--p1-color);
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .download:hover {
-  background: var(--n1-color);
+  background: var(--s1-color);
+  color: var(--p1-color);
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .pdf-to-docx-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .pdf-to-docx-link .header {
+  font-size: var(--text-font-size);
+  width: 100%;
+  text-align: left;
+  text-transform: none;
+}
+body .everything .cover-page-generator-page .generator-whole .input-field .pdf-to-docx-link a {
+  color: var(--n2-color);
+  font-size: var(--text-font-size);
 }
 body .everything .class-routine-page {
   width: 100%;
@@ -564,12 +607,14 @@ body .everything .class-routine-page .routine {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  gap: 1vh;
 }
 body .everything .class-routine-page .routine-row {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 1vh;
 }
 body .everything .class-routine-page .routine-cell {
   width: 20%;
@@ -578,11 +623,13 @@ body .everything .class-routine-page .routine-cell {
   align-items: center;
   justify-content: center;
   font-size: var(--text-font-size);
-  border: 0.1vh solid var(--n1-color);
+  border: 0.3vh solid var(--p1-color);
+  background: var(--s1-color);
+  border-radius: 0.5vh;
 }
 body .everything .class-routine-page .routine-header, body .everything .class-routine-page .routine-time {
   font-weight: bold;
-  background: var(--n2-color);
+  background: var(--n1-color);
   color: var(--s1-color);
 }
 body .everything .class-routine-page .routine-base {
@@ -596,8 +643,9 @@ body .everything .syllabus-page .syllabus-body {
 body .everything .syllabus-page .syllabus-body .semester-options {
   list-style-type: none;
   display: grid;
-  -moz-column-gap: none;
-       column-gap: none;
+  -moz-column-gap: 1vh;
+       column-gap: 1vh;
+  row-gap: 1vh;
   grid-template-columns: auto auto auto auto;
 }
 body .everything .syllabus-page .syllabus-body .semester-options .semester-option {
@@ -605,8 +653,9 @@ body .everything .syllabus-page .syllabus-body .semester-options .semester-optio
   transition: 0.2s ease-in-out;
   position: relative;
   background: var(--s1-color);
-  border: 0.2vh solid var(--p1-color);
-  height: 15vh;
+  border: 0.3vh solid var(--p1-color);
+  height: 10vh;
+  border-radius: 0.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -615,18 +664,15 @@ body .everything .syllabus-page .syllabus-body .semester-options .semester-optio
   transition: 0.2s ease-in-out;
   color: var(--p1-color);
   background: var(--s1-color);
-  font-size: var(--big-font-size);
+  font-size: var(--header-font-size);
   width: 100%;
   height: 100%;
   font-weight: bold;
+  border-radius: 0.5vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-}
-body .everything .syllabus-page .syllabus-body .semester-options .semester-option a:hover {
-  background: var(--n2-color);
-  color: var(--s1-color);
 }
 body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 {
   grid-column-start: 1;
@@ -634,13 +680,46 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 {
 }
 body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a {
   font-size: var(--header-font-size);
-  background: var(--n2-color);
+  background: var(--n1-color);
   color: var(--s1-color);
 }
 
 @media (min-width: 940px) {
+  .search-btn:hover {
+    background: var(--n2-color) !important;
+  }
+  .search-btn:hover .search-txt {
+    color: var(--s1-color);
+  }
   .mobile-options {
     display: none;
+  }
+  .search-item::before, .recommendation::before {
+    transition: 0.2s ease-in-out;
+    position: absolute;
+    z-index: -1;
+    right: -5%;
+    bottom: -10%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--s1-color);
+    border-radius: 0.5vh;
+    border: 0.3vh solid var(--p1-color);
+  }
+  .search-item::after, .recommendation::after {
+    transition: 0.2s ease-in-out;
+    position: absolute;
+    top: 0%;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15%;
+    font-size: var(--text-font-size);
+    color: var(--s1-color);
+    border-bottom: 0.3vh solid var(--p1-color);
   }
 }
 @media (max-width: 940px) {
@@ -650,6 +729,19 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
     --object-font-size: 1.5vh;
     --big-font-size: 3vh;
     --top-margin: 4vh;
+  }
+  .search-part {
+    min-width: 100%;
+  }
+  .search-part .search-btn {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+  .search-part .search-txt {
+    display: none;
+  }
+  .search-part .search-image {
+    min-width: 100%;
   }
   .landing-page-background {
     max-height: 25vh;

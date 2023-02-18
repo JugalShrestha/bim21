@@ -11,11 +11,11 @@ const closeMobileMenu = document.querySelector('.close-nav-mobile')
 const mobileMenu = document.querySelector('.mobile-menu')
 
 openMobileMenu.addEventListener('click',()=>{
-    mobileMenu.style.display ="flex"
+    mobileMenu.style.transform ="translateX(0)"
 })
 
 function closeMobileMenuFunction(){
-    mobileMenu.style.display ="none"
+    mobileMenu.style.transform ="translateX(500vh)"
 }
 
 closeMobileMenu.addEventListener('click',closeMobileMenuFunction)

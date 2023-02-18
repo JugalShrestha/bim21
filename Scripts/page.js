@@ -2,12 +2,25 @@ const pages = document.querySelectorAll('#page')
 const pagesHeader = document.querySelectorAll('#page .header .main-header')
 const clickable = document.querySelectorAll('#clickable')
 
+const notFoundPage = document.querySelector('.nothing-page-found-page')
+
 const recommendationPage = document.querySelector('.recommended-link')
 const helpingHandPage = document.querySelector('.helping-hand-part')
 
 const loadingPage = document.querySelector('.loading-page')
 
 const loadingSpeed = 1000
+
+//Nothing found page
+function openNotFoundPage()
+{
+    notFoundPage.style.display="flex"
+}
+
+function closeNotFoundPage()
+{
+    notFoundPage.style.display = "none"
+}
 
 //Opens hero page
 
@@ -58,6 +71,7 @@ function openClickablePage(index)
 function closeEveryPage()
 {
     emptyChecker = 0
+    closeNotFoundPage()
     closeMobileMenuFunction()
     closeHeroPage()
     closeSearchPage()
@@ -72,6 +86,7 @@ function closeEveryPage()
 clickable.forEach(clicker=>{
     clicker.addEventListener('click',()=>{
         closeEveryPage()
+        let pageChecker = 0
         let text = clicker.innerText
         text = text.toUpperCase()
         pagesHeader.forEach(function(header,index){
@@ -79,11 +94,18 @@ clickable.forEach(clicker=>{
             headerTxt = headerTxt.toUpperCase()
             if(headerTxt.includes(text))
             {
+                console.log("includes")
                 closeEveryPage()
                 pages[index].style.display = "flex"
                 setTimeout(openClickablePage,loadingSpeed,index)
+                pageChecker++
             }
         })
+        if(pageChecker==0)
+        {
+            closeEveryPage()
+            setTimeout(openNotFoundPage,loadingSpeed)
+        }
     })
 })
 //-----------------------------------------------------
