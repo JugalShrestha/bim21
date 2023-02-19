@@ -380,6 +380,12 @@ body .everything .search-page .search-results {
   justify-content: space-between;
   gap: 2vh;
 }
+body .everything .search-page .search-results .show {
+  display: flex;
+}
+body .everything .search-page .search-results .hide {
+  display: none;
+}
 body .everything .search-page .search-results .search-item {
   transition: 0.2s ease-in-out;
   cursor: pointer;

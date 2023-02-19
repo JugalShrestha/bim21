@@ -3,16 +3,24 @@ const everything = document.querySelector('.everything')
 
 const loadingAnimation = document.querySelector('.loading-screen .loading-animation')
 
-window.addEventListener('load',setTimeout(closeLoadingScreen,2000))
+loadingSpeed = 2000
+
+window.addEventListener('load',closeLoadingScreen)
 
 function openLoadingScreen(){
     loadingScreen.style.display = "flex"
     loadingScreen.style.opacity = "100%"
 }
+
 function closeLoadingScreen(){  
+    setTimeout(realCloseLoadingScreen,2000)
+    openEverything()
+}
+
+function realCloseLoadingScreen()
+{
     loadingScreen.style.display = "none"
     loadingScreen.style.opacity = "0%"
-    openEverything()
 }
 
 function openEverything(){

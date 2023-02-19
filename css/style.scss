@@ -417,6 +417,12 @@ body{
                 align-items: center;
                 justify-content: space-between;
                 gap:2vh;
+                .show{
+                    display: flex;
+                }
+                .hide{
+                    display: none;
+                }
                 .search-item{
                     transition: .2s ease-in-out;
                     cursor: pointer;

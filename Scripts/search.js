@@ -2,13 +2,40 @@
 const searchField = document.querySelector('.text-input input')
 const search = document.querySelector('.search-btn')
 const searchPage = document.querySelector('.search-page')
+const searchResults = document.querySelector('.search-results')
 const searchMsg = document.querySelector('.search-page .header .sub-header')
 
+//for show items
+
+//This is for tagged items
 const tags = document.querySelectorAll('#clickable-tag')
 let tagText = null
 
+//TO check whether the search is empty or not
 var emptyChecker = 0
 
+//All Searchable items
+const projectItems = ['coverpage generator','color picker','calculator']
+const noteItems = ['digital logic','c course','java course','python course']
+const items = ['coverpage generator'
+                ,'syllabus'
+                ,'class routine'
+                ,'color picker'
+                ,'digital logic'
+                ,'c course'
+                ,'python course'
+                ,'java course']
+//For sorting searchable items
+items.sort()
+items.forEach(function(item,index){
+    const showItem = document.createElement('div')
+    showItem.classList.add('search-item')
+    showItem.setAttribute('id','clickable')
+    showItem.innerText = item
+    searchResults.appendChild(showItem) 
+})
+
+//All searchItems
 const searchItems = document.querySelectorAll('.search-item')
 
 searchField.addEventListener('keydown',function(btn){
@@ -35,58 +62,65 @@ function realOpenSearchPage()
     closeLoadingPage()
     searchPage.style.opacity="100%"
     let searchedItem = searchField.value
+    searchedItem = searchedItem.toLowerCase()
     let message = "This is the search result on "
-    if(tagText == null)
+    if(tagText != null)
     {
-        searchedItem = searchedItem.toUpperCase()
         searchItems.forEach(item=>{
-            let text = item.innerText
-            text = text.toUpperCase()
-            if(text.includes(searchedItem) && searchedItem.length > 0)
-            {
-                item.style.display = "flex"
-            }
-            else if(searchedItem.length <= 0)
-            {
-                message = "Hey.. Try searching 'coverpage'"
-                item.style.display = "none"
-            }
-            else{
-                item.style.display = "none"
-                emptyChecker ++
-            }
+            item.style.display = "none"
         })
-        if(emptyChecker == searchItems.length)
-        {    
-            emptyChecker = 0
-            message = "Looks like nothing was found on "
+        if(tagText == "projects")
+        {
+            projectItems.forEach(function(pItem){
+                items.forEach(function(item,index){
+                    if(pItem==item)
+                    {
+                        searchItems[index].style.display= "flex"
+                        searchedItem = "Projects"
+                    }
+                })
+            })
         }
-        searchMsg.innerHTML = message + searchedItem
-    }
-    else if(tagText != null)
-    {   
-        searchItems.forEach(item=>{
-            if(item.hasAttribute('data-tag'))
-            {
-                let tag = item.getAttribute('data-tag')
-                tag = tag.toLowerCase()
-                tagText = tagText.toLowerCase()
-                if(tagText == tag)
-                {    
-                    item.style.display = "flex"
-                }
-                else{
-                    item.style.display = "none"
-                }
-            }
-            else{
-                item.style.display = "none"
-            }
-        })
-        tagText = tagText.toUpperCase()
-        searchMsg.innerHTML = message + tagText
+        else if(tagText == "notes")
+        {
+            noteItems.forEach(nItem=>{
+                items.forEach(function(item,index){
+                    if(nItem==item)
+                    {
+                        searchItems[index].style.display= "flex"
+                        searchedItem = "Notes"
+                    }
+                })
+            })
+        }
         tagText = null
     }
+    else
+    {
+
+        items.forEach(function(item,index){
+            searchItems[index].style.display = "none"
+            if(item.includes(searchedItem) && searchedItem.length>0)
+            {
+                searchItems[index].style.display= "flex"
+            }
+            else if(searchedItem.length == 0)
+            {
+                message = "Hey.. try searching 'coverpage'"
+                searchedItem = ""        
+                searchMsg.innerText = message
+                return
+            }
+            else{
+                emptyChecker++
+                if(emptyChecker == searchItems.length)
+                {
+                    message = "Looks like nothing was found on "
+                }
+            }
+        })
+    }
+    searchMsg.innerText = message + "' "+searchedItem+" '"
 }
 
 function closeSearchPage(){
@@ -97,8 +131,7 @@ function closeSearchPage(){
 //-----------------For Clickable Tags------------------------
 tags.forEach(tag=>{
     tag.addEventListener('click',()=>{
-        tagText = tag.innerText.toUpperCase()
+        tagText = tag.innerText.toLowerCase()
         openSearchPage()
-        closeMobileMenuFunction()
     })
 })

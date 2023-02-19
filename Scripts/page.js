@@ -94,7 +94,6 @@ clickable.forEach(clicker=>{
             headerTxt = headerTxt.toUpperCase()
             if(headerTxt.includes(text))
             {
-                console.log("includes")
                 closeEveryPage()
                 pages[index].style.display = "flex"
                 setTimeout(openClickablePage,loadingSpeed,index)
