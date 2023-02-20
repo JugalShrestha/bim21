@@ -139,6 +139,32 @@ function checkRollNo(rollNo){
 }
 function checkSubject(subject){
     /*-------------------1st Semester---------------------------- */
+    subjectArray[5] = {
+        subjectName: "C Programming",
+        teacherName: "Er. Anuj Shrestha Sir",
+        teacherDes: "Faculty Member of  Computer Science"
+    }
+    subjectArray[6] = {
+        subjectName: "Foundation of Information Technology",
+        teacherName: "Mr. Robin Sir",
+        teacherDes: "Faculty Member of  Computer Science"
+    }
+    subjectArray[7] = {
+        subjectName: "Foundation of Management",
+        teacherName: "Mr. Ramesh Suwal Sir",
+        teacherDes: "Faculty Member of  Computer Science"
+    }
+    subjectArray[8] = {
+        subjectName: "English",
+        teacherName: "Mr. Sushil Paudel Sir",
+        teacherDes: "Faculty Member of  English"
+    }
+    subjectArray[9] = {
+        subjectName: "Basic Maths",
+        teacherName: "Mr. Sir",
+        teacherDes: "Faculty Member of  Computer Science"
+    }
+    
     /*-------------------2nd Semester---------------------------- */
     subjectArray[0] = {
         subjectName: "Discrete Structure",
@@ -165,7 +191,6 @@ function checkSubject(subject){
         teacherName: "Mr. Dibya Darpan Adhikari",
         teacherDes: "Faculty Member of English "
     }
-    
     /*-------------------3rd Semester---------------------------- */
     
     /*-------------------4th Semester---------------------------- */
@@ -177,10 +202,7 @@ function checkSubject(subject){
     /*-------------------7th Semester---------------------------- */
     
     /*-------------------8th Semester---------------------------- */
-    subjectArray[5] = {
-        subjectName: "C Programming",
-        teacherName: "Er. Anuj Shrestha Sir"
-    }
+    
     subjectNameToShow = subjectArray[subject-1].subjectName
     subjectTeacherNameToShow = subjectArray[subject-1].teacherName
     teacherDescriptionToShow = subjectArray[subject-1].teacherDes

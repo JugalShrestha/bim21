@@ -14,7 +14,7 @@ function openLoadingScreen(){
 
 function closeLoadingScreen(){  
     setTimeout(realCloseLoadingScreen,2000)
-    openEverything()
+    setTimeout(openEverything,2100)
 }
 
 function realCloseLoadingScreen()
