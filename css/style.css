@@ -98,7 +98,6 @@ body .everything {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 10vh;
 }
 body .everything .landing-page-background {
   position: relative;
@@ -688,6 +687,91 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   font-size: var(--header-font-size);
   background: var(--n1-color);
   color: var(--s1-color);
+}
+body .everything .ascii-finder-page .ascii-finder-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .everything .ascii-finder-page .ascii-finder-body .ascii-finder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2vh;
+}
+body .everything .ascii-finder-page .ascii-finder-body .input-part {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2vh;
+}
+body .everything .ascii-finder-page .ascii-finder-body .input-part .input-header {
+  font-size: var(--header-font-size);
+  font-weight: bold;
+}
+body .everything .ascii-finder-page .ascii-finder-body .input-part .key-input {
+  width: 20%;
+}
+body .everything .ascii-finder-page .ascii-finder-body .input-part .key-input input {
+  border: 0.3vh solid var(--p1-color);
+  border-radius: 0.5vh;
+  background: var(--s1-color);
+  outline: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 3vh;
+  font-size: var(--text-font-size);
+}
+body .everything .ascii-finder-page .ascii-finder-body .output-part {
+  width: 20vh;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.3vh solid var(--p1-color);
+  border-radius: 0.5vh;
+  font-size: var(--big-font-size);
+}
+body .everything .footer {
+  width: 100%;
+  position: relative;
+  padding: var(--padding-whole);
+  margin-top: var(--top-margin);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .everything .footer .footer-whole {
+  width: var(--p-margin);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body .everything .footer .footer-whole .copy-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 32%;
+  height: 100%;
+}
+body .everything .footer .footer-whole .copy-right {
+  position: fixed;
+  bottom: 1%;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  left: 1%;
+  font-size: var(--text-font-size);
 }
 
 @media (min-width: 940px) {

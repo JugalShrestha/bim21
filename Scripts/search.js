@@ -15,7 +15,7 @@ let tagText = null
 var emptyChecker = 0
 
 //All Searchable items
-const projectItems = ['coverpage generator','color picker','calculator']
+const projectItems = ['ascii finder','coverpage generator','color picker','calculator']
 const noteItems = ['digital logic','c course','java course','python course']
 const items = ['coverpage generator'
                 ,'syllabus'
@@ -24,7 +24,8 @@ const items = ['coverpage generator'
                 ,'digital logic'
                 ,'c course'
                 ,'python course'
-                ,'java course']
+                ,'java course'
+                ,'ascii finder']
 //For sorting searchable items
 items.sort()
 items.forEach(function(item,index){

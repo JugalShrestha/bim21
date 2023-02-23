@@ -108,7 +108,6 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        margin-bottom: 10vh;
         //Start of Landing page background
         .landing-page-background{
             position: relative;
@@ -748,6 +747,99 @@ body{
             }
         }
         //--------------------------------End of Syllabus page
+
+        //---------------------------------Start of Ascii Finder page
+
+        .ascii-finder-page{
+            .ascii-finder-body{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .ascii-finder{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    gap: 2vh;
+                }
+                .input-part{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 2vh;
+                    .input-header{
+                        font-size: var(--header-font-size);
+                        font-weight: bold;
+                    }
+                    .key-input{
+                        width: 20%;
+                        input{
+                            border: .3vh solid var(--p1-color);
+                            border-radius: .5vh;
+                            background: var(--s1-color);
+                            outline: none;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            height: 3vh;
+                            font-size: var(--text-font-size);
+                        }
+                    }
+                }
+                .output-part{
+                    width: 20vh;
+                    height: 20vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: .3vh solid var(--p1-color);
+                    border-radius: .5vh;
+                    font-size: var(--big-font-size);
+                }
+            }
+        }
+
+        //----------------------------------End of Ascii Finder page
+
+        //Start of Footer
+        .footer{
+            width: 100%;
+            position: relative;
+            padding: var(--padding-whole);
+            margin-top: var(--top-margin);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .footer-whole{
+                width: var(--p-margin);
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                .copy-right{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    width: 32%;
+                    height: 100%;
+                }
+                .copy-right{
+                    position: fixed;
+                    bottom: 1%;
+                    width: max-content;
+                    height: max-content;
+                    left: 1%;
+                    font-size: var(--text-font-size);
+                }
+            }
+        }
+        //End of Footer
     }
 }
 @media (min-width: 940px) {
