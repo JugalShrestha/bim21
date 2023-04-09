@@ -4,12 +4,11 @@ const clickable = document.querySelectorAll('#clickable')
 
 const notFoundPage = document.querySelector('.nothing-page-found-page')
 
-const recommendationPage = document.querySelector('.recommended-link')
-const helpingHandPage = document.querySelector('.helping-hand-part')
+const everythingPage = document.querySelector('.every-projects-link')
 
 const loadingPage = document.querySelector('.loading-page')
 
-const loadingSpeed = 1000
+const loadingSpeed = 0
 
 //Nothing found page
 function openNotFoundPage()
@@ -25,20 +24,16 @@ function closeNotFoundPage()
 //Opens hero page
 
 function openHeroPage(){
-    recommendationPage.style.display = "flex"
-    recommendationPage.style.opacity = "100%"
-    helpingHandPage.style.display = "flex"
-    helpingHandPage.style.opacity = "100%"
+    everythingPage.style.display = "flex"
+    everythingPage.style.opacity = "100%"
 }
 
 //CLoses hero page
 
 function closeHeroPage()
 {
-    recommendationPage.style.display = "none"
-    recommendationPage.style.opacity = "0%"
-    helpingHandPage.style.display = "none"
-    helpingHandPage.style.opacity = "0%"
+    everythingPage.style.display = "none"
+    everythingPage.style.opacity = "0%"
     searchPage.style.display = "none"
 }
 

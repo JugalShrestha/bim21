@@ -5,6 +5,9 @@ const searchPage = document.querySelector('.search-page')
 const searchResults = document.querySelector('.search-results')
 const searchMsg = document.querySelector('.search-page .header .sub-header')
 
+//For landing Everthing page
+const everyProjectResult = document.querySelector('.every-projects-body')
+
 //for show items
 
 //This is for tagged items
@@ -15,29 +18,41 @@ let tagText = null
 var emptyChecker = 0
 
 //All Searchable items
-const projectItems = ['ascii finder','coverpage generator','color picker','calculator']
 const noteItems = ['digital logic','c course','java course','python course']
-const items = ['coverpage generator'
-                ,'syllabus'
-                ,'class routine'
-                ,'color picker'
-                ,'digital logic'
-                ,'c course'
-                ,'python course'
-                ,'java course'
-                ,'ascii finder']
+const items = [
+    {name:'coverpage generator',tag: 'project'},
+    {name:'ascii finder',tag: 'project'},
+    {name:'color picker',tag: 'project'},
+    {name:'note maker',tag: 'project'},
+    {name: 'syllabus',tag:'syllabus'},
+    {name: 'class routine',tag:'routine'},
+    {name:'digital logic course',tag: 'note'},
+    {name:'c course',tag: 'note'},
+    {name:'java course',tag: 'note'},
+]
 //For sorting searchable items
-items.sort()
-items.forEach(function(item,index){
+items.sort((a, b) => a.name.localeCompare(b.name));
+
+//For resulting all results
+items.forEach(item=>{
+    const showItem = document.createElement('div')
+    showItem.classList.add('show-item')
+    showItem.setAttribute('id','clickable')
+    showItem.innerText = item.name
+    everyProjectResult.appendChild(showItem) 
+})
+//For search
+items.forEach(item=>{
     const showItem = document.createElement('div')
     showItem.classList.add('search-item')
     showItem.setAttribute('id','clickable')
-    showItem.innerText = item
+    showItem.innerText = item.name
     searchResults.appendChild(showItem) 
 })
-
 //All searchItems
 const searchItems = document.querySelectorAll('.search-item')
+
+console.log(searchItems.length);
 
 searchField.addEventListener('keydown',function(btn){
     let key = btn.keyCode   
@@ -63,6 +78,7 @@ function realOpenSearchPage()
     closeLoadingPage()
     searchPage.style.opacity="100%"
     let searchedItem = searchField.value
+    searchField.value = ''
     searchedItem = searchedItem.toLowerCase()
     let message = "This is the search result on "
     if(tagText != null)
@@ -72,26 +88,22 @@ function realOpenSearchPage()
         })
         if(tagText == "projects")
         {
-            projectItems.forEach(function(pItem){
-                items.forEach(function(item,index){
-                    if(pItem==item)
-                    {
-                        searchItems[index].style.display= "flex"
-                        searchedItem = "Projects"
-                    }
-                })
+            items.forEach(function(item,index){
+                if(tagText==item.tag+'s')
+                {
+                    searchItems[index].style.display= "flex"
+                    searchedItem = "Projects"
+                }
             })
         }
         else if(tagText == "notes")
         {
-            noteItems.forEach(nItem=>{
-                items.forEach(function(item,index){
-                    if(nItem==item)
-                    {
-                        searchItems[index].style.display= "flex"
-                        searchedItem = "Notes"
-                    }
-                })
+            items.forEach(function(item,index){
+                if(tagText==item.tag+'s')
+                {
+                    searchItems[index].style.display= "flex"
+                    searchedItem = "Notes"
+                }
             })
         }
         tagText = null
@@ -101,7 +113,7 @@ function realOpenSearchPage()
 
         items.forEach(function(item,index){
             searchItems[index].style.display = "none"
-            if(item.includes(searchedItem) && searchedItem.length>0)
+            if(item.name.includes(searchedItem) && searchedItem.length>0)
             {
                 searchItems[index].style.display= "flex"
             }
