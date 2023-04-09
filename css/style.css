@@ -733,7 +733,7 @@ body .everything .ascii-finder-page .ascii-finder-body .output-part {
     content: "";
     width: 100%;
     height: 100%;
-    background: var(--s1-color);
+    background: var(--s2-color);
     border-radius: 0.5vh;
     border: 0.3vh solid var(--p1-color);
   }
