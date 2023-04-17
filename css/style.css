@@ -364,7 +364,7 @@ body .everything .search-page {
   width: var(--p-margin);
   margin-top: var(--top-margin);
   padding: var(--padding-whole);
-  gap: 5vh;
+  gap: 3vh;
   display: none;
   opacity: 0;
   flex-direction: column;
@@ -403,7 +403,7 @@ body .everything #page {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 2vh;
+  gap: 3vh !important;
 }
 body .everything #page .header {
   width: 100%;
@@ -758,7 +758,6 @@ body .everything .ascii-finder-page .ascii-finder-body .output-part {
     --header-font-size:2vh;
     --object-font-size: 1.5vh;
     --big-font-size: 3vh;
-    --top-margin: 4vh;
   }
   .everything {
     gap: 2vh !important;

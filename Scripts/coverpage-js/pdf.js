@@ -10,11 +10,6 @@ function savePdf()
   var textSize = 14
 
   var doc = new jsPDF()
-  // doc.text("Name: "+nameToShow,105,20,null,null,"center")
-  // doc.text("ID: "+rollNoToShow,105,30,null,null,"center")
-  // doc.text("Subject: "+subjectNameToShow,105,40,null,null,"center")
-  // doc.text("Teacher Name: "+subjectTeacherNameToShow,105,50,null,null,"center")
-  // doc.text("title"+titleSelector.value,105,60,null,null,"center")
 
   //--------------COLLEGE NAME PART-----------------
   doc.setFontSize(textSize)
@@ -60,7 +55,7 @@ function savePdf()
   doc.text(rollNoToShow,105,235,null,null,"center")
   doc.text("BIM, 2nd Semester",105,240,null,null,"center")
 
-  doc.save('coverpage.pdf')
+  doc.save('coverpage-'+titleSelector.value.toLowerCase().trim()+'.pdf')
 }
 
 
