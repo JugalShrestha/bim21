@@ -52,8 +52,6 @@ items.forEach(item=>{
 //All searchItems
 const searchItems = document.querySelectorAll('.search-item')
 
-console.log(searchItems.length);
-
 searchField.addEventListener('keydown',function(btn){
     let key = btn.keyCode   
     if(key=='13')
