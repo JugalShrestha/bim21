@@ -34,7 +34,7 @@ function savePdf()
   doc.text(subjectNameToShow.toUpperCase(),105,145,null,null,"center")
   
   //--------------Line part=----------------
-  doc.addImage("images/middle-line.png","PNG",98,155,15,40,"alias2","center")
+  doc.addImage("images/middle-line.png","png",98,155,15,40,"alias2","center")
 
   //----------------Submitted To Part---------------
   doc.setFont("times","bold")
