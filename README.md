@@ -17,4 +17,4 @@ needed projects and notes a student will need for **BIM faculty.**
     - Click on the results from the search to enter thier respective page.
 
 ### Have fun with the page!
-#### Also you can search '**bim021**' in google to find me!
+#### Also you can search '**bim21**' in google to find me!
