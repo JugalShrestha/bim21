@@ -25,7 +25,7 @@ function savePdf()
   doc.text("(Affiliated by Tribhuvan University)",105,47,null,null,"center")
   doc.setFontSize(textSize)
   //-------------COLLEGE LOGO PART------------------
-  doc.addImage("../../images/college-logo.jpg","JPEG",80,60,50,60,"alias1","center")
+  doc.addImage("images/college-logo.jpg","JPEG",80,60,50,60,"alias1","center")
 
   //-------------Subject Title Part----------------
   doc.setFont("times","bold")
@@ -34,7 +34,7 @@ function savePdf()
   doc.text(subjectNameToShow.toUpperCase(),105,145,null,null,"center")
   
   //--------------Line part=----------------
-  doc.addImage("../../images/middle-line.png","PNG",98,155,15,40,"alias2","center")
+  doc.addImage("images/middle-line.png","PNG",98,155,15,40,"alias2","center")
 
   //----------------Submitted To Part---------------
   doc.setFont("times","bold")
