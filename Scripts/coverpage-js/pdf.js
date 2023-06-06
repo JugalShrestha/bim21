@@ -24,6 +24,7 @@ function savePdf()
   doc.setFontSize(16)
   doc.text("Maitighar, Kathmandu",105,40,null,null,"center")
   doc.setFontSize(12)
+  doc.setFont("times","normal")
   doc.text("(Affiliated by Tribhuvan University)",105,47,null,null,"center")
   doc.setFontSize(textSize)
   //-------------COLLEGE LOGO PART------------------
