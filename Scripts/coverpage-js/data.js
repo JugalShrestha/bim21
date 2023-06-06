@@ -203,34 +203,34 @@ var subjects = [
     //3rd sem
     {
         name: "Microprocessor and Computer Architecture [IT 236]",
-        teacher: "Er. Anuj Shrestha",
+        teacher: "Er. Bishnu K.C.",
         title: "lecturer",
         department: "Dept. of Computer Science",
         shortForm: "Microprocessor and C.A [IT 236]"
     },
     {
         name: "Web Technology I [IT 237]",
-        teacher: "Er. Anuj Shrestha",
+        teacher: "Mr. Ujjwal Shrestha",
         title: "lecturer",
         department: "Dept. of Computer Science"
     },
     {
         name: "Data Structure and Algorithm [IT 238]",
-        teacher: "Er. Anuj Shrestha",
+        teacher: "Er. Sudan Maharjan",
         title: "lecturer",
         department: "Dept. of Computer Science"
     },
     {
         name: "Financial Accounting [ACC 201]",
-        teacher: "Er. Anuj Shrestha",
+        teacher: "Mr. Rameswhor Suwal",
         title: "lecturer",
         department: "Dept. of Computer Science"
     },
     {
-        name: "Business Statistics [SIT 201]",
-        teacher: "Er. Anuj Shrestha",
+        name: "Business Statistics [STT 201]",
+        teacher: "Mr. Pushpa Lal Shrestha",
         title: "lecturer",
-        department: "Dept. of Computer Science"
+        department: "Dept. of Management"
     },
 ]
 

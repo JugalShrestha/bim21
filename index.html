@@ -85,7 +85,9 @@
                             Search
                         </div>
                         <div class="search-image">
-                            <img src="images/search.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg>                              
                         </div>
                     </div>
                 </section>
@@ -165,10 +167,15 @@
                             <select class="subject-selector">
                             </select>
                         </div>
+                        <!-- Report no taker -->
+                        <div class="report-no-selector">
+                            <div class="header">Report No:</div>
+                            <input placeholder="For eg: 12" type="text" name="report-no">
+                        </div>
                         <!--Title Taker-->
-                        <div class="title">
+                        <div class="title-selector">
                             <div class="header">Title:</div>
-                            <input placeholder="For eg: Report on..." type="text" required="required">
+                            <input placeholder="For eg: Report on..." type="text">
                         </div>
                         <button type="submit" class="download">
                             Download
@@ -190,38 +197,52 @@
                             <img src="images/college-logo.jpg" alt="">
                         </div>
                         <div class="titles">
+                            <div class="department">(Department of Computer Science)</div>
+                            <div class="subject-title">subject</div>    
+                            <div class="lines">
+                                <img src="images/middle-line.png" alt="middle-line">
+                            </div>
+                            <div class="report-no">Lab Report</div>
                             <div class="title">title</div>
-                            <div class="subject-title">subject</div>
                         </div>
-                        <div class="lines">
-                            <img src="images/middle-line.png" alt="">
-                        </div>
-                        <div class="submitted-by">
-                            <div class="header">
-                                submitted by:
+                        <div class="submition-field">
+                            <div class="submitted-by">
+                                <div class="header">
+                                    submitted by:
+                                </div>
+                                <div class="body">
+                                    <div class="name">
+                                        ..
+                                    </div>
+                                    <div class="department">
+                                        BIM 2nd
+                                    </div>
+                                    <div class="roll-number">
+                                        ..
+                                    </div>
+                                </div>
                             </div>
-                            <div class="name">
-                                ..
+                            <div class="submitted-to">
+                                <div class="header">
+                                    submitted to:
+                                </div>
+                                <div class="body">
+                                    <div class="name">
+                                        ..
+                                    </div>
+                                    <div class="title">
+                                        ..
+                                    </div>
+                                    <div class="department">
+                                        ..
+                                    </div>
+                                </div>
                             </div>
-                            <div class="department">
-                                BIM 2nd
-                            </div>
-                            <div class="roll-number">
-                                ..
-                            </div>
-                        </div>
-                        <div class="submitted-to">
-                            <div class="header">
-                                submitted to:
-                            </div>
-                            <div class="name">
-                                ..
-                            </div>
-                            <div class="title">
-                                ..
-                            </div>
-                            <div class="department">
-                                ..
+
+                            <div class="signature">
+                                <div class="header">
+                                    Signature
+                                </div>
                             </div>
                         </div>
                     </div>

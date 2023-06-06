@@ -100,6 +100,13 @@
   text-decoration: none;
 }
 
+img, svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 body {
   width: 100%;
   min-height: 100dvh;
@@ -507,56 +514,95 @@ body .everything .cover-page-generator-page .generator-whole .generator-body .ou
   font-weight: bold;
   text-transform: uppercase;
 }
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .lines {
-  position: absolute;
-  top: 60%;
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles .department {
+  font-size: 1vh;
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles .lines {
   width: 5vh;
   height: 5vh;
   overflow: hidden;
 }
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .lines img {
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles .lines img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-by {
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .submition-field {
+  width: 100%;
+  bottom: 0;
+  height: 20%;
   position: absolute;
-  left: 10%;
-  bottom: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.1vh solid var(--shadow);
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-by {
+  width: 40%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
   font-size: 1vh;
   text-transform: capitalize;
   font-weight: bold;
-  gap: 0.5vh;
+  border-right: 0.1vh solid var(--shadow);
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-by .header {
   font-size: 1vh !important;
-  border-bottom: 0.3vh solid var(--p1-color);
+  border-bottom: 0.1vh solid var(--p1-color);
   text-transform: uppercase;
 }
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to {
-  position: absolute;
-  right: 10%;
-  bottom: 10%;
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-by .body {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   text-transform: capitalize;
+  font-size: 1vh !important;
+  font-weight: bold;
+  border-right: 0.1vh solid var(--shadow);
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to .header {
+  font-size: 1vh !important;
+  border-bottom: 0.1vh solid var(--p1-color);
+  text-transform: uppercase;
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to .body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .signature {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   font-size: 1vh !important;
   font-weight: bold;
   gap: 0.5vh;
 }
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to .header {
+body .everything .cover-page-generator-page .generator-whole .generator-body .output .signature .header {
+  padding: 1vh;
   font-size: 1vh !important;
-  text-align: end;
-  width: -moz-max-content !important;
-  width: max-content !important;
-  border-bottom: 0.3vh solid var(--p1-color);
+  text-align: center;
   text-transform: uppercase;
 }
 body .everything .cover-page-generator-page .generator-whole .input-field {
@@ -578,17 +624,13 @@ body .everything .cover-page-generator-page .generator-whole .input-field .roll-
   font-size: var(--header-font-size);
   text-align: left;
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .roll-no .select-wraper, body .everything .cover-page-generator-page .generator-whole .input-field .subject .select-wraper {
-  height: 50px;
-  overflow: visible;
-}
 body .everything .cover-page-generator-page .generator-whole .input-field .roll-no select, body .everything .cover-page-generator-page .generator-whole .input-field .subject select {
   width: 100%;
   min-height: 50px;
   border-radius: 0.5vh;
   background: var(--s1-color);
   border: 0.3vh solid var(--p1-color);
-  padding: 1vh 2vh;
+  padding: 1vh;
   font-size: var(--text-font-size);
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .roll-no select optgroup, body .everything .cover-page-generator-page .generator-whole .input-field .subject select optgroup {
@@ -600,19 +642,18 @@ body .everything .cover-page-generator-page .generator-whole .input-field .roll-
   width: 100%;
   font-size: var(--text-font-size);
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .title {
+body .everything .cover-page-generator-page .generator-whole .input-field .title-selector, body .everything .cover-page-generator-page .generator-whole .input-field .report-no-selector {
   width: 100%;
-  height: 5vh;
   display: flex;
   flex-direction: column;
   gap: 1vh;
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .title .header {
+body .everything .cover-page-generator-page .generator-whole .input-field .title-selector .header, body .everything .cover-page-generator-page .generator-whole .input-field .report-no-selector .header {
   width: 100%;
   text-align: left;
   font-size: var(--header-font-size);
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .title input {
+body .everything .cover-page-generator-page .generator-whole .input-field .title-selector input, body .everything .cover-page-generator-page .generator-whole .input-field .report-no-selector input {
   padding: 1vh 2vh;
   font-size: var(--text-font-size);
   width: 100%;

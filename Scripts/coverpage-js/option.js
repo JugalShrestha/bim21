@@ -1,7 +1,8 @@
 const rollNoSelector = document.querySelector('.roll-no-selector')
 const subjectSelector = document.querySelector('.subject-selector')
 const downloader = document.querySelector('.download')
-const titleSelector = document.querySelector('.title input')
+const titleSelector = document.querySelector('.title-selector input')
+const reportNoSelector = document.querySelector('.report-no-selector input')
 
 const submittedbyName = document.querySelector('.submitted-by .name')
 const submittedbyDept = document.querySelector('.submitted-by .department')
@@ -13,6 +14,7 @@ const submittedToTitle = document.querySelector('.submitted-to .title')
 
 const outputTitle = document.querySelector('.titles .title')
 const subjectTitle = document.querySelector('.titles .subject-title')
+const reportNoTitle = document.querySelector('.titles .report-no')
 
 var rollNo, subject
 
@@ -26,6 +28,10 @@ subjectSelector.addEventListener('change',()=>{
 
 titleSelector.addEventListener('input',()=>{
     outputTitle.innerText = titleSelector.value
+})
+
+reportNoSelector.addEventListener('input',()=>{
+    reportNoTitle.innerText = "Lab report "+reportNoSelector.value
 })
 
 function getRollNo()
