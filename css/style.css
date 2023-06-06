@@ -661,6 +661,15 @@ body .everything .cover-page-generator-page .generator-whole .input-field .pdf-t
 }
 body .everything .class-routine-page {
   width: 100%;
+  gap: 2vh;
+}
+body .everything .class-routine-page .routine-whole {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
 }
 body .everything .class-routine-page .class-routine-body {
   width: 100%;

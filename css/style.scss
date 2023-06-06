@@ -712,6 +712,15 @@ body{
         //-----------------------------Start of Class Routine Page
         .class-routine-page{
             width: 100%;
+            gap: 2vh;
+            .routine-whole{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2vh;
+            }
             .class-routine-body{
                 width: 100%;
                 display: flex;
