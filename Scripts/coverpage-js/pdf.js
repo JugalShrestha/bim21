@@ -58,8 +58,8 @@ function savePdf()
   doc.text("SUBMITTED TO:",110,247,null,null,"center")
   doc.line(0,250,1000,250)
   doc.text(subjectTeacherNameToShow,110,268,null,null,"center")
-  doc.text(teacherDescriptionToShow,110,273,null,null,"center")
-  doc.text(teacherDeptToShow,110,278,null,null,"center")
+  doc.text(teacherDescriptionToShow,110,275,null,null,"center")
+  doc.text(teacherDeptToShow,110,282,null,null,"center")
   doc.line(150,240,150,300)
   
   //----------------Submitted By Part---------------
@@ -69,8 +69,8 @@ function savePdf()
   doc.text("SUBMITTED BY:",35,247,null,null,"center")
 
   doc.text(nameToShow,35,268,null,null,"center")
-  doc.text("BIM, "+semCount+"rd Semester",35,273,null,null,"center")
-  doc.text(rollNoToShow,35,278,null,null,"center")
+  doc.text("BIM, "+semCount+"rd Semester",35,275,null,null,"center")
+  doc.text(rollNoToShow,35,282,null,null,"center")
 
   
   //--------------------Sign Part-----------------

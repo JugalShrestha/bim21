@@ -131,6 +131,138 @@ var students = [
         name: "Priyanka Shrestha",
         rN: "021BIM033"
     }
+    ,{
+        name:"Priyansha Acharya",
+        rN:"021BIM034",
+    }
+    ,{
+        name:"Ragya Kansakar",
+        rN: "021BIM035",
+    }
+    ,{
+        name: "Raj Kiran Chaudhary",
+        rN: "021BIM036",
+    }
+    ,{
+        name: "Rakesh Kumar Mahato",
+        rN: "021BIM037"
+    }
+    ,{
+        name: "Rakhya Subedi",
+        rN: "021BIM038"
+    }
+    ,{
+        name: "Raman Bharati",
+        rN: "021BIM039"
+    }
+    ,{
+        name: "Ranu Shahi",
+        rN: "021BIM040"
+    }
+    ,{
+        name: "Ribek Ratna Buddhacharya",
+        rN: "021BIM041"
+    }
+    ,{
+        name: "Roja Shrestha",
+        rN: "021BIM042"
+    }
+    ,{
+        name: "Sagar Karki",
+        rN: "021BIM043"
+    }
+    ,{
+        name: "Sajjit Shrestha",
+        rN: "021BIM044"
+    }
+    ,{
+        name: "Saloni Malla",
+        rN: "021BIM045"
+    }
+    ,{
+        name: "Saman Awale",
+        rN: "021BIM046"
+    }
+    ,{
+        name: "Sambid Dhahal",
+        rN: "021BIM047"
+    }
+    ,{
+        name: "Samip Shrestha",
+        rN: "021BIM048"
+    }
+    ,{
+        name: "Samyak sigdel",
+        rN: "021BIM049"
+    }
+    ,{
+        name: "Samyam shrestha",
+        rN: "021BIM050"
+    }
+    ,{
+        name: "Sandesh Lohani",
+        rN: "021BIM051"
+    }
+    ,{
+        name: "Sarin Kayastha",
+        rN: "021BIM052"
+    }
+    ,{
+        name: "Sausthab Bir Singh Tuladhar",
+        rN: "021BIM053"
+    }
+    ,{
+        name: "Sayujya Satyal",
+        rN: "021BIM054"
+    }
+    ,{
+        name: "Shristi shahi",
+        rN: "021BIM055"
+    }
+    ,{
+        name: "Sneha Acharya",
+        rN: "021BIM056"
+    }
+    ,{
+        name: "Sonakshi Pokharel",
+        rN: "021BIM057"
+    }
+    ,{
+        name: "Srijan Ghimire",
+        rN: "021BIM058"
+    }
+    ,{
+        name: "Sumit Joshi",
+        rN: "021BIM059"
+    }
+    ,{
+        name: "Sushma Thapa",
+        rN: "021BIM060"
+    }
+    ,{
+        name: "Swornima Shakya ",
+        rN: "021BIM061"
+    }
+    ,{
+        name: "",
+        rN: ""
+    }
+    ,{
+        name: "Tisha Shrestha",
+        rN: "021BIM063"
+    }
+    ,{
+        name: "Unisha Raut",
+        rN: "021BIM064"
+    }
+    ,{
+        name: "Yojana Bhusal",
+        rN: "021BIM065"
+    }
+    ,{
+        name: "Yojana parajuli",
+        rN: "021BIM066"
+    }
 ]
 
 var subjects = [
