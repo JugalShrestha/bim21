@@ -154,12 +154,12 @@ body{
         justify-content: flex-start;
         gap: 3vh;
         padding-bottom: 3vh;
+        padding-top: 1vh;
         //Start of Landing page background
         .landing-page-background{
             position: relative;
             width: 100%;
             gap: 5vh;
-            padding: 1vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -385,6 +385,10 @@ body{
                     font-size: var(--header-font-size);
                     font-weight: bold;  
                     text-transform: uppercase;
+                    svg{
+                        width: var(--header-font-size);
+                        height: var(--header-font-size);
+                    }
                 }
                 .sub-header{
                     opacity: 50%;
@@ -485,7 +489,6 @@ body{
             .generator-whole{
             width: 100%;
             display: flex;
-            flex-direction: column; 
             align-items: flex-start;
             justify-content: flex-start;
             gap:2vh;
@@ -514,6 +517,7 @@ body{
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
+                    overflow: hidden;
                     .top-part{
                         position: absolute;
                         top: 10%;
@@ -769,35 +773,22 @@ body{
                 justify-content: center;
             }
             .routine {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
                 width: 100%;
-                gap: 1vh;
-            }
-            .routine-row {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                gap: 1vh;
             }
             .routine-cell {
-                width: 20%;
-                height: 6vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: var(--text-font-size);
-                border: .3vh solid var(--p1-color);
+                text-align: center;
+                padding: 1vh;
                 background: var(--s1-color);
-                border-radius: .5vh ;
+                font-weight: bold;
+                font-size: var(--text-font-size);
             }
             .routine-header, .routine-time {
                 font-weight: bold;
                 background: var(--n1-color);
                 color: var(--s1-color);
+            }
+            .room-no{
+                border-bottom: .3vh solid var(--p1-color);
             }
             .routine-base{
                 font-weight: bold;
@@ -1000,11 +991,12 @@ body{
             min-width: 100%;
         }
     }
-    .class-routine-body{
-        .routine{
-            .routine__cell{
-                max-width: 17%;
-            }
+    .routine{
+        .routine-row{
+            gap: .1vh !important;
+        }
+        .routine-cell{
+            padding: .5vh !important;
         }
     }
 }

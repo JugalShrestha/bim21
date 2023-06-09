@@ -143,12 +143,12 @@ body .everything {
   justify-content: flex-start;
   gap: 3vh;
   padding-bottom: 3vh;
+  padding-top: 1vh;
 }
 body .everything .landing-page-background {
   position: relative;
   width: 100%;
   gap: 5vh;
-  padding: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -355,6 +355,10 @@ body .everything .every-projects-link .header .main-header {
   font-weight: bold;
   text-transform: uppercase;
 }
+body .everything .every-projects-link .header .main-header svg {
+  width: var(--header-font-size);
+  height: var(--header-font-size);
+}
 body .everything .every-projects-link .header .sub-header {
   opacity: 50%;
   font-size: var(--text-font-size);
@@ -437,7 +441,6 @@ body .everything .nothing-page-found-page {
 body .everything .cover-page-generator-page .generator-whole {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2vh;
@@ -467,6 +470,7 @@ body .everything .cover-page-generator-page .generator-whole .generator-body .ou
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .output .top-part {
   position: absolute;
@@ -719,35 +723,22 @@ body .everything .class-routine-page .class-routine-body {
   justify-content: center;
 }
 body .everything .class-routine-page .routine {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   width: 100%;
-  gap: 1vh;
-}
-body .everything .class-routine-page .routine-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 1vh;
 }
 body .everything .class-routine-page .routine-cell {
-  width: 20%;
-  height: 6vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-font-size);
-  border: 0.3vh solid var(--p1-color);
+  text-align: center;
+  padding: 1vh;
   background: var(--s1-color);
-  border-radius: 0.5vh;
+  font-weight: bold;
+  font-size: var(--text-font-size);
 }
 body .everything .class-routine-page .routine-header, body .everything .class-routine-page .routine-time {
   font-weight: bold;
   background: var(--n1-color);
   color: var(--s1-color);
+}
+body .everything .class-routine-page .room-no {
+  border-bottom: 0.3vh solid var(--p1-color);
 }
 body .everything .class-routine-page .routine-base {
   font-weight: bold;
@@ -931,7 +922,10 @@ body .everything .ascii-finder-page .ascii-finder-body .output-part {
   .generator-body .output {
     min-width: 100%;
   }
-  .class-routine-body .routine .routine__cell {
-    max-width: 17%;
+  .routine .routine-row {
+    gap: 0.1vh !important;
+  }
+  .routine .routine-cell {
+    padding: 0.5vh !important;
   }
 }/*# sourceMappingURL=style.css.map */
