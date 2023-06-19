@@ -534,7 +534,7 @@ body .everything .cover-page-generator-page .generator-whole .generator-body {
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .output {
   width: 40vh;
-  height: 50vh;
+  height: 60vh;
   background: white;
   border: 0.3vh solid var(--p1-color);
   position: relative;
@@ -579,13 +579,13 @@ body .everything .cover-page-generator-page .generator-whole .generator-body .ou
 }
 body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles {
   position: absolute;
-  top: 50%;
+  top: 47%;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.2vh;
+  gap: 1vh;
   font-size: 1.3vh;
   font-weight: bold;
   text-transform: uppercase;
@@ -697,12 +697,13 @@ body .everything .cover-page-generator-page .generator-whole .input-field .roll-
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .roll-no .header, body .everything .cover-page-generator-page .generator-whole .input-field .subject .header {
   width: 100%;
-  font-size: var(--header-font-size);
+  font-size: var(--text-font-size);
   text-align: left;
+  text-transform: uppercase;
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .roll-no select, body .everything .cover-page-generator-page .generator-whole .input-field .subject select {
+  cursor: pointer;
   width: 100%;
-  min-height: 50px;
   border-radius: 0.5vh;
   background: var(--s1-color);
   border: 0.3vh solid var(--p1-color);
@@ -726,8 +727,9 @@ body .everything .cover-page-generator-page .generator-whole .input-field .title
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .title-selector .header, body .everything .cover-page-generator-page .generator-whole .input-field .report-no-selector .header {
   width: 100%;
+  font-size: var(--text-font-size);
   text-align: left;
-  font-size: var(--header-font-size);
+  text-transform: uppercase;
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .title-selector input, body .everything .cover-page-generator-page .generator-whole .input-field .report-no-selector input {
   padding: 1vh 2vh;

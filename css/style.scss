@@ -587,7 +587,7 @@ body{
                  //Start of Sample png
                 .output{
                     width: 40vh;
-                    height: 50vh;
+                    height:60vh;
                     background: white;
                     border: .3vh solid var(--p1-color);
                     position: relative;
@@ -630,13 +630,13 @@ body{
                     }
                     .titles{
                         position: absolute;
-                        top: 50%;
+                        top: 47%;
                         display: flex;
                         width: 100%;
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        gap: .2vh;
+                        gap: 1vh;
                         font-size: 1.3vh;
                         font-weight: bold;
                         text-transform: uppercase;
@@ -747,12 +747,13 @@ body{
                     gap: 1vh;
                     .header{
                         width: 100%;
-                        font-size: var(--header-font-size);
+                        font-size: var(--text-font-size);
                         text-align: left;
+                        text-transform: uppercase;
                     }
                     select{
+                        cursor: pointer;
                         width: 100%;
-                        min-height: 50px;
                         border-radius: .5vh;
                         background: var(--s1-color);
                         border: .3vh solid var(--p1-color);
@@ -776,8 +777,9 @@ body{
                     gap: 1vh;
                     .header{
                         width: 100%;
+                        font-size: var(--text-font-size);
                         text-align: left;
-                        font-size: var(--header-font-size);
+                        text-transform: uppercase;
                     }
                     input{
                         padding: 1vh 2vh;

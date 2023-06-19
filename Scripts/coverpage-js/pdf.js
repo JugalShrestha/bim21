@@ -32,7 +32,7 @@ function savePdf()
 
   //-------------Subject Title Part----------------
   doc.setFont("times","normal")
-  doc.setFontSize(12)
+  doc.setFontSize(textSize)
   doc.text("( Department of Computer Science )",105,135,null,null,"center")
 
   doc.setFont("times","bold")
