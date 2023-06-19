@@ -1,4 +1,13 @@
 const logo = document.querySelector('.logo')
+const goBackBtn = document.querySelectorAll('.go-back-btn')
+
+goBackBtn.forEach(btn=>{
+    btn.addEventListener('click',()=>{    
+        closeEveryPage()
+        setTimeout(closeLoadingPage,loadingSpeed)
+        setTimeout(openHeroPage,loadingSpeed+1)
+    })
+})
 
 logo.addEventListener('click',()=>{
     closeEveryPage()

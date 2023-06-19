@@ -417,6 +417,28 @@ body{
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
+            .go-back-btn{
+                transition: .2s ease-in-out;
+                cursor: pointer;
+                position: relative;
+                padding: 1vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                text-decoration: none;   
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: var(--text-font-size);
+                background: var(--s1-color) ;
+                border-radius: .5vh;
+                border: .3vh solid var(--p1-color);
+                &:hover{
+                    &::after{
+                        background: var(--n2-color);
+                    }
+                }
+            }
             .header{
                 .main-header{
                     font-size: var(--header-font-size);
@@ -456,6 +478,28 @@ body{
             align-items: flex-start;
             justify-content: flex-start;
             gap: 3vh !important;
+            .go-back-btn{
+                transition: .2s ease-in-out;
+                cursor: pointer;
+                position: relative;
+                padding: 1vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                text-decoration: none;   
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: var(--text-font-size);
+                background: var(--s1-color) ;
+                border-radius: .5vh;
+                border: .3vh solid var(--p1-color);
+                &:hover{
+                    &::after{
+                        background: var(--n2-color);
+                    }
+                }
+            }
             .header{
                 width: 100%;
                 .main-header{
@@ -475,13 +519,47 @@ body{
         //----------------Nothing page found page-----------
 
         .nothing-page-found-page{
+            transition: .5s ease-in-out;
             display: none;
+            width: var(--p-margin);
             margin-top: var(--top-margin);
-            align-items: center;
-            justify-content: center;
-            padding: 2vh;
-            font-size: var(--header-font-size);
-            font-weight: bold;
+            padding: var(--padding-whole);
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 3vh !important;
+            .go-back-btn{
+                transition: .2s ease-in-out;
+                cursor: pointer;
+                position: relative;
+                padding: 1vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                text-decoration: none;   
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: var(--text-font-size);
+                background: var(--s1-color) ;
+                border-radius: .5vh;
+                border: .3vh solid var(--p1-color);
+                &:hover{
+                    &::after{
+                        background: var(--n2-color);
+                    }
+                }
+            }
+            .text{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: var(--header-font-size);
+                font-weight: bold;
+                text-transform: capitalize;
+            }
         }
 
         //-------------------------Start of Coverpage Generator
@@ -919,7 +997,13 @@ body{
     .mobile-options{
         display: none;
     }    
-    .search-item,.show-item{
+    .go-back-btn{
+        &::before{
+            right: -.7vh !important;
+            bottom: -.7vh !important;
+        }
+    }
+    .search-item,.show-item,.go-back-btn{
         &::before{
             transition: .2s ease-in-out;
             position: absolute;
