@@ -21,7 +21,6 @@ var emptyChecker = 0
 const noteItems = ['digital logic','c course','java course','python course']
 const items = [
     {name:'coverpage generator',tag: 'project'},
-    {name:'ascii finder',tag: 'project'},
     {name: 'syllabus',tag:'syllabus'},
     {name: 'class routine',tag:'routine'},
     {name:'digital logic course',tag: 'note'},

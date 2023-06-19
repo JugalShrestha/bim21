@@ -79,6 +79,6 @@ function savePdf()
   doc.setFontSize(textSize)
   doc.text("SIGNATURE:",180,247,null,null,"center")
 
-  doc.save("coverpage-"+titleSelector.value+'.pdf')
+  doc.save(nameToShow+" - ("+titleSelector.value.toUpperCase().replace(/\s/g, "_")+').pdf')
   
 }
