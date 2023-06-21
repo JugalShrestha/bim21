@@ -63,6 +63,8 @@ function savePdf()
   doc.text("SUBMITTED BY:",40,248,null,null,"center")
   doc.line(5,252,75,252)
 
+  doc.setFont("times","normal")
+
   doc.text(nameToShow,40,264,null,null,"center")
   doc.text("BIM, "+semCount+"rd Semester",40,272,null,null,"center")
   doc.text(rollNoToShow,40,280,null,null,"center")
@@ -82,6 +84,8 @@ function savePdf()
   doc.text("SUBMITTED TO:",120,248,null,null,"center")
   doc.line(80,252,205,252)
 
+  doc.setFont("times","normal")
+
   doc.text(subjectTeacherNameToShow,120,264,null,null,"center")
   doc.text(teacherDescriptionToShow,120,272,null,null,"center")
   doc.text(teacherDeptToShow,120,280,null,null,"center")
@@ -96,9 +100,9 @@ function savePdf()
   
   //--------------------Sign Part-----------------
   
-  doc.setFont("times","bold")
+  doc.setFont("times","normal")
   doc.setFontSize(textSize)
-  doc.text("signature",182.5,248,null,null,"center")
+  doc.text("SIGNATURE",182.5,248,null,null,"center")
 
   //side line
   doc.line(205,240,205,292)
