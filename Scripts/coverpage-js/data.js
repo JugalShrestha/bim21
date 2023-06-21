@@ -270,65 +270,65 @@ var subjects = [
     {
         name: "Foundation of Information Technology [IT 231]",
         teacher: "Mr. Robin Maharjan",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science",
         shortForm: "Foundation of I.T. [IT 231]"
     },
     {
         name: "C Programming [IT 232]",
         teacher: "Er. Anuj Shrestha",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     {   
         name: "English [ENG 206]",
         teacher: "Mr. Sushil Paudel",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of English"
     },
     {
         name: "Foundation of Business Management [MGT 231]",
         teacher: "Mr. Rameshwor Suwal",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science",
         shortForm : "Foundation of B.M [MGT 231]"
     },
     {
         name: "Basic mathematics [MTH 204]",
         teacher: "Er. Anuj Shrestha",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     //2nd sem
     {
         name: "Digital logic [IT 233]",
         teacher: "Er. Saugat Sigdel",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     {
         name: "Object Oriented Programming (Java) [IT 234]",
         teacher: "Mr. Mario",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science",
         shortForm: "O.O.P. with Java [IT 234]"
     },
     {
         name: "Discrete Structure [IT 235]",
         teacher: "Er. Anuj Shrestha",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     {
         name: "Business Communication [ENG 203]",
         teacher: "Mr. Vidya Devi",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of English"
     },
     {
         name: "Orgainzational Behaviour and HRM [MGT 241]",
         teacher: "Mr. Rameshwor Suwal",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science",
         shortForm: "OB and HRM [MGT 241]"
     },
@@ -336,32 +336,32 @@ var subjects = [
     {
         name: "Microprocessor and Computer Architecture [IT 236]",
         teacher: "Er. Bishnu K.C.",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science",
         shortForm: "Microprocessor and C.A [IT 236]"
     },
     {
         name: "Web Technology I [IT 237]",
         teacher: "Mr. Ujjwal Shrestha",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     {
         name: "Data Structure and Algorithm [IT 238]",
         teacher: "Er. Sudan Maharjan",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     {
         name: "Financial Accounting [ACC 201]",
         teacher: "Mr. Rameswhor Suwal",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     {
         name: "Business Statistics [STT 201]",
         teacher: "Mr. Pushpa Lal Shrestha",
-        title: "lecturer",
+        title: "Lecturer",
         department: "Dept. of Management"
     },
 ]

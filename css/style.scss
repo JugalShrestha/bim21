@@ -587,7 +587,7 @@ body{
                  //Start of Sample png
                 .output{
                     width: 40vh;
-                    height:60vh;
+                    height:55vh;
                     background: white;
                     border: .3vh solid var(--p1-color);
                     position: relative;
@@ -655,14 +655,14 @@ body{
                         }
                     }
                     .submition-field{
-                        width: 100%;
-                        bottom: 0;
+                        width: 95%;
+                        bottom: 1vh;
                         height: 20%;
                         position: absolute;
                         display: flex;
                         align-items: center;
+                        gap: 1vh;
                         justify-content: space-between;
-                        border-top: .1vh solid var(--shadow);
                     }
                     .submitted-by{
                         width: 40%;
@@ -674,7 +674,7 @@ body{
                         font-size: 1vh;
                         text-transform: capitalize;
                         font-weight: bold;
-                        border-right: .1vh solid var(--shadow);
+                        border: .1vh solid var(--shadow);
                         .header{
                             font-size: 1vh !important;
                             border-bottom: .1vh solid var(--p1-color);
@@ -699,7 +699,7 @@ body{
                         text-transform: capitalize;
                         font-size: 1vh !important;
                         font-weight: bold;
-                        border-right: .1vh solid var(--shadow);
+                        border: .1vh solid var(--shadow);
                         .header{
                             font-size: 1vh !important;
                             border-bottom: .1vh solid var(--p1-color);
@@ -720,15 +720,16 @@ body{
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        justify-content: flex-end;
+                        justify-content: flex-start;
                         font-size: 1vh !important;
                         font-weight: bold;
+                        border: .1vh solid var(--shadow);
                         gap: .5vh;
                         .header{
-                            padding: 1vh;
                             font-size: 1vh !important;
                             text-align: center;
-                            text-transform: uppercase;
+                            border-bottom: .1vh solid var(--shadow);
+                            text-transform: lowercase;
                         }
                     }
                 }
