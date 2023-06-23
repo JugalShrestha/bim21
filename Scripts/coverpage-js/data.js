@@ -192,11 +192,11 @@ var students = [
         rN: "021BIM048"
     }
     ,{
-        name: "Samyak sigdel",
+        name: "Samyak Sigdel",
         rN: "021BIM049"
     }
     ,{
-        name: "Samyam shrestha",
+        name: "Samyam Shrestha",
         rN: "021BIM050"
     }
     ,{
@@ -216,7 +216,7 @@ var students = [
         rN: "021BIM054"
     }
     ,{
-        name: "Shristi shahi",
+        name: "Shristi Shahi",
         rN: "021BIM055"
     }
     ,{
@@ -260,7 +260,7 @@ var students = [
         rN: "021BIM065"
     }
     ,{
-        name: "Yojana parajuli",
+        name: "Yojana Parajuli",
         rN: "021BIM066"
     }
 ]
