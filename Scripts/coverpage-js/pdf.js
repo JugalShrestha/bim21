@@ -5,6 +5,8 @@ let subjectNameToShow, subjectTeacherNameToShow, teacherDescriptionToShow,teache
 
 var semCount = 3;
 
+let coverpageTitle = "";
+
 window.jsPDF = window.jspdf.jsPDF
 
 function savePdf()
@@ -45,13 +47,24 @@ function savePdf()
   doc.line(110,165,110,190)
 
   //-----------Subject title part 2-------------------
-  doc.setFont("times","normal")
-  doc.setFontSize(12)
-  doc.text("LAB REPORT "+reportNoSelector.value.toUpperCase(),105,210,null,null,"center")
-  
-  doc.setFont("times","bold")
-  doc.setFontSize(textSize)
-  doc.text(titleSelector.value.toUpperCase(),105,220,null,null,"center")  
+  if(titleSelector.value=='')
+  {  
+    doc.setFont("times","bold")
+    doc.setFontSize(textSize)
+    doc.text("LAB REPORT "+reportNoSelector.value.toUpperCase(),105,220,null,null,"center") 
+    coverpageTitle=subjectNameToShow.toUpperCase()
+     
+  }
+  else{
+    doc.setFont("times","normal")
+    doc.setFontSize(12)
+    doc.text("LAB REPORT "+reportNoSelector.value.toUpperCase(),105,210,null,null,"center")
+    
+    doc.setFont("times","bold")
+    doc.setFontSize(textSize)
+    doc.text(titleSelector.value.toUpperCase(),105,220,null,null,"center")
+    coverpageTitle = titleSelector.value.toUpperCase().replace(/\s/g, "_");
+  } 
 
   //----------------Submitted By Part---------------
   
@@ -107,6 +120,6 @@ function savePdf()
   //side line
   doc.line(205,240,205,292)
 
-  doc.save(nameToShow+" - ("+titleSelector.value.toUpperCase().replace(/\s/g, "_")+').pdf')
+  doc.save(nameToShow+" - ( "+coverpageTitle+" ).pdf")
   
 }
