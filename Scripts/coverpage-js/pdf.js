@@ -35,11 +35,11 @@ function savePdf()
   //-------------Subject Title Part----------------
   doc.setFont("times","normal")
   doc.setFontSize(textSize)
-  doc.text("( Department of Computer Science )",105,135,null,null,"center")
+  doc.text("( Department of Computer Science )",105,133,null,null,"center")
 
   doc.setFont("times","bold")
   doc.setFontSize(textSize)
-  doc.text(subjectNameToShow.toUpperCase(),105,145,null,null,"center")
+  doc.text(subjectNameToShow.toUpperCase(),105,143,null,null,"center")
   
   //--------------Line part=----------------
   doc.line(100,165,100,190)
