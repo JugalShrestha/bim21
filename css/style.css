@@ -312,8 +312,13 @@ body .everything .hero-page .search-part .search-btn .search-txt {
 body .everything .hero-page .search-part .search-btn .search-image {
   width: 20%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-body .everything .hero-page .search-part .search-btn .search-image img {
+body .everything .hero-page .search-part .search-btn .search-image svg {
+  stroke: var(--p1-color);
+  stroke-width: 0.2vh;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
