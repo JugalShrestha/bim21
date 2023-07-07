@@ -38,8 +38,8 @@ function savePdf()
   doc.text("( Department of Computer Science )",105,133,null,null,"center")
 
   doc.setFont("times","bold")
-  doc.setFontSize(textSize)
-  doc.text(subjectNameToShow.toUpperCase(),105,143,null,null,"center")
+  doc.setFontSize(bigSize)
+  doc.text(subjectNameToShow,105,143,null,null,"center")
   
   //--------------Line part=----------------
   doc.line(100,165,100,190)
@@ -51,19 +51,19 @@ function savePdf()
   {  
     doc.setFont("times","bold")
     doc.setFontSize(textSize)
-    doc.text("LAB REPORT "+reportNoSelector.value.toUpperCase(),105,220,null,null,"center") 
+    doc.text("Lab Report "+reportNoSelector.value,105,220,null,null,"center") 
     coverpageTitle=subjectNameToShow.toUpperCase()
      
   }
   else{
     doc.setFont("times","normal")
-    doc.setFontSize(12)
-    doc.text("LAB REPORT "+reportNoSelector.value.toUpperCase(),105,210,null,null,"center")
+    doc.setFontSize(textSize)
+    doc.text("Lab Report "+reportNoSelector.value,105,210,null,null,"center")
     
     doc.setFont("times","bold")
     doc.setFontSize(textSize)
-    doc.text(titleSelector.value.toUpperCase(),105,220,null,null,"center")
-    coverpageTitle = titleSelector.value.toUpperCase().replace(/\s/g, "_");
+    doc.text(titleSelector.value,105,220,null,null,"center")
+    coverpageTitle = titleSelector.value.replace(/\s/g, "_");
   } 
 
   //----------------Submitted By Part---------------

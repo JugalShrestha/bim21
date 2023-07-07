@@ -294,14 +294,14 @@ var subjects = [
         shortForm : "Foundation of B.M [MGT 231]"
     },
     {
-        name: "Basic mathematics [MTH 204]",
+        name: "Basic Mathematics [MTH 204]",
         teacher: "Er. Anuj Shrestha",
         title: "Lecturer",
         department: "Dept. of Computer Science"
     },
     //2nd sem
     {
-        name: "Digital logic [IT 233]",
+        name: "Digital Logic [IT 233]",
         teacher: "Er. Saugat Sigdel",
         title: "Lecturer",
         department: "Dept. of Computer Science"
@@ -380,19 +380,19 @@ subjects.forEach((subject,index)=>{
     if(index==0){
         const opt = document.createElement('optgroup')
         opt.label = "1st sem"
-        opt.style.textTransform = "uppercase"
+        opt.style.textTransform = "capitalize"
         subjectSelector.appendChild(opt)
     }
     if(index==5){
         const opt = document.createElement('optgroup')
         opt.label = "2nd sem"
-        opt.style.textTransform = "uppercase"
+        opt.style.textTransform = "capitalize"
         subjectSelector.appendChild(opt)
     }
     if(index==10){
         const opt = document.createElement('optgroup')
         opt.label = "3rd sem"
-        opt.style.textTransform = "uppercase"
+        opt.style.textTransform = "capitalize"
         subjectSelector.appendChild(opt)
     }
     const option = document.createElement('option')
