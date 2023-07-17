@@ -101,6 +101,11 @@
     }
 }
 
+@font-face {
+    font-family: "handwriting-12";
+    src: url('../fonts/handwriting-12.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -933,63 +938,57 @@ body{
         }
         //--------------------------------End of Syllabus page
 
-        //---------------------------------Start of Ascii Finder page
-
-        .ascii-finder-page{
-            .ascii-finder-body{
+        // ----------------------------------Start of text2handwriting
+        .text-2-handwriting{
+            .text-2-handwriting-body{
                 width: 100%;
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                .ascii-finder{
-                    width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 2vh;
+                .handwriting-selection{
                     display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    gap: 2vh;
-                }
-                .input-part{
-                    display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
                     justify-content: flex-start;
-                    flex-wrap: wrap;
-                    gap: 2vh;
-                    .input-header{
-                        font-size: var(--header-font-size);
-                        font-weight: bold;
+                    gap: 1vh;
+                    .header{
+                        font-size: var(--text-font-size);
+                        font-weight: 900;
+                        text-transform: uppercase;
                     }
-                    .key-input{
-                        width: 20%;
-                        input{
-                            border: .3vh solid var(--p1-color);
-                            border-radius: .5vh;
-                            background: var(--s1-color);
-                            outline: none;
-                            width: 100%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            text-align: center;
-                            height: 3vh;
-                            font-size: var(--text-font-size);
-                        }
+                    .handwriting-selector{
+                        padding: 1vh;
+                        background: var(--s1-color);
+                        font-size: var(--text-font-size);
+                        border: .3vh solid var(--shadow);
+                        border-radius: .5vh;
                     }
                 }
-                .output-part{
-                    width: 20vh;
-                    height: 20vh;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border: .3vh solid var(--p1-color);
+                .text-selector{
+                    width: 100%;
                     border-radius: .5vh;
-                    font-size: var(--big-font-size);
+                    min-height: 25vh;
+                    padding: 1vh;
+                    resize: vertical;
+                    font-size: var(--header-font-size);
+                    background: var(--s1-color);
+                    border: .3vh solid var(--shadow);
+                }
+                .download{
+                    padding: 2vh;
+                    border-radius: .5vh;
+                    border: .3vh solid var(--shadow);
+                    background: var(--n1-color);
+                    color: var(--s1-color);
+                    font-weight: 900;
+                    font-size: var(--header-font-size);
+                    text-transform: uppercase;
                 }
             }
         }
-
-        //----------------------------------End of Ascii Finder page
+        // ----------------------------------End of text2handwriting
     }
 }
 @media (min-width: 940px) {

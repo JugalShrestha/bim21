@@ -21,10 +21,9 @@ var emptyChecker = 0
 const noteItems = ['digital logic','c course','java course','python course']
 const items = [
     {name:'coverpage generator',tag: 'project'},
+    {name:'text-2-handwriting',tag:'project'},
     {name: 'syllabus',tag:'syllabus'},
     {name: 'class routine',tag:'routine'},
-    {name:'digital logic course',tag: 'note'},
-    {name:'c course',tag: 'note'},
     {name:'java course',tag: 'note'},
 ]
 //For sorting searchable items

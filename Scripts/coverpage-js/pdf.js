@@ -120,6 +120,7 @@ function savePdf()
   //side line
   doc.line(205,240,205,292)
 
+  window.open(doc.output('bloburl'), '_blank');
   doc.save(nameToShow+" - ( "+coverpageTitle+" ).pdf")
   
 }

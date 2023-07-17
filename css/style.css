@@ -91,6 +91,10 @@
     background-position: 0% 50%, 50% 50%, 100% 100%;
   }
 }
+@font-face {
+  font-family: "handwriting-12";
+  src: url("../fonts/handwriting-12.ttf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -870,56 +874,52 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   background: var(--n1-color);
   color: var(--s1-color);
 }
-body .everything .ascii-finder-page .ascii-finder-body {
+body .everything .text-2-handwriting .text-2-handwriting-body {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body .everything .ascii-finder-page .ascii-finder-body .ascii-finder {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2vh;
-}
-body .everything .ascii-finder-page .ascii-finder-body .input-part {
-  display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
-  flex-wrap: wrap;
   gap: 2vh;
 }
-body .everything .ascii-finder-page .ascii-finder-body .input-part .input-header {
-  font-size: var(--header-font-size);
-  font-weight: bold;
-}
-body .everything .ascii-finder-page .ascii-finder-body .input-part .key-input {
-  width: 20%;
-}
-body .everything .ascii-finder-page .ascii-finder-body .input-part .key-input input {
-  border: 0.3vh solid var(--p1-color);
-  border-radius: 0.5vh;
-  background: var(--s1-color);
-  outline: none;
-  width: 100%;
+body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 3vh;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1vh;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .header {
   font-size: var(--text-font-size);
+  font-weight: 900;
+  text-transform: uppercase;
 }
-body .everything .ascii-finder-page .ascii-finder-body .output-part {
-  width: 20vh;
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.3vh solid var(--p1-color);
+body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .handwriting-selector {
+  padding: 1vh;
+  background: var(--s1-color);
+  font-size: var(--text-font-size);
+  border: 0.3vh solid var(--shadow);
   border-radius: 0.5vh;
-  font-size: var(--big-font-size);
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .text-selector {
+  width: 100%;
+  border-radius: 0.5vh;
+  min-height: 25vh;
+  padding: 1vh;
+  resize: vertical;
+  font-size: var(--header-font-size);
+  background: var(--s1-color);
+  border: 0.3vh solid var(--shadow);
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .download {
+  padding: 2vh;
+  border-radius: 0.5vh;
+  border: 0.3vh solid var(--shadow);
+  background: var(--n1-color);
+  color: var(--s1-color);
+  font-weight: 900;
+  font-size: var(--header-font-size);
+  text-transform: uppercase;
 }
 
 @media (min-width: 940px) {
