@@ -52,7 +52,7 @@ function text2handwritingConvertion(){
     // Set font size and font type
     const fontSize = 18;
     doc.setFontSize(fontSize);
-    doc.addFont('../fonts/'+selectedHandwriting,'Handwriting','normal');
+    doc.addFont('./fonts/'+selectedHandwriting,'Handwriting','normal');
     doc.setFont("Handwriting");
 
     let text = textField.value;
