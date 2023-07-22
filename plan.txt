@@ -12,3 +12,5 @@ Plan :
             -Note search
             -Syllabus search
         -Greetings and Quotes
+
+A4 dimension: 210mm * 297mm

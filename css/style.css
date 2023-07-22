@@ -901,6 +901,59 @@ body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selec
   border: 0.3vh solid var(--shadow);
   border-radius: 0.5vh;
 }
+body .everything .text-2-handwriting .text-2-handwriting-body .sub-header {
+  font-size: var(--text-font-size);
+  font-weight: bold;
+  opacity: 50%;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization {
+  width: 100%;
+  display: flex;
+  gap: 2vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization label {
+  border: 0.3vh solid var(--shadow);
+  padding: 1vh;
+  width: 100%;
+  font-size: var(--text-font-size);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization div, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization input {
+  border: 0.3vh solid var(--shadow);
+  padding: 1vh;
+  width: 100%;
+  border-radius: 0.5vh;
+  background: var(--s1-color);
+  font-size: var(--text-font-size);
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwriting-output-whole {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1vh;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwriting-output-whole .text-2-handwriting-output {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5vh;
+  padding: 1vh;
+  background: var(--s1-color);
+  outline: none;
+  border: 0.3vh solid var(--shadow);
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwriting-output-whole .header {
+  font-size: var(--text-font-size);
+  font-weight: 900;
+  text-transform: uppercase;
+}
 body .everything .text-2-handwriting .text-2-handwriting-body .text-selector {
   width: 100%;
   border-radius: 0.5vh;
@@ -1010,5 +1063,8 @@ body .everything .text-2-handwriting .text-2-handwriting-body .download {
   }
   .routine .routine-cell {
     padding: 0.5vh !important;
+  }
+  .text-2-handwriting-output-whole {
+    display: none !important;
   }
 }/*# sourceMappingURL=style.css.map */

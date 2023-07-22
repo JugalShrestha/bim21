@@ -447,7 +447,26 @@
                     <select class="handwriting-selector">
                     </select>
                 </div>
+                <div class="sub-header">
+                    customize line spacing, font size & page margin!
+                </div>
+                <div class="page-customization">
+                    <label for="line-spacing">line spacing</label>
+                    <label for="font-size">font size</label>
+                    <label for="page-margin">page margin</label>
+                </div>
+                <div class="page-customization">
+                    <input min="5" max="10" step="1" name="line-spacing" type="number" placeholder="line space (5-10)" id="line-space-text2handwriting">
+                    <input min="14" max="24" step="2" name="font-size" type="number" placeholder="font size (14-24)" id="font-size-text2handwriting">
+                    <input min="10" max="35" step="5" name="page-margin" type="number" placeholder="page margin (10-35)" type="number"  id="page-margin-text2handwriting">
+                </div>
                 <textarea placeholder="write your assignment which is to be converted here!" class="text-selector"></textarea>
+                <div class="text-2-handwriting-output-whole">
+                    <div class="header">
+                        output:
+                    </div>
+                    <iframe class="text-2-handwriting-output"></iframe>
+                </div>
                 <div class="download">download</div>
             </div>
         </section>
