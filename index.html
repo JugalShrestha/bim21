@@ -163,14 +163,14 @@
                         <div class="roll-no">
                             <div class="header">Roll No:</div>
                             <div class="selector-wraper">
-                                <select class="roll-no-selector">
+                                <select name="roll-no-selector" class="roll-no-selector">
                                 </select>
                             </div>
                         </div>
                         <!--Subject taker-->
                         <div class="subject">
                             <div class="header">Subject:</div>
-                            <select class="subject-selector">
+                            <select name="subject-selector" class="subject-selector">
                             </select>
                         </div>
                         <!-- Report no taker -->
@@ -181,7 +181,7 @@
                         <!--Title Taker-->
                         <div class="title-selector">
                             <div class="header">Title</div>
-                            <input placeholder="For eg: Report on..." type="text">
+                            <input name="report-title" placeholder="For eg: Report on..." type="text">
                         </div>
                         <button type="submit" class="download">
                             Download
@@ -444,7 +444,7 @@
             <div class="text-2-handwriting-body">
                 <div class="handwriting-selection">
                     <div class="header">Select a handwriting:</div>
-                    <select class="handwriting-selector">
+                    <select name="handwriting-selector" class="handwriting-selector">
                     </select>
                     <div class="sub-header">
                         how to add your own handwriting? <a href="pdf/how-to-add-your-handwriting.pdf" target="_blank">click here!</a>
@@ -463,7 +463,7 @@
                             <input min="10" max="35" step="5" name="page-margin" type="number" placeholder="page margin (10-35)" type="number"  id="page-margin-text2handwriting">
                         </div>
                     </div>
-                    <textarea placeholder="write your assignment which is to be converted here!" class="text-selector"></textarea>
+                    <textarea name="assignment-text" placeholder="write your assignment which is to be converted here!" class="text-selector"></textarea>
                 </div>
                 <div class="text-2-handwriting-output-whole">
                     <div class="header">
