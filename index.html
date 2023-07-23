@@ -422,9 +422,9 @@
             </div>
             <div class="syllabus-body">
                 <ul class="semester-options">
-                    <li class="semester-option"><a href="syllabus/2nd-sem.pdf" target="_blank">2</a></li>
-                    <li class="semester-option"><a href="syllabus/3rd-sem.pdf" target="_blank">3</a></li>
-                    <li class="semester-option syllabus-1-8"><a href="syllabus/whole-syllabus.pdf" target="_blank">BIM-COURSE-STRUCTURE.pdf</a></li>
+                    <li class="semester-option"><a href="pdf/syllabus/2nd-sem.pdf" target="_blank">2</a></li>
+                    <li class="semester-option"><a href="pdf/syllabus/3rd-sem.pdf" target="_blank">3</a></li>
+                    <li class="semester-option syllabus-1-8"><a href="pdf/syllabus/whole-syllabus.pdf" target="_blank">BIM-COURSE-STRUCTURE.pdf</a></li>
                 </ul>
             </div>
         </section>
@@ -446,21 +446,25 @@
                     <div class="header">Select a handwriting:</div>
                     <select class="handwriting-selector">
                     </select>
+                    <div class="sub-header">
+                        how to add your own handwriting? <a href="pdf/how-to-add-your-handwriting.pdf" target="_blank">click here!</a>
+                    </div>
                 </div>
-                <div class="sub-header">
-                    customize line spacing, font size & page margin!
+                <div class="text-2-handwriting-converter-field">
+                    <div class="page-customization">
+                        <div class="headers">
+                            <div class="header">line spacing</div>
+                            <div class="header">font size</div>
+                            <div class="header">page margin</div>
+                        </div>
+                        <div class="customizations">
+                            <input min="5" max="10" step="1" name="line-spacing" type="number" placeholder="line space (5-10)" id="line-space-text2handwriting">
+                            <input min="14" max="24" step="2" name="font-size" type="number" placeholder="font size (14-24)" id="font-size-text2handwriting">
+                            <input min="10" max="35" step="5" name="page-margin" type="number" placeholder="page margin (10-35)" type="number"  id="page-margin-text2handwriting">
+                        </div>
+                    </div>
+                    <textarea placeholder="write your assignment which is to be converted here!" class="text-selector"></textarea>
                 </div>
-                <div class="page-customization">
-                    <label for="line-spacing">line spacing</label>
-                    <label for="font-size">font size</label>
-                    <label for="page-margin">page margin</label>
-                </div>
-                <div class="page-customization">
-                    <input min="5" max="10" step="1" name="line-spacing" type="number" placeholder="line space (5-10)" id="line-space-text2handwriting">
-                    <input min="14" max="24" step="2" name="font-size" type="number" placeholder="font size (14-24)" id="font-size-text2handwriting">
-                    <input min="10" max="35" step="5" name="page-margin" type="number" placeholder="page margin (10-35)" type="number"  id="page-margin-text2handwriting">
-                </div>
-                <textarea placeholder="write your assignment which is to be converted here!" class="text-selector"></textarea>
                 <div class="text-2-handwriting-output-whole">
                     <div class="header">
                         output:

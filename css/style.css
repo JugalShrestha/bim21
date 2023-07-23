@@ -101,6 +101,8 @@
   box-sizing: border-box;
   font-family: var(--text);
   color: var(--text-color);
+  border: none;
+  outline: none;
   text-decoration: none;
 }
 
@@ -906,34 +908,62 @@ body .everything .text-2-handwriting .text-2-handwriting-body .sub-header {
   font-weight: bold;
   opacity: 50%;
 }
+body .everything .text-2-handwriting .text-2-handwriting-body .sub-header a {
+  color: var(--n2-color);
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwriting-converter-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5vh;
+  border: 0.3vh solid var(--shadow);
+  overflow: hidden;
+}
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization {
   width: 100%;
   display: flex;
-  gap: 2vh;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-body .everything .text-2-handwriting .text-2-handwriting-body .page-customization label {
-  border: 0.3vh solid var(--shadow);
-  padding: 1vh;
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers {
   width: 100%;
-  font-size: var(--text-font-size);
+  display: grid;
+  grid-template-columns: 30% auto 30%;
+  border-bottom: 0.3vh solid var(--shadow);
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header {
   font-weight: 900;
   text-transform: uppercase;
-  text-align: center;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--s1-color) !important;
+  background: var(--n1-color) !important;
+  border-left: 0.3vh solid var(--shadow) !important;
 }
-body .everything .text-2-handwriting .text-2-handwriting-body .page-customization div, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization input {
-  border: 0.3vh solid var(--shadow);
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header:nth-child(1), body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header:nth-child(1) {
+  border-left: none !important;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations input, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers input {
+  border-left: 0.3vh solid var(--shadow) !important;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations input:nth-child(1), body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers input:nth-child(1) {
+  border-left: none !important;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations input, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers input {
   padding: 1vh;
   width: 100%;
-  border-radius: 0.5vh;
+  outline: none;
+  border: none;
   background: var(--s1-color);
   font-size: var(--text-font-size);
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwriting-output-whole {
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -944,7 +974,6 @@ body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwritin
   width: 100%;
   height: 100%;
   border-radius: 0.5vh;
-  padding: 1vh;
   background: var(--s1-color);
   outline: none;
   border: 0.3vh solid var(--shadow);
@@ -956,13 +985,11 @@ body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwritin
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .text-selector {
   width: 100%;
-  border-radius: 0.5vh;
   min-height: 25vh;
   padding: 1vh;
   resize: vertical;
   font-size: var(--header-font-size);
   background: var(--s1-color);
-  border: 0.3vh solid var(--shadow);
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .download {
   padding: 2vh;

@@ -8,9 +8,9 @@ const lineSpacingSelector = document.querySelector('#line-space-text2handwriting
 const fontSizeSelector = document.querySelector('#font-size-text2handwriting');
 const pageMarginSelector = document.querySelector('#page-margin-text2handwriting');
 
-var lineSpacing = lineSpacingSelector.value || 5;
-var pageMargin = pageMarginSelector.value || 10;
-var fontSize = fontSizeSelector.value || 14 ;
+var lineSpacing = lineSpacingSelector.value || 7;
+var pageMargin = pageMarginSelector.value || 20;
+var fontSize = fontSizeSelector.value || 16;
 
 const handwritings = [
     {
@@ -99,7 +99,12 @@ fontSizeSelector.addEventListener('input',()=>{
 
 //downloading and showing of output
 download.addEventListener('click',text2handwritingConvertionDownload);
-textField.addEventListener('input',text2handwritingConvertionOutput);
+const deviceWidth = window.innerWidth;
+if(deviceWidth>980)
+{
+    text2handwritingConvertionOutput();
+    textField.addEventListener('input',text2handwritingConvertionOutput);
+}
 
 window.jsPDF = window.jspdf.jsPDF;
 
@@ -115,9 +120,8 @@ function text2handwritingConvertionDownload(){
     doc.setFontSize(fontSize);
     doc.addFont('./fonts/'+selectedHandwriting,'Handwriting','normal');
     doc.setFont("Handwriting");
-
     let text = textField.value;
-    let margin = pageMargin;
+    let margin = parseInt(pageMargin);
 
     // Set initial position
     let x = margin;
@@ -127,10 +131,10 @@ function text2handwritingConvertionDownload(){
     const pageWidth = doc.internal.pageSize.getWidth();
     const pageHeight = doc.internal.pageSize.getHeight();
     const availableHeight = pageHeight - (2 * margin);
-    const availableWidth = pageWidth - (2 * margin) + margin; // Leave 15 units margin on each side
+    const availableWidth = pageWidth - margin; // Leave 15 units margin on each side
     
     // Split the text into multiple lines within the document's width
-    var lines = doc.splitTextToSize(text, availableWidth-fontSize);
+    var lines = doc.splitTextToSize(text, availableWidth - margin);
 
     // Loop through each line and add it to the PDF
     lines.forEach(line=>{
@@ -140,10 +144,9 @@ function text2handwritingConvertionDownload(){
         y = margin;
       }
       doc.text(line,x,y);
-      y += lineSpacing;
+      y = y + parseInt(lineSpacing);
 
     })
-    window.open(doc.output('bloburl'), '_blank');
     doc.save(handwritingID+'-assignment.pdf');
 }
 
@@ -165,7 +168,6 @@ function text2handwritingConvertionOutput(){
     // Set initial position
     let x = margin;
     let y = margin;
-    console.log("y: "+y);
 
     // Calculate available width for text
     const pageWidth = doc.internal.pageSize.getWidth();
@@ -180,13 +182,11 @@ function text2handwritingConvertionOutput(){
     lines.forEach(line=>{
       if(y > ( availableHeight + margin + lineSpacing))
       {
-        console.log("linebreaked!");
         doc.addPage("a4","p");
         y = margin;
       }
       doc.text(line,x,y);
       y = y + parseInt(lineSpacing);
-      console.log("y+linespacing: " + y + " + " + lineSpacing);
 
     })
     const output = doc.output('datauristring');
