@@ -8,9 +8,9 @@ const lineSpacingSelector = document.querySelector('#line-space-text2handwriting
 const fontSizeSelector = document.querySelector('#font-size-text2handwriting');
 const pageMarginSelector = document.querySelector('#page-margin-text2handwriting');
 
-var lineSpacing = lineSpacingSelector.value || 10;
-var pageMargin = pageMarginSelector.value || 30;
-var fontSize = fontSizeSelector.value || 22;
+var lineSpacing = lineSpacingSelector.value || 7;
+var pageMargin = pageMarginSelector.value || 25;
+var fontSize = fontSizeSelector.value || 20;
 
 const handwritings = [
     {
@@ -24,7 +24,6 @@ const handwritings = [
         id: "30",
         fontName: "handwriting-30",
         font: "handwriting-30.ttf",
-
     },
 ]
 
@@ -183,10 +182,16 @@ function text2handwritingConvertionOutput(){
     let pageWidth = doc.internal.pageSize.getWidth();
     let pageHeight = doc.internal.pageSize.getHeight();
     let availableHeight = pageHeight - (2 * margin);
-    let availableWidth = pageWidth - margin; // Leave 15 units margin on each side
+    let availableWidth = pageWidth - margin;
     
     // Split the text into multiple lines within the document's width
     var lines = doc.splitTextToSize(text, availableWidth - margin);
+
+    let minLineSpacing = 6;
+    let maxLineSpacing = parseInt(lineSpacing);
+
+    let minLineWidthSpacing = 1;
+    let maxLineWidthSpacing = 5;
 
     // Loop through each line and add it to the PDF
     lines.forEach(line=>{
@@ -195,8 +200,13 @@ function text2handwritingConvertionOutput(){
         doc.addPage("a4","p");
         y = margin;
       }
+
+      let randomLineSpacing = Math.floor(Math.random() * (maxLineSpacing - minLineSpacing + 1)) + minLineSpacing;
+      let randomLineWidthSpacing = Math.floor(Math.random() * (maxLineWidthSpacing - minLineWidthSpacing + 1)) + minLineWidthSpacing;
+
+      x = margin + randomLineWidthSpacing;
       doc.text(line,x,y);
-      y = y + parseInt(lineSpacing);
+      y += parseInt(randomLineSpacing);
 
     })
     let output = doc.output('datauristring');
