@@ -8,9 +8,9 @@ const lineSpacingSelector = document.querySelector('#line-space-text2handwriting
 const fontSizeSelector = document.querySelector('#font-size-text2handwriting');
 const pageMarginSelector = document.querySelector('#page-margin-text2handwriting');
 
-var lineSpacing = lineSpacingSelector.value || 7;
-var pageMargin = pageMarginSelector.value || 20;
-var fontSize = fontSizeSelector.value || 16;
+var lineSpacing = lineSpacingSelector.value || 9;
+var pageMargin = pageMarginSelector.value || 25;
+var fontSize = fontSizeSelector.value || 20;
 
 const handwritings = [
     {
