@@ -95,6 +95,10 @@
   font-family: "handwriting-12";
   src: url("../fonts/handwriting-12.ttf");
 }
+@font-face {
+  font-family: "handwriting-30";
+  src: url("../fonts/handwriting-30.ttf");
+}
 * {
   margin: 0;
   padding: 0;

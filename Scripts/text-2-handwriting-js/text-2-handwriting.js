@@ -8,9 +8,9 @@ const lineSpacingSelector = document.querySelector('#line-space-text2handwriting
 const fontSizeSelector = document.querySelector('#font-size-text2handwriting');
 const pageMarginSelector = document.querySelector('#page-margin-text2handwriting');
 
-var lineSpacing = lineSpacingSelector.value || 9;
-var pageMargin = pageMarginSelector.value || 25;
-var fontSize = fontSizeSelector.value || 20;
+var lineSpacing = lineSpacingSelector.value || 10;
+var pageMargin = pageMarginSelector.value || 30;
+var fontSize = fontSizeSelector.value || 22;
 
 const handwritings = [
     {
@@ -19,17 +19,24 @@ const handwritings = [
         fontName: "handwriting-12",
         font: "handwriting-12.ttf",
     },
+    {
+        name: "30 . Prateek Raut",
+        id: "30",
+        fontName: "handwriting-30",
+        font: "handwriting-30.ttf",
+
+    },
 ]
 
 //determines what roll no id is it
-const handwritingID = handwritings[0].id;
+var handwritingID = handwritings[0].id;
 
 //determine the selected font
 var selectedHandwriting = handwritings[0].font;
 //determine the selected font name
-const selectedHandwritingNameInitial = handwritings[0].fontName;            
+let selectedHandwritingName = handwritings[0].fontName;            
 //used in the textarea font
-textField.style.fontFamily = selectedHandwritingNameInitial;
+textField.style.fontFamily = selectedHandwritingName;
 
 handwritings.forEach(text=>{
     const handwritingOption = document.createElement('option');
@@ -39,15 +46,18 @@ handwritings.forEach(text=>{
 
 //selection of handwriting
 handwritingField.addEventListener('change',()=>{
-    const handwritingPartition = handwritingField.value.split('.');
+    let handwritingSpliter = handwritingField.value;
+    let handwritingPartition = handwritingSpliter.split('.');
     handwritingID = handwritingPartition[0].trim();
     handwritings.forEach(text=>{
         if(text.id == handwritingID)
         {
             selectedHandwriting = text.font;
             const selectedHandwritingNamePartition = selectedHandwriting.split('.');
-            const selectedHandwritingName = selectedHandwritingNamePartition[0].trim();
+            selectedHandwritingName = selectedHandwritingNamePartition[0].trim();
+            console.log(selectedHandwritingName);
             textField.style.fontFamily = selectedHandwritingName;
+            text2handwritingConvertionOutput();
         }
     })
 })
@@ -128,10 +138,10 @@ function text2handwritingConvertionDownload(){
     let y = margin;
 
     // Calculate available width for text
-    const pageWidth = doc.internal.pageSize.getWidth();
-    const pageHeight = doc.internal.pageSize.getHeight();
-    const availableHeight = pageHeight - (2 * margin);
-    const availableWidth = pageWidth - margin; // Leave 15 units margin on each side
+    let pageWidth = doc.internal.pageSize.getWidth();
+    let pageHeight = doc.internal.pageSize.getHeight();
+    let availableHeight = pageHeight - (2 * margin);
+    let availableWidth = pageWidth - margin; // Leave 15 units margin on each side
     
     // Split the text into multiple lines within the document's width
     var lines = doc.splitTextToSize(text, availableWidth - margin);
@@ -170,10 +180,10 @@ function text2handwritingConvertionOutput(){
     let y = margin;
 
     // Calculate available width for text
-    const pageWidth = doc.internal.pageSize.getWidth();
-    const pageHeight = doc.internal.pageSize.getHeight();
-    const availableHeight = pageHeight - (2 * margin);
-    const availableWidth = pageWidth - margin; // Leave 15 units margin on each side
+    let pageWidth = doc.internal.pageSize.getWidth();
+    let pageHeight = doc.internal.pageSize.getHeight();
+    let availableHeight = pageHeight - (2 * margin);
+    let availableWidth = pageWidth - margin; // Leave 15 units margin on each side
     
     // Split the text into multiple lines within the document's width
     var lines = doc.splitTextToSize(text, availableWidth - margin);
@@ -189,6 +199,6 @@ function text2handwritingConvertionOutput(){
       y = y + parseInt(lineSpacing);
 
     })
-    const output = doc.output('datauristring');
+    let output = doc.output('datauristring');
     text2HwOutput.src = output;
 }
