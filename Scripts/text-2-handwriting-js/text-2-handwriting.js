@@ -190,8 +190,26 @@ function text2handwritingConvertionOutput(){
     let minLineSpacing = 6;
     let maxLineSpacing = parseInt(lineSpacing);
 
-    let minLineWidthSpacing = 1;
-    let maxLineWidthSpacing = 5;
+    let minLineWidthSpacing = -3;
+    let maxLineWidthSpacing = 3;
+
+    let minFontSize = 0;
+    let maxFontSize = 0;
+
+    if(fontSize == 14 || fontSize == 15){
+        minFontSize = parseInt(fontSize);
+        maxFontSize = parseInt(fontSize) + 1;
+    }
+    else if(fontSize == 24 || fontSize == 23)
+    {
+        minFontSize = parseInt(fontSize) - 1;
+        maxFontSize = parseInt(fontSize);
+    }
+    else if(fontSize > 15 && fontSize < 23){
+        minFontSize = parseInt(fontSize) - 1;
+        maxFontSize = parseInt(fontSize) + 1;
+    }
+
 
     // Loop through each line and add it to the PDF
     lines.forEach(line=>{
@@ -203,8 +221,10 @@ function text2handwritingConvertionOutput(){
 
       let randomLineSpacing = Math.floor(Math.random() * (maxLineSpacing - minLineSpacing + 1)) + minLineSpacing;
       let randomLineWidthSpacing = Math.floor(Math.random() * (maxLineWidthSpacing - minLineWidthSpacing + 1)) + minLineWidthSpacing;
-
+      let randomFontSize = Math.floor(Math.random() * (maxFontSize - minFontSize + 1)) + minFontSize;
       x = margin + randomLineWidthSpacing;
+
+      doc.setFontSize(randomFontSize);
       doc.text(line,x,y);
       y += parseInt(randomLineSpacing);
 
