@@ -947,6 +947,31 @@ body{
 
         // ----------------------------------Start of text2handwriting
         .text-2-handwriting{
+            .link{
+                width: auto;
+                display: flex;
+                gap: 1vh;
+                align-items: center;
+                justify-content: center;
+                .header{
+                    font-size: var(--text-font-size);
+                    font-weight: 900 !important;
+                    text-align: left;
+                    padding: 1vh;
+                    background: var(--n1-color) ;
+                    color: var(--s1-color);
+                    border: .3vh solid var(--p1-color);
+                    border-radius: .5vh;
+                    text-transform: uppercase;
+                }
+                a{
+                    color: var(--s2-color);
+                    padding: 1vh;
+                    background: var(--n2-color);
+                    border-radius: .5vh;
+                    font-size: var(--text-font-size );
+                }
+            }
             .text-2-handwriting-body{
                 width: 100%;
                 display: flex;
