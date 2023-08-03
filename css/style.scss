@@ -963,6 +963,9 @@ body{
                     border: .3vh solid var(--p1-color);
                     border-radius: .5vh;
                     text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 a{
                     color: var(--s2-color);
