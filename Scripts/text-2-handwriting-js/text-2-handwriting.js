@@ -1,6 +1,7 @@
 const download = document.querySelector('.text-2-handwriting .text-2-handwriting-body .download');
-const handwritingField = document.querySelector('.text-2-handwriting .text-2-handwriting-body .handwriting-selection .handwriting-selector');
+const inBuiltHandwritingSelector = document.querySelector('.text-2-handwriting .text-2-handwriting-body .handwriting-selection .in-built-handwritings .handwriting-selector');
 const textField = document.querySelector('.text-2-handwriting .text-2-handwriting-body .text-selector');
+const customHandwritingSelector = document.querySelector('.text-2-handwriting .text-2-handwriting-body .handwriting-selection .custom-handwriting .custom-handwriting-selector input');
 
 const text2HwOutput = document.querySelector('.text-2-handwriting-output');
 
@@ -30,6 +31,8 @@ const handwritings = [
 //determines what roll no id is it
 var handwritingID = handwritings[0].id;
 
+var customHandwritingChecker = false;
+
 //determine the selected font
 var selectedHandwriting = handwritings[0].font;
 //determine the selected font name
@@ -40,12 +43,13 @@ textField.style.fontFamily = selectedHandwritingName;
 handwritings.forEach(text=>{
     const handwritingOption = document.createElement('option');
     handwritingOption.textContent = text.name.trim();
-    handwritingField.appendChild(handwritingOption);
+    inBuiltHandwritingSelector.appendChild(handwritingOption);
 })
 
 //selection of handwriting
-handwritingField.addEventListener('change',()=>{
-    let handwritingSpliter = handwritingField.value;
+inBuiltHandwritingSelector.addEventListener('change',()=>{
+    customHandwritingChecker = false;
+    let handwritingSpliter = inBuiltHandwritingSelector.value;
     let handwritingPartition = handwritingSpliter.split('.');
     handwritingID = handwritingPartition[0].trim();
     handwritings.forEach(text=>{
@@ -54,11 +58,37 @@ handwritingField.addEventListener('change',()=>{
             selectedHandwriting = text.font;
             const selectedHandwritingNamePartition = selectedHandwriting.split('.');
             selectedHandwritingName = selectedHandwritingNamePartition[0].trim();
-            console.log(selectedHandwritingName);
             textField.style.fontFamily = selectedHandwritingName;
             text2handwritingConvertionOutput();
         }
     })
+})
+
+// selection of custom handwriting
+customHandwritingSelector.addEventListener('input',(inputFile)=>{
+    const file = inputFile.target.files[0];
+    customHandwritingChecker = true;
+
+    if(file)
+    {
+        const reader = new FileReader();
+        reader.onload = function(e){
+            const fontData = e.target.result;
+            const fontBlob = new Blob([fontData], { type: 'application/octet-stream' });
+            const fontUrl = URL.createObjectURL(fontBlob);
+
+            const fontFace = new FontFace("customFont", `url(${fontUrl})`);
+            fontFace.load().then(loadedFont => {
+                document.fonts.add(loadedFont);
+                selectedHandwriting = fontUrl;
+                textField.style.fontFamily = "customFont, sans-serif";
+                text2handwritingConvertionOutput();
+            });
+        }
+        
+        reader.readAsArrayBuffer(file);
+    }
+
 })
 
 //selection of customization
@@ -168,8 +198,17 @@ function text2handwritingConvertionOutput(){
     })
 
     doc.setFontSize(fontSize);
-    doc.addFont('./fonts/'+selectedHandwriting,'Handwriting','normal');
-    doc.setFont("Handwriting");
+
+    if(!customHandwritingChecker)
+    {
+        doc.addFont('./fonts/'+selectedHandwriting,'Handwriting','normal');
+        doc.setFont("Handwriting");
+    }
+    else if(customHandwritingChecker){
+        doc.addFont(selectedHandwriting,'CustomHandwriting','normal');
+        doc.setFont("CustomHandwriting")
+    }
+
 
     let text = textField.value;
     let margin = parseInt(pageMargin);

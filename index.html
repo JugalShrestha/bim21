@@ -443,13 +443,22 @@
             </div>
             <div class="text-2-handwriting-body">
                 <div class="handwriting-selection">
-                    <div class="header">Select a handwriting:</div>
-                    <select name="handwriting-selector" class="handwriting-selector">
-                    </select>
-                    <div class="link">
-                        <div class="header">how to add your own handwriting? </div>
-                        <a href="pdf/how-to-add-your-handwriting.pdf" target="_blank">click_here!</a>
+                    <div class="in-built-handwritings">
+                        <div class="header">Select a handwriting:</div>
+                        <select name="handwriting-selector" class="handwriting-selector">
+                        </select>
                     </div>
+                    <div class="custom-handwriting">
+                        <div class="header">Upload a handwriting:</div>
+                        <div class="custom-handwriting-selector">
+                            <input type="file" accept=".ttf, .otf" name="handwriting-custom" id="custom-hw-selector">
+                            <div class="header btn">Upload</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-header opacity">
+                    how to add your own handwriting?
+                    <a href="pdf/how-to-add-your-handwriting.pdf" target="_blank">click_here!</a>
                 </div>
                 <div class="text-2-handwriting-converter-field">
                     <div class="page-customization">
@@ -466,8 +475,8 @@
                     </div>
                     <textarea name="assignment-text" placeholder="write your assignment which is to be converted here!" class="text-selector"></textarea>
                 </div>
-                <div class="link">
-                    <div class="header">see the real output of this project? </div>
+                <div class="sub-header opacity">
+                    see the real output of this project?
                     <a href="pdf/examples-of-real-time-output.pdf" target="_blank">click_here!</a>
                 </div>
                 <div class="text-2-handwriting-output-whole">

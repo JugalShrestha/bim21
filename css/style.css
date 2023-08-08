@@ -880,33 +880,8 @@ body .everything .syllabus-page .syllabus-body .semester-options .syllabus-1-8 a
   background: var(--n1-color);
   color: var(--s1-color);
 }
-body .everything .text-2-handwriting .link {
-  width: auto;
-  display: flex;
-  gap: 1vh;
-  align-items: center;
-  justify-content: center;
-}
-body .everything .text-2-handwriting .link .header {
-  font-size: var(--text-font-size);
-  font-weight: 900 !important;
-  text-align: left;
-  padding: 1vh;
-  background: var(--n1-color);
-  color: var(--s1-color);
-  border: 0.3vh solid var(--p1-color);
-  border-radius: 0.5vh;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body .everything .text-2-handwriting .link a {
-  color: var(--s2-color);
-  padding: 1vh;
-  background: var(--n2-color);
-  border-radius: 0.5vh;
-  font-size: var(--text-font-size);
+body .everything .text-2-handwriting .opacity {
+  opacity: 1 !important;
 }
 body .everything .text-2-handwriting .text-2-handwriting-body {
   width: 100%;
@@ -918,10 +893,18 @@ body .everything .text-2-handwriting .text-2-handwriting-body {
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection {
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2vh;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .in-built-handwritings, body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .custom-handwriting {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding-right: 2vh;
   gap: 1vh;
+  border-right: 0.3vh solid var(--shadow);
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .header {
   font-size: var(--text-font-size);
@@ -929,11 +912,34 @@ body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selec
   text-transform: uppercase;
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .handwriting-selector {
+  width: 100%;
   padding: 1vh;
   background: var(--s1-color);
   font-size: var(--text-font-size);
   border: 0.3vh solid var(--shadow);
   border-radius: 0.5vh;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .custom-handwriting-selector {
+  cursor: pointer;
+  width: 100%;
+  padding: 1vh;
+  position: relative;
+  background: var(--n1-color);
+  border: 0.3vh solid var(--shadow);
+  border-radius: 0.5vh;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection #custom-hw-selector {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .handwriting-selection .btn {
+  cursor: pointer;
+  width: 100%;
+  color: var(--s1-color);
+  text-align: center;
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .sub-header {
   font-size: var(--text-font-size);
