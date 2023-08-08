@@ -155,10 +155,19 @@ function text2handwritingConvertionDownload(){
         format: 'a4',
     })
 
-    // Set font size and font type
+  
     doc.setFontSize(fontSize);
-    doc.addFont('./fonts/'+selectedHandwriting,'Handwriting','normal');
-    doc.setFont("Handwriting");
+
+    if(!customHandwritingChecker)
+    {
+        doc.addFont('./fonts/'+selectedHandwriting,'Handwriting','normal');
+        doc.setFont("Handwriting");
+    }
+    else if(customHandwritingChecker){
+        doc.addFont(selectedHandwriting,'CustomHandwriting','normal');
+        doc.setFont("CustomHandwriting")
+    }
+
     let text = textField.value;
     let margin = parseInt(pageMargin);
 
@@ -208,7 +217,6 @@ function text2handwritingConvertionOutput(){
         doc.addFont(selectedHandwriting,'CustomHandwriting','normal');
         doc.setFont("CustomHandwriting")
     }
-
 
     let text = textField.value;
     let margin = parseInt(pageMargin);
