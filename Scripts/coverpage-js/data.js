@@ -148,7 +148,7 @@ var students = [
         rN: "021BIM037"
     }
     ,{
-        name: "Rakhya Subedi",
+        name: "Rakshya Subedi",
         rN: "021BIM038"
     }
     ,{
