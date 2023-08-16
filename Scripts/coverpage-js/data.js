@@ -120,7 +120,7 @@ var students = [
         rN: "021BIM030"
     },
     {
-        name: "Pratiksa Rana Kshetri",
+        name: "Pratiksha Rana Kshetri",
         rN: "021BIM031"
     },
     {
