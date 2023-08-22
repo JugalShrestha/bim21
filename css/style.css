@@ -939,9 +939,20 @@ body .everything .text-2-handwriting .text-2-handwriting-body .download {
     border-bottom: 0.3vh solid var(--p1-color);
   }
 }
+@media (max-width: 980px) {
+  :root {
+    --p-margin: 80%;
+  }
+  .coverpage-output {
+    display: none !important;
+  }
+  .text-2-handwriting-output-whole {
+    display: none !important;
+  }
+}
 @media (max-width: 720px) {
   :root {
-    --p-margin: 100%;
+    --p-margin: 100% !important;
     --header-font-size:2vh;
     --object-font-size: 1.5vh;
     --big-font-size: 3vh;
