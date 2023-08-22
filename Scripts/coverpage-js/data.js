@@ -371,9 +371,9 @@ students.forEach((student,index)=>{
     {
         return
     }
-    const rollNo = document.createElement('option')
-    rollNo.innerText = index+1 +" . "+ student.name
-    rollNoSelector.appendChild(rollNo)
+    const option = document.createElement('option')
+    option.innerText = index+1 +" . "+ student.name
+    rollNoSelector.appendChild(option)
 })
 
 subjects.forEach((subject,index)=>{
@@ -400,38 +400,3 @@ subjects.forEach((subject,index)=>{
     option.innerHTML = subjectName[0].trim()
     subjectSelector.appendChild(option)
 })
-
-function printRN(rollNo){
-    submittedbyName.innerText = students[rollNo-1].name;
-    submittedbyRN.innerText = students[rollNo-1].rN;
-    nameToShow = students[rollNo-1].name;
-    rollNoToShow = students[rollNo-1].rN;
-}
-
-function printSub(subject)
-{
-    subjects.forEach(sub=>{
-        var name1 = sub.name.split('[')
-        if(name1[0].trim() == subject.trim())
-        {
-            if(sub.shortForm != null)
-            {
-                subjectTitle.innerText = sub.shortForm
-                subjectNameToShow = sub.shortForm
-            }
-            else
-            {
-                subjectTitle.innerText = sub.name
-                subjectNameToShow = sub.name
-            }
-
-            submittedToTitle.innerText = sub.title 
-            submittedToName.innerText = sub.teacher
-            submittedToDept.innerText = sub.department
-            
-            subjectTeacherNameToShow = sub.teacher
-            teacherDeptToShow = sub.department
-            teacherDescriptionToShow = sub.title
-        }
-    })
-}

@@ -301,18 +301,21 @@ body{
             }
             //Start of Search part
             .search-part{
-                width: 49%;
+                width: var(--p-margin);
+                padding: 0 1vh;
                 height: 5vh;
+                gap: 2vh;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: space-between;
                 .text-input{
                     width: 100%;
                     height: 100%;
                     display: flex;
+                    
                     #search-id{
                         cursor: pointer;
-                        width: 95%;
+                        width: 100%;
                         height: 100%;
                         padding-left: 2vh;
                         background: var(--s1-color);
@@ -340,6 +343,7 @@ body{
                     background: var(--s1-color);
                     border: .3vh solid var(--p1-color);
                     border-radius: .5vh;
+                    gap: 1vh;
                     .search-txt{
                         font-weight: bold;
                         font-size: var(--text-font-size);
@@ -597,163 +601,14 @@ body{
             .generator-body{
                 width: 100%;
                 display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: space-between;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
                 gap: 2vh;
-                 //Start of Sample png
-                .output{
-                    width: 40vh;
-                    height:55vh;
-                    background: white;
-                    border: .3vh solid var(--p1-color);
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    overflow: hidden;
-                    .top-part{
-                        position: absolute;
-                        top: 10%;
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        font-weight: 900;
-                        justify-content: center;
-                        gap: .5vh;
-                        .college-name{
-                            font-size: 2vh;
-                        }
-                        .address{
-                            font-size: 1.5vh;
-                        }
-                        .affiliated{
-                            font-size: 1vh;
-                        }
-                    }
-                    .logo{
-                        position: absolute;
-                        top: 25%;
-                        width: 10vh;
-                        height: 10vh;
-                        overflow: hidden;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                    .titles{
-                        position: absolute;
-                        top: 47%;
-                        display: flex;
-                        width: 100%;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 1vh;
-                        font-size: 1.3vh;
-                        font-weight: bold;
-                        .department{
-                            font-size: 1vh;
-                        }
-                        .lines{
-                            width: 5vh;
-                            height: 5vh;
-                            overflow: hidden;
-                            img{
-                                width: 100%;
-                                height: 100%;
-                                object-fit: contain;
-                            }
-                        }
-                    }
-                    .submition-field{
-                        width: 95%;
-                        bottom: 1vh;
-                        height: 20%;
-                        position: absolute;
-                        display: flex;
-                        align-items: center;
-                        gap: 1vh;
-                        justify-content: space-between;
-                    }
-                    .submitted-by{
-                        width: 40%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-start;
-                        font-size: 1vh;
-                        text-transform: capitalize;
-                        font-weight: bold;
-                        border: .1vh solid var(--shadow);
-                        .header{
-                            font-size: 1vh !important;
-                            border-bottom: .1vh solid var(--p1-color);
-                            text-transform: uppercase;
-                        }
-                        .body{
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }  
-                    .submitted-to{
-                        width: 40%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-start;
-                        text-transform: capitalize;
-                        font-size: 1vh !important;
-                        font-weight: bold;
-                        border: .1vh solid var(--shadow);
-                        .header{
-                            font-size: 1vh !important;
-                            border-bottom: .1vh solid var(--p1-color);
-                            text-transform: uppercase;
-                        }
-                        .body{
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    } 
-                    .signature{
-                        width: 20%;
-                        height: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: flex-start;
-                        font-size: 1vh !important;
-                        font-weight: bold;
-                        border: .1vh solid var(--shadow);
-                        gap: .5vh;
-                        .header{
-                            font-size: 1vh !important;
-                            text-align: center;
-                            border-bottom: .1vh solid var(--shadow);
-                            text-transform: lowercase;
-                        }
-                    }
-                }
             }
             .input-field{
-                width: 40%;
+                width: 100%;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 gap: 2vh;
@@ -762,6 +617,8 @@ body{
                     display: flex;
                     flex-direction: column;
                     gap: 1vh;
+                    padding-right: 2vh;
+                    border-right: .3vh solid var(--p1-color);
                     .header{
                         width: 100%;
                         font-size: var(--text-font-size);
@@ -808,13 +665,17 @@ body{
                         border: .3vh solid var(--p1-color);
                     }
                 }
+                
+                }
+                .coverpage-output{
+                    width: 100%;
+                    min-height: 60vh;
+                }
                 .download{
                     cursor: pointer;
                     transition: .2s ease-in-out;
                     border: none;
                     outline: none;
-                    width: 100%;
-                    margin: 4vh 0;
                     padding: 2vh;
                     background: var(--n1-color);
                     color: var(--s1-color);
@@ -830,10 +691,9 @@ body{
                     }
                 }
                 .pdf-to-docx-link{
-                    width: 100%;
                     display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
+                    gap: 1vh;
+                    align-items: center;
                     justify-content: center;
                     .header{
                         font-size: var(--text-font-size);
@@ -844,8 +704,8 @@ body{
                     a{
                         color: var(--n2-color);
                         font-size: var(--text-font-size );
+                        font-weight: 900;
                     }
-                }
                 }
             }
         }
@@ -1111,7 +971,7 @@ body{
         // ----------------------------------End of text2handwriting
     }
 }
-@media (min-width: 940px) {
+@media (min-width: 720px) {
     .search-btn{
         &:hover{
             background: var(--n2-color) !important;
@@ -1159,7 +1019,7 @@ body{
         }
     }
 }
-@media (max-width: 940px) {
+@media (max-width: 720px) {
     :root{
         --p-margin: 100%;
         --header-font-size:2vh; 
@@ -1195,10 +1055,17 @@ body{
     }
     .generator-body{
         .input-field{
+            flex-direction: column !important;
             min-width: 100%;
+            padding: 0vh !important;
+            div{border: none !important;
+            padding: 0vh !important;}
         }
         .output{
             min-width: 100%;
+        }
+        .coverpage-output{
+            display: none !important;
         }
     }
     .routine{

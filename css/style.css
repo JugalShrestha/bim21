@@ -277,10 +277,12 @@ body .everything .hero-page .hero-page-slogan span {
   font-weight: bold;
 }
 body .everything .hero-page .search-part {
-  width: 49%;
+  width: var(--p-margin);
+  padding: 0 1vh;
   height: 5vh;
+  gap: 2vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 body .everything .hero-page .search-part .text-input {
@@ -290,7 +292,7 @@ body .everything .hero-page .search-part .text-input {
 }
 body .everything .hero-page .search-part .text-input #search-id {
   cursor: pointer;
-  width: 95%;
+  width: 100%;
   height: 100%;
   padding-left: 2vh;
   background: var(--s1-color);
@@ -314,6 +316,7 @@ body .everything .hero-page .search-part .search-btn {
   background: var(--s1-color);
   border: 0.3vh solid var(--p1-color);
   border-radius: 0.5vh;
+  gap: 1vh;
 }
 body .everything .hero-page .search-part .search-btn .search-txt {
   font-weight: bold;
@@ -542,164 +545,14 @@ body .everything .cover-page-generator-page .generator-whole .header {
 body .everything .cover-page-generator-page .generator-whole .generator-body {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 2vh;
 }
-body .everything .cover-page-generator-page .generator-whole .generator-body .output {
-  width: 40vh;
-  height: 55vh;
-  background: white;
-  border: 0.3vh solid var(--p1-color);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .top-part {
-  position: absolute;
-  top: 10%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-weight: 900;
-  justify-content: center;
-  gap: 0.5vh;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .top-part .college-name {
-  font-size: 2vh;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .top-part .address {
-  font-size: 1.5vh;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .top-part .affiliated {
-  font-size: 1vh;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .logo {
-  position: absolute;
-  top: 25%;
-  width: 10vh;
-  height: 10vh;
-  overflow: hidden;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .logo img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles {
-  position: absolute;
-  top: 47%;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1vh;
-  font-size: 1.3vh;
-  font-weight: bold;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles .department {
-  font-size: 1vh;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles .lines {
-  width: 5vh;
-  height: 5vh;
-  overflow: hidden;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .titles .lines img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submition-field {
-  width: 95%;
-  bottom: 1vh;
-  height: 20%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 1vh;
-  justify-content: space-between;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-by {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 1vh;
-  text-transform: capitalize;
-  font-weight: bold;
-  border: 0.1vh solid var(--shadow);
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-by .header {
-  font-size: 1vh !important;
-  border-bottom: 0.1vh solid var(--p1-color);
-  text-transform: uppercase;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-by .body {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to {
-  width: 40%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-transform: capitalize;
-  font-size: 1vh !important;
-  font-weight: bold;
-  border: 0.1vh solid var(--shadow);
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to .header {
-  font-size: 1vh !important;
-  border-bottom: 0.1vh solid var(--p1-color);
-  text-transform: uppercase;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .submitted-to .body {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .signature {
-  width: 20%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 1vh !important;
-  font-weight: bold;
-  border: 0.1vh solid var(--shadow);
-  gap: 0.5vh;
-}
-body .everything .cover-page-generator-page .generator-whole .generator-body .output .signature .header {
-  font-size: 1vh !important;
-  text-align: center;
-  border-bottom: 0.1vh solid var(--shadow);
-  text-transform: lowercase;
-}
 body .everything .cover-page-generator-page .generator-whole .input-field {
-  width: 40%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2vh;
@@ -709,6 +562,8 @@ body .everything .cover-page-generator-page .generator-whole .input-field .roll-
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  padding-right: 2vh;
+  border-right: 0.3vh solid var(--p1-color);
 }
 body .everything .cover-page-generator-page .generator-whole .input-field .roll-no .header, body .everything .cover-page-generator-page .generator-whole .input-field .subject .header {
   width: 100%;
@@ -755,13 +610,15 @@ body .everything .cover-page-generator-page .generator-whole .input-field .title
   background: var(--s1-color);
   border: 0.3vh solid var(--p1-color);
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .download {
+body .everything .cover-page-generator-page .generator-whole .coverpage-output {
+  width: 100%;
+  min-height: 60vh;
+}
+body .everything .cover-page-generator-page .generator-whole .download {
   cursor: pointer;
   transition: 0.2s ease-in-out;
   border: none;
   outline: none;
-  width: 100%;
-  margin: 4vh 0;
   padding: 2vh;
   background: var(--n1-color);
   color: var(--s1-color);
@@ -772,26 +629,26 @@ body .everything .cover-page-generator-page .generator-whole .input-field .downl
   border-radius: 0.5vh;
   border: 0.3vh solid var(--p1-color);
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .download:hover {
+body .everything .cover-page-generator-page .generator-whole .download:hover {
   background: var(--s1-color);
   color: var(--p1-color);
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .pdf-to-docx-link {
-  width: 100%;
+body .everything .cover-page-generator-page .generator-whole .pdf-to-docx-link {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  gap: 1vh;
+  align-items: center;
   justify-content: center;
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .pdf-to-docx-link .header {
+body .everything .cover-page-generator-page .generator-whole .pdf-to-docx-link .header {
   font-size: var(--text-font-size);
   width: 100%;
   text-align: left;
   text-transform: none;
 }
-body .everything .cover-page-generator-page .generator-whole .input-field .pdf-to-docx-link a {
+body .everything .cover-page-generator-page .generator-whole .pdf-to-docx-link a {
   color: var(--n2-color);
   font-size: var(--text-font-size);
+  font-weight: 900;
 }
 body .everything .class-routine-page {
   width: 100%;
@@ -1040,7 +897,7 @@ body .everything .text-2-handwriting .text-2-handwriting-body .download {
   text-transform: uppercase;
 }
 
-@media (min-width: 940px) {
+@media (min-width: 720px) {
   .search-btn:hover {
     background: var(--n2-color) !important;
   }
@@ -1082,7 +939,7 @@ body .everything .text-2-handwriting .text-2-handwriting-body .download {
     border-bottom: 0.3vh solid var(--p1-color);
   }
 }
-@media (max-width: 940px) {
+@media (max-width: 720px) {
   :root {
     --p-margin: 100%;
     --header-font-size:2vh;
@@ -1118,10 +975,19 @@ body .everything .text-2-handwriting .text-2-handwriting-body .download {
     max-height: 10vh !important;
   }
   .generator-body .input-field {
+    flex-direction: column !important;
     min-width: 100%;
+    padding: 0vh !important;
+  }
+  .generator-body .input-field div {
+    border: none !important;
+    padding: 0vh !important;
   }
   .generator-body .output {
     min-width: 100%;
+  }
+  .generator-body .coverpage-output {
+    display: none !important;
   }
   .routine .routine-row {
     gap: 0.1vh !important;

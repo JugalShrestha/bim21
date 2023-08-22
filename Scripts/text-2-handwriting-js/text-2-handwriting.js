@@ -13,6 +13,8 @@ var lineSpacing = lineSpacingSelector.value || 10;
 var pageMargin = pageMarginSelector.value || 30;
 var fontSize = fontSizeSelector.value || 20;
 
+let downloadText2Hw = false;
+
 const handwritings = [
     {
         name: "12 . Jugal Shrestha",
@@ -149,53 +151,8 @@ window.jsPDF = window.jspdf.jsPDF;
 
 //Downloads  the pdf plus opens the pdf in a new window
 function text2handwritingConvertionDownload(){
-    var doc = new jsPDF({
-        orientation: 'p',
-        unit: 'mm',
-        format: 'a4',
-    })
-
-  
-    doc.setFontSize(fontSize);
-
-    if(!customHandwritingChecker)
-    {
-        doc.addFont('./fonts/'+selectedHandwriting,'Handwriting','normal');
-        doc.setFont("Handwriting");
-    }
-    else if(customHandwritingChecker){
-        doc.addFont(selectedHandwriting,'CustomHandwriting','normal');
-        doc.setFont("CustomHandwriting")
-    }
-
-    let text = textField.value;
-    let margin = parseInt(pageMargin);
-
-    // Set initial position
-    let x = margin;
-    let y = margin;
-
-    // Calculate available width for text
-    let pageWidth = doc.internal.pageSize.getWidth();
-    let pageHeight = doc.internal.pageSize.getHeight();
-    let availableHeight = pageHeight - (2 * margin);
-    let availableWidth = pageWidth - margin; // Leave 15 units margin on each side
-    
-    // Split the text into multiple lines within the document's width
-    var lines = doc.splitTextToSize(text, availableWidth - margin);
-
-    // Loop through each line and add it to the PDF
-    lines.forEach(line=>{
-      if(y > ( availableHeight + margin + lineSpacing))
-      {
-        doc.addPage("a4","p");
-        y = margin;
-      }
-      doc.text(line,x,y);
-      y = y + parseInt(lineSpacing);
-
-    })
-    doc.save(handwritingID+'-assignment.pdf');
+    downloadText2Hw = true;
+    text2handwritingConvertionOutput();
 }
 
 //Shows the output of the pdf only no download
@@ -278,4 +235,9 @@ function text2handwritingConvertionOutput(){
     })
     let output = doc.output('datauristring');
     text2HwOutput.src = output;
+
+    if(downloadText2Hw){    
+        doc.save(handwritingID+'-assignment.pdf');
+        downloadText2Hw = false;
+    }
 }
