@@ -140,8 +140,7 @@ fontSizeSelector.addEventListener('input',()=>{
 
 //downloading and showing of output
 download.addEventListener('click',text2handwritingConvertionDownload);
-const deviceWidth = window.innerWidth;
-if(deviceWidth>980)
+if(deviceWidth > 980)
 {
     text2handwritingConvertionOutput();
     textField.addEventListener('input',text2handwritingConvertionOutput);
@@ -233,8 +232,11 @@ function text2handwritingConvertionOutput(){
       y += parseInt(randomLineSpacing);
 
     })
-    let output = doc.output('datauristring');
-    text2HwOutput.src = output;
+    if(deviceWidth > 980)
+    {
+        let output = doc.output('datauristring');
+        text2HwOutput.src = output;
+    }
 
     if(downloadText2Hw){    
         doc.save(handwritingID+'-assignment.pdf');

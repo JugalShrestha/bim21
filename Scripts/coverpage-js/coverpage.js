@@ -13,6 +13,12 @@ let reportNo = reportNoSelector.value
 
 let coverpageTitle = "";
 
+//Checking if mobile or not for the pdf to be outputed
+const deviceWidth = window.innerWidth;
+window.addEventListener('resize',()=>{
+    deviceWidth = window.innerWidth;
+})
+
 window.jsPDF = window.jspdf.jsPDF
 
 let name = "";
@@ -194,14 +200,18 @@ function generatePdf()
 
   //side line
   doc.line(205,240,205,292)
-
-  const output = doc.output("dataurlstring");
-  coverpageOutput.src = output;
+  if(deviceWidth > 980)
+  {
+    const output = doc.output("dataurlstring");
+    coverpageOutput.src = output;
+  }
   if(downloadCoverpage)
   {
     doc.save(name+" - ( "+coverpageTitle+" ).pdf");
     downloadCoverpage = false;
   }
 }
-
-generatePdf();
+if(deviceWidth > 980)
+{    
+    generatePdf();
+}
