@@ -1,9 +1,9 @@
-const rollNoSelector = document.querySelector('.roll-no-selector')
-const subjectSelector = document.querySelector('.subject-selector')
-const downloader = document.querySelector('.download')
-const titleSelector = document.querySelector('.title-selector input')
-const reportNoSelector = document.querySelector('.report-no-selector input')
-let coverpageOutput = document.querySelector('.coverpage-output');
+const rollNoSelector = document.querySelector('.cover-page-generator-page .roll-no-selector')
+const subjectSelector = document.querySelector('.cover-page-generator-page .subject-selector')
+const downloader = document.querySelector('.cover-page-generator-page .download')
+const titleSelector = document.querySelector('.cover-page-generator-page .title-selector input')
+const reportNoSelector = document.querySelector('.cover-page-generator-page .report-no-selector input')
+let coverpageOutput = document.querySelector('.cover-page-generator-page .coverpage-output');
 let downloadCoverpage = false;
 
 var semCount = 3;
