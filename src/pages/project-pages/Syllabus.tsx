@@ -24,7 +24,7 @@ const Syllabus = () => {
           </li>
           <li className="semester-option syllabus-1-8">
             <Link
-              to={rootBranch + "/src/assets/pdf/syllabus/whole-syllabus.pdf"}
+              to={rootBranch + "/pdf/syllabus/whole-syllabus.pdf"}
               target="_blank"
             >
               BIM-COURSE-STRUCTURE.pdf
