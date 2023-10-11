@@ -393,6 +393,25 @@ body .everything #page .header .sub-header {
   font-weight: bold;
   opacity: 50%;
 }
+body .everything .note-page .note-link {
+  padding: 1vh;
+  transition: 0.2s ease;
+  font-size: var(--text-font-size);
+  background: var(--n1-color);
+  text-transform: uppercase;
+  border-radius: 0.5vh;
+  border: 0.3vh solid var(--p1-color);
+  color: var(--s1-color);
+  font-weight: bold;
+}
+body .everything .note-page .note-link:hover {
+  color: var(--p1-color);
+  background: var(--s1-color);
+}
+body .everything .note-page .note-output {
+  width: 100%;
+  height: 100vh;
+}
 body .everything .cover-page-generator-page .generator-whole {
   width: 100%;
   display: flex;
@@ -497,6 +516,15 @@ body .everything .cover-page-generator-page .coverpage-output {
   height: 100vh;
   background: var(--s1-color);
 }
+body .everything .cover-page-generator-page .display-none {
+  display: none !important;
+}
+body .everything .cover-page-generator-page .action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
 body .everything .cover-page-generator-page .download {
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -505,7 +533,7 @@ body .everything .cover-page-generator-page .download {
   padding: 1vh;
   background: var(--n1-color);
   color: var(--s1-color);
-  font-size: var(--header-font-size);
+  font-size: var(--text-font-size);
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
@@ -663,6 +691,8 @@ body .everything .text-2-handwriting .text-2-handwriting-body .sub-header {
   font-size: var(--text-font-size);
   font-weight: bold;
   opacity: 50%;
+  display: flex;
+  gap: 1vh;
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .sub-header a {
   color: var(--n2-color);
@@ -687,7 +717,7 @@ body .everything .text-2-handwriting .text-2-handwriting-body .page-customizatio
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers {
   width: 100%;
   display: grid;
-  grid-template-columns: 30% auto 30%;
+  grid-template-columns: auto 30% auto;
   border-bottom: 0.3vh solid var(--shadow);
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header {
@@ -702,6 +732,10 @@ body .everything .text-2-handwriting .text-2-handwriting-body .page-customizatio
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header:nth-child(1), body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header:nth-child(1) {
   border-left: none !important;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .generate-pdf, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .generate-pdf {
+  cursor: pointer;
+  background: var(--n2-color) !important;
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations input, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers input {
   border-left: 0.3vh solid var(--shadow) !important;
@@ -719,7 +753,8 @@ body .everything .text-2-handwriting .text-2-handwriting-body .page-customizatio
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwriting-output-whole {
   width: 100%;
-  height: 60vh;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -728,7 +763,7 @@ body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwritin
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .text-2-handwriting-output-whole .text-2-handwriting-output {
   width: 100%;
-  height: 100%;
+  height: 60vh;
   border-radius: 0.5vh;
   background: var(--s1-color);
   outline: none;
@@ -747,15 +782,26 @@ body .everything .text-2-handwriting .text-2-handwriting-body .text-selector {
   font-size: var(--header-font-size);
   background: var(--s1-color);
 }
+body .everything .text-2-handwriting .text-2-handwriting-body .download-field {
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+  justify-content: center;
+}
 body .everything .text-2-handwriting .text-2-handwriting-body .download {
-  padding: 2vh;
+  padding: 1vh 2vh;
+  transition: 0.2s ease;
+  cursor: pointer;
   border-radius: 0.5vh;
   border: 0.3vh solid var(--shadow);
   background: var(--n1-color);
   color: var(--s1-color);
   font-weight: 900;
-  font-size: var(--header-font-size);
+  font-size: var(--text-font-size);
   text-transform: uppercase;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .download:hover {
+  background: var(--n2-color) !important;
 }
 
 @media (min-width: 940px) {
@@ -803,6 +849,15 @@ body .everything .text-2-handwriting .text-2-handwriting-body .download {
 @media (max-width: 940px) {
   :root {
     --p-margin: 70%;
+    --header-font-size:2vh;
+    --object-font-size: 1.5vh;
+    --big-font-size: 3vh;
+  }
+  .every-projects-body {
+    grid-template-columns: 30% 30% 30% !important;
+  }
+  .every-projects-body, .search-results {
+    gap: 2vh !important;
   }
 }
 @media (max-width: 720px) {
@@ -837,6 +892,9 @@ body .everything .text-2-handwriting .text-2-handwriting-body .download {
     background: var(--n1-color);
     color: var(--s1-color);
     border: 0.3vh solid var(--shadow);
+  }
+  .every-projects-body {
+    grid-template-columns: 30% 30% 30% !important;
   }
   .every-projects-body, .search-results {
     gap: 2vh !important;

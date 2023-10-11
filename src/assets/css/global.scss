@@ -431,6 +431,31 @@ body{
         }
         //End of All Pages
 
+        //Start of note page
+        .note-page{
+            .note-link{
+                padding: 1vh;
+                transition: .2s ease;
+                font-size: var(--text-font-size);
+                background: var(--n1-color);
+                text-transform: uppercase;
+                border-radius: .5vh;
+                border: .3vh solid var(--p1-color);
+                color: var(--s1-color);
+                font-weight: bold;
+                &:hover{
+                    color: var(--p1-color);
+                    background: var(--s1-color);
+                }
+
+            }
+            .note-output{
+                width: 100%;
+                height: 100vh;
+            }
+        }
+        //End of note page
+
         //-------------------------Start of Coverpage Generator
         .cover-page-generator-page{
             .generator-whole{
@@ -537,6 +562,15 @@ body{
                 height: 100vh;
                 background: var(--s1-color);
             }
+            .display-none{
+                display: none !important;
+            }
+            .action-btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 2vh;
+            }
             .download{
                 cursor: pointer;
                 transition: .2s ease-in-out;
@@ -545,7 +579,7 @@ body{
                 padding: 1vh;
                 background: var(--n1-color);
                 color: var(--s1-color);
-                font-size: var(--header-font-size);
+                font-size: var(--text-font-size);
                 font-weight: bold;
                 text-align: center;
                 text-transform: uppercase;
@@ -882,6 +916,15 @@ body{
 @media (max-width: 940px) {
     :root{
         --p-margin: 70%;
+        --header-font-size:2vh; 
+        --object-font-size: 1.5vh;
+        --big-font-size: 3vh;
+    }
+    .every-projects-body{
+        grid-template-columns: 30% 30% 30% !important;
+    }
+    .every-projects-body,.search-results{
+        gap: 2vh !important;
     }
 }
 @media (max-width: 720px) {
@@ -915,6 +958,9 @@ body{
         background: var(--n1-color);
         color: var(--s1-color);
         border: .3vh solid var(--shadow);
+    }
+    .every-projects-body{
+        grid-template-columns: 30% 30% 30% !important;
     }
     .every-projects-body,.search-results{
         gap: 2vh !important;

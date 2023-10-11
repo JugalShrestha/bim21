@@ -27,7 +27,9 @@ const SearchBar = () => {
           ></input>
         </div>
         <Link
-          to={`${rootBranch}/search?query=${encodeURIComponent(searchable)}`}
+          to={`${rootBranch}/search?query=${encodeURIComponent(
+            searchable.toLowerCase()
+          )}`}
           className="search-btn"
         >
           <div className="search-txt">Search</div>

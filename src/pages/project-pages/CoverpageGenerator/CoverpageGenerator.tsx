@@ -125,7 +125,6 @@ const CoverpageGenerator = () => {
           pdf2docx.com
         </a>
       </div>
-
       <CoverpageGeneratorOutput
         rollNoProp={rollNo}
         subjectProp={subject}

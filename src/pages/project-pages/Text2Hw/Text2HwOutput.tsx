@@ -164,7 +164,7 @@ const Text2HwOutput: React.FC<Props> = ({
   };
 
   return (
-    <div className="text-2-handwriting-output-whole">
+    <>
       <div className="download-field">
         <div onClick={generatePdf} className="download">
           Generate
@@ -173,16 +173,18 @@ const Text2HwOutput: React.FC<Props> = ({
           Download
         </div>
       </div>
-      {pdfDataUri && (
-        <>
-          <div className="header">output:</div>
-          <iframe
-            src={pdfDataUri}
-            className="text-2-handwriting-output"
-          ></iframe>
-        </>
-      )}
-    </div>
+      <div className="text-2-handwriting-output-whole">
+        {pdfDataUri && (
+          <>
+            <div className="header">output:</div>
+            <iframe
+              src={pdfDataUri}
+              className="text-2-handwriting-output"
+            ></iframe>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

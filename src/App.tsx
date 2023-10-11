@@ -7,6 +7,9 @@ import Syllabus from "./pages/project-pages/Syllabus";
 import CoverpageGenerator from "./pages/project-pages/CoverpageGenerator/CoverpageGenerator";
 import Text2Hw from "./pages/project-pages/Text2Hw/Text2Hw";
 import rootBranch from "./components/variables/rootBranch";
+import FinancialAccountingNote from "./pages/note-pages/FinancialAccountingNote";
+import MicroprocessorAndCANote from "./pages/note-pages/MicroprocessorAndCANote";
+import NotAvailable from "./pages/NotAvailable";
 
 const App = () => {
   return (
@@ -35,6 +38,15 @@ const App = () => {
             element={<CoverpageGenerator />}
           ></Route>
           <Route path={rootBranch + "/text2hw"} element={<Text2Hw />}></Route>
+          <Route
+            path={rootBranch + "/financial-accounting"}
+            element={<FinancialAccountingNote />}
+          ></Route>
+          <Route
+            path={rootBranch + "/mpca"}
+            element={<MicroprocessorAndCANote />}
+          ></Route>
+          <Route path={rootBranch + "/na"} element={<NotAvailable />}></Route>
         </Routes>
       </div>
     </Router>
