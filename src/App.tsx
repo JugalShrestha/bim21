@@ -7,9 +7,8 @@ import Syllabus from "./pages/project-pages/Syllabus";
 import CoverpageGenerator from "./pages/project-pages/CoverpageGenerator/CoverpageGenerator";
 import Text2Hw from "./pages/project-pages/Text2Hw/Text2Hw";
 import rootBranch from "./components/variables/rootBranch";
-import FinancialAccountingNote from "./pages/note-pages/FinancialAccountingNote";
-import MicroprocessorAndCANote from "./pages/note-pages/MicroprocessorAndCANote";
 import NotAvailable from "./pages/NotAvailable";
+import NotePage from "./pages/NotePage";
 
 const App = () => {
   return (
@@ -20,11 +19,11 @@ const App = () => {
         <Routes>
           <Route path={rootBranch} element={<SearchPage searchItem={""} />} />
           <Route
-            path={rootBranch + "/project"}
+            path={rootBranch + "/projects"}
             element={<SearchPage searchItem={"project"} />}
           />
           <Route
-            path={rootBranch + "/note"}
+            path={rootBranch + "/notes"}
             element={<SearchPage searchItem={"note"} />}
           />
           <Route path={rootBranch + "/routine"} element={<Routine />} />
@@ -39,12 +38,8 @@ const App = () => {
           ></Route>
           <Route path={rootBranch + "/text2hw"} element={<Text2Hw />}></Route>
           <Route
-            path={rootBranch + "/financial-accounting"}
-            element={<FinancialAccountingNote />}
-          ></Route>
-          <Route
-            path={rootBranch + "/mpca"}
-            element={<MicroprocessorAndCANote />}
+            path={rootBranch + "/note"}
+            element={<NotePage noteId={""} />}
           ></Route>
           <Route path={rootBranch + "/na"} element={<NotAvailable />}></Route>
         </Routes>

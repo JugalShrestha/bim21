@@ -25,6 +25,18 @@
   --text-color: #1d1d1d;
 }
 
+.fullscreen {
+  position: absolute;
+  width: 100%;
+  height: 100% !important;
+  background: var(--p1-color);
+  top: 0;
+  left: 0;
+}
+.fullscreen .iframe-controllers {
+  width: 100% !important;
+}
+
 .show-item, .search-item {
   transition: 0.2s ease-in-out;
   cursor: pointer;
@@ -393,7 +405,28 @@ body .everything #page .header .sub-header {
   font-weight: bold;
   opacity: 50%;
 }
-body .everything .note-page .note-link {
+body .everything .note-page .note-output {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+body .everything .note-page .note-output .iframe-controllers {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+  background: var(--s1-color);
+  padding: 1vh;
+  border: 0.3vh solid var(--p1-color);
+  border-radius: 0.5vh 0.5vh 0 0;
+  border-bottom: none;
+}
+body .everything .note-page .note-output .iframe-controllers .iframe-controller {
   padding: 1vh;
   transition: 0.2s ease;
   font-size: var(--text-font-size);
@@ -403,14 +436,18 @@ body .everything .note-page .note-link {
   border: 0.3vh solid var(--p1-color);
   color: var(--s1-color);
   font-weight: bold;
+  cursor: pointer;
 }
-body .everything .note-page .note-link:hover {
+body .everything .note-page .note-output .iframe-controllers .iframe-controller:hover {
   color: var(--p1-color);
   background: var(--s1-color);
 }
-body .everything .note-page .note-output {
+body .everything .note-page .note-output iframe {
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  background: var(--s1-color);
+  border-radius: 0 0.5vh 0.5vh 0.5vh;
+  border: 0.3vh solid var(--p1-color);
 }
 body .everything .cover-page-generator-page .generator-whole {
   width: 100%;
