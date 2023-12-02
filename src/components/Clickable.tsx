@@ -8,15 +8,27 @@ interface Props {
   searchItem: string;
 }
 
+const vairants = {
+  hidden: { opacity: 0, x: -10 },
+  show: { opacity: 1, x: 0 },
+};
+
 const Clickable: React.FC<Props> = ({ searchItem }) => {
   return (
     <>
       {searchItem === ""
         ? items.map((item, index) => (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2, delay: index * 0.1 }}
+              initial="hidden"
+              animate="show"
+              variants={vairants}
+              transition={{
+                duration: 0.2,
+                delay: index * 0.1,
+                type: "spring",
+                damping: 15,
+                stiffness: 500,
+              }}
               key={index}
             >
               <Link
@@ -34,9 +46,16 @@ const Clickable: React.FC<Props> = ({ searchItem }) => {
               (item.name.includes(searchItem) ||
                 item.tag.includes(searchItem)) && (
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2, delay: index * 0.1 }}
+                  initial="hidden"
+                  animate="show"
+                  variants={vairants}
+                  transition={{
+                    duration: 0.2,
+                    delay: index * 0.1,
+                    type: "spring",
+                    damping: 15,
+                    stiffness: 500,
+                  }}
                   key={index}
                 >
                   <Link

@@ -23,7 +23,7 @@ const CoverpageGeneratorOutput: React.FC<Props> = ({
   let teacherName = "";
   let teacherTitle = "";
   let teacherDept = "";
-  const sem = "3";
+  let semester = 1;
 
   const [pdfUri, setPdfUri] = useState("");
 
@@ -45,6 +45,7 @@ const CoverpageGeneratorOutput: React.FC<Props> = ({
       teacherName = data.teacher;
       teacherTitle = data.title;
       teacherDept = data.department;
+      semester = data.sem;
     }
   });
 
@@ -121,7 +122,7 @@ const CoverpageGeneratorOutput: React.FC<Props> = ({
     doc.setFont("times", "normal");
 
     doc.text(name, 40, 264, { align: "center" });
-    doc.text("BIM, " + sem + "rd Semester", 40, 272, { align: "center" });
+    doc.text("BIM, " + semester + "rd Semester", 40, 272, { align: "center" });
     doc.text(rollNo, 40, 280, { align: "center" });
 
     //Side lines

@@ -112,6 +112,49 @@ const subjectData = [
     department: "Dept. of Management",
     sem: 3,
   },
+  //4th sem
+  {
+    name: "Database Management System [IT 220]",
+    teacher: "Er. Nitin Malla",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 4,
+  },
+  {
+    name: "Web Technology II [IT 239]",
+    teacher: "Er. Sudhir Maharjan",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 4,
+  },
+  {
+    name: "Business Data Communication and Networking [IT 240]",
+    teacher: "Er. Sanjay Kumar Yadav",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 4,
+  },
+  {
+    name: "Operating System [IT 241]",
+    teacher: "Mr. Lalit Giri",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 4,
+  },
+  {
+    name: "Cost and Management Accounting [ACC 202]",
+    teacher: "Mr. Rameshwor Suwal",
+    title: "Lecturer",
+    department: "Dept. of Management",
+    sem: 4,
+  },
+  {
+    name: "Economics for Business [ECO 206]",
+    teacher: "Mr. Niroj Duwal",
+    title: "Lecturer",
+    department: "Dept. of Management",
+    sem: 4,
+  },
 ];
 
 export default subjectData;
