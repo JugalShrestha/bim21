@@ -10,6 +10,7 @@ interface Props {
   text: string;
   customHwChecker: boolean;
   customHw: string;
+  pageBorder: boolean;
 }
 
 const Text2HwOutput: React.FC<Props> = ({
@@ -20,6 +21,7 @@ const Text2HwOutput: React.FC<Props> = ({
   text,
   customHwChecker,
   customHw,
+  pageBorder,
 }) => {
   //For output
   const [pdfDataUri, setPdfDataUri] = useState<string | null>(null);
@@ -117,10 +119,49 @@ const Text2HwOutput: React.FC<Props> = ({
       maxFontSize = textSize + 1;
     }
 
+    const generatePageLine = () => {
+      //underline generator
+      if (pageBorder) {
+        //global line margin
+        const liner = 6;
+        //left line
+        doc.line(
+          pageMargin - liner,
+          pageMargin - liner,
+          pageMargin - liner,
+          297 - pageMargin + liner
+        );
+        //right line
+        doc.line(
+          210 + liner - pageMargin,
+          pageMargin - liner,
+          210 + liner - pageMargin,
+          297 - pageMargin + liner
+        );
+        //top line
+        doc.line(
+          pageMargin - liner,
+          pageMargin - liner,
+          210 - pageMargin + liner,
+          pageMargin - liner
+        );
+        //bottom line
+        doc.line(
+          pageMargin - liner,
+          297 - pageMargin + liner,
+          210 - pageMargin + liner,
+          297 - pageMargin + liner
+        );
+      }
+    };
+
+    generatePageLine();
+
     // Loop through each line and add it to the PDF
     lines.forEach((line: string) => {
       if (y > availableHeight + pageMargin + linespacing) {
         doc.addPage("a4", "p");
+        generatePageLine();
         y = pageMargin;
       }
 

@@ -754,7 +754,7 @@ body .everything .text-2-handwriting .text-2-handwriting-body .page-customizatio
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers {
   width: 100%;
   display: grid;
-  grid-template-columns: auto 30% auto;
+  grid-template-columns: 25% 25% 25% 25%;
   border-bottom: 0.3vh solid var(--shadow);
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header {
@@ -779,6 +779,16 @@ body .everything .text-2-handwriting .text-2-handwriting-body .page-customizatio
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations input:nth-child(1), body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers input:nth-child(1) {
   border-left: none !important;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .page-border-checker, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .page-border-checker {
+  background: var(--s1-color);
+  padding: 1vh;
+  border-left: 0.3vh solid var(--shadow) !important;
+}
+body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .page-border-checker input, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .page-border-checker input {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
 }
 body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations input, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header, body .everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers input {
   padding: 1vh;

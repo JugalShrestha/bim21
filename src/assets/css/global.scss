@@ -809,7 +809,7 @@ body{
                     .customizations, .headers{
                         width: 100%;
                         display: grid;
-                        grid-template-columns: auto 30% auto;
+                        grid-template-columns: 25% 25% 25% 25%;
                         border-bottom: .3vh solid var(--shadow);
                         .header{
                             font-weight: 900;
@@ -832,6 +832,16 @@ body{
                             border-left: .3vh solid var(--shadow) !important;
                             &:nth-child(1){
                                 border-left: none !important;
+                            }
+                        }
+                        .page-border-checker{
+                            background: var(--s1-color);
+                            padding: 1vh;
+                            border-left: .3vh solid var(--shadow) !important;
+                            input{
+                                cursor: pointer;
+                                width: 100%;
+                                height: 100%;
                             }
                         }
                         .header,input{

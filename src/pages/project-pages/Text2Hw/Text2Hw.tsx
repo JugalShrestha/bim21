@@ -12,6 +12,7 @@ const Text2Hw = () => {
   const [lineSpacing, setlineSpacing] = useState<number>(10);
   const [pageMargin, setpageMargin] = useState<number>(25);
   const [textSize, settextSize] = useState<number>(18);
+  const [pageBorder, setPageBorder] = useState(false);
 
   const handleHandwritingChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setHandwriting(e.target.value);
@@ -85,6 +86,11 @@ const Text2Hw = () => {
     }
   };
 
+  const handlePageBorderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const checker = e.target.checked;
+    setPageBorder(checker);
+  };
+
   const divStyle: React.CSSProperties = {
     fontFamily: handwriting,
   };
@@ -148,6 +154,7 @@ const Text2Hw = () => {
               <div className="header">line spacing</div>
               <div className="header">font size</div>
               <div className="header">page margin</div>
+              <div className="header">page border</div>
             </div>
             <div className="customizations">
               <input
@@ -183,6 +190,14 @@ const Text2Hw = () => {
                 placeholder="page margin (10-35)"
                 id="page-margin-text2handwriting"
               />
+              <label className="page-border-checker">
+                <input
+                  type="checkbox"
+                  name="page-border"
+                  onChange={handlePageBorderChange}
+                  id="page-border-text2handwriting"
+                />
+              </label>
             </div>
           </div>
           <textarea
@@ -211,6 +226,7 @@ const Text2Hw = () => {
           text={text}
           customHwChecker={customHwChecker}
           customHw={customHw}
+          pageBorder={pageBorder}
         />
       </div>
     </section>
