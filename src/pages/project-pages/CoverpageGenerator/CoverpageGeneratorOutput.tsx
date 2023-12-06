@@ -24,6 +24,7 @@ const CoverpageGeneratorOutput: React.FC<Props> = ({
   let teacherTitle = "";
   let teacherDept = "";
   let semester = 1;
+  let semesterAlpha = "st";
 
   const [pdfUri, setPdfUri] = useState("");
 
@@ -48,6 +49,25 @@ const CoverpageGeneratorOutput: React.FC<Props> = ({
       semester = data.sem;
     }
   });
+
+  function lastDigitChecker() {
+    const lastDigit = semester % 10;
+
+    switch (lastDigit) {
+      case 1:
+        semesterAlpha = "st";
+        break;
+      case 2:
+        semesterAlpha = "nd";
+        break;
+      case 3:
+        semesterAlpha = "rd";
+        break;
+      default:
+        semesterAlpha = "th";
+        break;
+    }
+  }
 
   //generating coverpage
   function generateCoverpage() {
@@ -120,9 +140,11 @@ const CoverpageGeneratorOutput: React.FC<Props> = ({
     doc.line(5, 252, 75, 252);
 
     doc.setFont("times", "normal");
-
+    lastDigitChecker();
     doc.text(name, 40, 264, { align: "center" });
-    doc.text("BIM, " + semester + "rd Semester", 40, 272, { align: "center" });
+    doc.text("BIM, " + semester + semesterAlpha + " Semester ", 40, 272, {
+      align: "center",
+    });
     doc.text(rollNo, 40, 280, { align: "center" });
 
     //Side lines
