@@ -184,7 +184,7 @@ const studentData = [
     rN: "021BIM046",
   },
   {
-    name: "Sambid Dhahal",
+    name: "Sambid Dahal",
     rN: "021BIM047",
   },
   {
