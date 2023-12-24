@@ -7,6 +7,13 @@ const SearchBar = () => {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchable(e.target.value);
   };
+  const handleEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key == "Enter") {
+      window.location.href = `${rootBranch}/search?query=${encodeURIComponent(
+        searchable.toLowerCase()
+      )}`;
+    }
+  };
   return (
     <section className="hero-page">
       <div className="hero-page-slogan">
@@ -21,6 +28,7 @@ const SearchBar = () => {
             placeholder="For eg. Class Routine"
             value={searchable}
             onChange={handleSearch}
+            onKeyDown={handleEnter}
             type="text"
             name="search"
             id="search-id"
