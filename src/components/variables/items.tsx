@@ -33,7 +33,7 @@ const items = [
   },
   {
     name: "business statistics",
-    tag: "note 4sem",
+    tag: "note 3sem",
     link: rootBranch + "/note?query=STT201",
   },
   {
