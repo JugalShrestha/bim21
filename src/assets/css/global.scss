@@ -23,6 +23,17 @@
     --text: 'Open Sans', sans-serif;
     --text-color: #1d1d1d;
 }
+.activeDay{
+    background: var(--s2-color) !important;
+    td{
+    font-size: var(--header-font-size) !important;
+    }
+    td:nth-child(1){
+        background: var(--n2-color);
+        color: var(--s1-color);
+        font-weight: bold;
+    }
+}
 
 .fullscreen{
     position: absolute;
@@ -703,24 +714,33 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
+                gap: 3vh;
             }
-            .routine {
+            .routine-section-A, .routine-section-B {
                 width: 100%;
-                border: .3vh solid var(--n1-color);
             }
-            .routine-cell {
-                text-align: center;
-                padding: 1vh;
-                background: var(--s1-color);
-                font-weight: bold;
-                font-size: var(--text-font-size);
-                border-right: .3vh solid var(--n1-color);
+            tr{
+                outline: .3vh solid var(--shadow);
             }
-            .routine-base,.routine-header, .routine-time {
-                font-weight: bold;
+            thead{
                 background: var(--n1-color);
-                color: var(--s1-color);
-                border: none;
+                tr:nth-child(1){
+                    th{
+                        color: var(--s1-color);
+                        font-weight: bold;
+                        font-size: var(--header-font-size) !important;
+                    }
+                }
+                th{
+                    color: var(--s1-color);
+                }
+            }
+            td,th{
+                padding: 1vh;
+                outline: .3vh solid var(--shadow);
+                text-align: center;
+                font-size: var(--text-font-size);
             }
         }
         //--------------------------End Of Class Routine Page
