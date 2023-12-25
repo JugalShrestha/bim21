@@ -191,7 +191,7 @@ body{
             animation: blob 2s infinite;
          }
     }
-    .everything{
+    #everything{
         width: 100%;
         height: 100%;
         display: flex;
@@ -1037,7 +1037,7 @@ body{
         --object-font-size: 1.5vh;
         --big-font-size: 3vh;
     }
-    .everything{
+    #everything{
         gap: 2vh !important;
     }
     .search-part{

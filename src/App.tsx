@@ -13,37 +13,35 @@ import NotePage from "./pages/NotePage";
 const App = () => {
   return (
     <Router>
-      <div className="everything">
-        <NavBar />
-        <SearchBar />
-        <Routes>
-          <Route path={rootBranch} element={<SearchPage searchItem={""} />} />
-          <Route
-            path={rootBranch + "/projects"}
-            element={<SearchPage searchItem={"project"} />}
-          />
-          <Route
-            path={rootBranch + "/notes"}
-            element={<SearchPage searchItem={"note"} />}
-          />
-          <Route path={rootBranch + "/routine"} element={<Routine />} />
-          <Route
-            path={rootBranch + "/search"}
-            element={<SearchPage searchItem={""} />}
-          ></Route>
-          <Route path={rootBranch + "/syllabus"} element={<Syllabus />}></Route>
-          <Route
-            path={rootBranch + "/coverpage-generator"}
-            element={<CoverpageGenerator />}
-          ></Route>
-          <Route path={rootBranch + "/text2hw"} element={<Text2Hw />}></Route>
-          <Route
-            path={rootBranch + "/note"}
-            element={<NotePage noteId={""} />}
-          ></Route>
-          <Route path={rootBranch + "/na"} element={<NotAvailable />}></Route>
-        </Routes>
-      </div>
+      <NavBar />
+      <SearchBar />
+      <Routes>
+        <Route path={rootBranch} element={<SearchPage searchItem={""} />} />
+        <Route
+          path={rootBranch + "/projects"}
+          element={<SearchPage searchItem={"project"} />}
+        />
+        <Route
+          path={rootBranch + "/notes"}
+          element={<SearchPage searchItem={"note"} />}
+        />
+        <Route path={rootBranch + "/routine"} element={<Routine />} />
+        <Route
+          path={rootBranch + "/search"}
+          element={<SearchPage searchItem={""} />}
+        ></Route>
+        <Route path={rootBranch + "/syllabus"} element={<Syllabus />}></Route>
+        <Route
+          path={rootBranch + "/coverpage-generator"}
+          element={<CoverpageGenerator />}
+        ></Route>
+        <Route path={rootBranch + "/text2hw"} element={<Text2Hw />}></Route>
+        <Route
+          path={rootBranch + "/note"}
+          element={<NotePage noteId={""} />}
+        ></Route>
+        <Route path={rootBranch + "/na"} element={<NotAvailable />}></Route>
+      </Routes>
     </Router>
   );
 };
