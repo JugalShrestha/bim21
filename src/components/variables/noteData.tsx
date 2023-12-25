@@ -7,6 +7,31 @@ const note = [
     subject: "Web Technology II",
     link: "https://docs.google.com/document/d/17KqnJW1vDqnMPR3UYNM0W0b3LunlylOCVj5LOOy4XI4/edit?usp=sharing",
   },
+  {
+    id: "ACC202",
+    subject: "Cost Management and Accounting",
+    link: "https://docs.google.com/document/d/1dr6CpDSOvWgDNIIkVfd0SgLwyoyL6LF4zxfl01JuEN4/edit?usp=sharing",
+  },
+  {
+    id: "IT240",
+    subject: "Business Data Communication and Networking",
+    link: "https://docs.google.com/document/d/13XwYcAMKdUJ67rAUTi7AJzTgtULTTE2cO1Rihht66j4/edit?usp=sharing",
+  },
+  {
+    id: "IT220",
+    subject: "Database Management System",
+    link: "https://docs.google.com/document/d/1GysDiSkLa6PJ1XN39RvPRvwpKI8gUb6byzoP04g9sUk/edit?usp=sharing",
+  },
+  {
+    id: "ECO206",
+    subject: "Economics for Business",
+    link: "https://docs.google.com/document/d/1ay8vGkG_vlRrqxbGISWI_MorCyBp123XoV4eYUWj23g/edit?usp=sharing",
+  },
+  {
+    id: "IT241",
+    subject: "Operating System",
+    link: "https://docs.google.com/document/d/15xOQTmfE-uGKcrxx6dBoUR_UQdAMIGlXGw5qBNhOlmg/edit?usp=sharing",
+  },
   //3rd sem notes
   {
     id: "IT236",

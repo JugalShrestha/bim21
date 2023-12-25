@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import GoBackBtn from "../components/GoBackBtn";
 import Clickable from "../components/Clickable";
+import TagBar from "../components/TagBar";
 
 interface Props {
   searchItem: string;
@@ -46,6 +47,7 @@ const SearchPage: React.FC<Props> = ({ searchItem }) => {
             : "This is the search result on: ' " + searchItem + " '"}
         </div>
       </div>
+      <TagBar />
       <div className="every-projects-body">
         <Clickable searchItem={searchItem} />
       </div>

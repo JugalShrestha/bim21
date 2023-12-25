@@ -1,2 +1,2 @@
-const rootBranch = "/bim21";
+const rootBranch = "";
 export default rootBranch;
