@@ -11,6 +11,7 @@ interface Props {
   customHwChecker: boolean;
   customHw: string;
   pageBorder: boolean;
+  randomLine: boolean;
 }
 
 const Text2HwOutput: React.FC<Props> = ({
@@ -22,6 +23,7 @@ const Text2HwOutput: React.FC<Props> = ({
   customHwChecker,
   customHw,
   pageBorder,
+  randomLine,
 }) => {
   //For output
   const [pdfDataUri, setPdfDataUri] = useState<string | null>(null);
@@ -165,27 +167,32 @@ const Text2HwOutput: React.FC<Props> = ({
         y = pageMargin;
       }
 
-      const randomLineSpacing =
-        Math.floor(Math.random() * (maxLineSpacing - minLineSpacing + 1)) +
-        minLineSpacing;
-      const randomLineWidthSpacing =
-        Math.floor(
-          Math.random() * (maxLineWidthSpacing - minLineWidthSpacing + 1)
-        ) + minLineWidthSpacing;
-      const randomFontSize =
-        Math.floor(Math.random() * (maxFontSize - minFontSize + 1)) +
-        minFontSize;
-      x = pageMargin + randomLineWidthSpacing;
+      //Random Line Creation
+      if (randomLine) {
+        const randomLineSpacing =
+          Math.floor(Math.random() * (maxLineSpacing - minLineSpacing + 1)) +
+          minLineSpacing;
+        const randomLineWidthSpacing =
+          Math.floor(
+            Math.random() * (maxLineWidthSpacing - minLineWidthSpacing + 1)
+          ) + minLineWidthSpacing;
+        const randomFontSize =
+          Math.floor(Math.random() * (maxFontSize - minFontSize + 1)) +
+          minFontSize;
+        x = pageMargin + randomLineWidthSpacing;
 
-      doc.setFontSize(randomFontSize);
-      doc.text(line, x, y);
-      y += randomLineSpacing;
+        doc.setFontSize(randomFontSize);
+        doc.text(line, x, y);
+        y += randomLineSpacing;
+      } else {
+        doc.setFontSize(textSize);
+        doc.text(line, x, y);
+        y += linespacing;
+      }
     });
     const output = doc.output("datauristring");
     setPdfDataUri(output);
     if (downloadText2Hw) {
-      console.log("downloading:" + downloadText2Hw);
-
       doc.save(handwriting + ".pdf");
       setDownloadText2Hw(false);
     }

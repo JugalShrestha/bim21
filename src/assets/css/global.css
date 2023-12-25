@@ -834,7 +834,7 @@ body #everything .text-2-handwriting .text-2-handwriting-body .page-customizatio
 body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations, body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers {
   width: 100%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   border-bottom: 0.3vh solid var(--shadow);
 }
 body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .header, body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .header {
@@ -866,6 +866,16 @@ body #everything .text-2-handwriting .text-2-handwriting-body .page-customizatio
   border-left: 0.3vh solid var(--shadow) !important;
 }
 body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .page-border-checker input, body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .page-border-checker input {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .random-line-checker, body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .random-line-checker {
+  background: var(--s1-color);
+  padding: 1vh;
+  border-left: 0.3vh solid var(--shadow) !important;
+}
+body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .customizations .random-line-checker input, body #everything .text-2-handwriting .text-2-handwriting-body .page-customization .headers .random-line-checker input {
   cursor: pointer;
   width: 100%;
   height: 100%;

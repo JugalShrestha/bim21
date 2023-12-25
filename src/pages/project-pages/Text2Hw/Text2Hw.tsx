@@ -13,6 +13,7 @@ const Text2Hw = () => {
   const [pageMargin, setpageMargin] = useState<number>(25);
   const [textSize, settextSize] = useState<number>(18);
   const [pageBorder, setPageBorder] = useState(false);
+  const [randomLine, setRandomLine] = useState(false);
 
   const handleHandwritingChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setHandwriting(e.target.value);
@@ -91,6 +92,11 @@ const Text2Hw = () => {
     setPageBorder(checker);
   };
 
+  const handleRandomLineChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const checker = e.target.checked;
+    setRandomLine(checker);
+  };
+
   const divStyle: React.CSSProperties = {
     fontFamily: handwriting,
   };
@@ -155,6 +161,7 @@ const Text2Hw = () => {
               <div className="header">font size</div>
               <div className="header">page margin</div>
               <div className="header">page border</div>
+              <div className="header">random lines</div>
             </div>
             <div className="customizations">
               <input
@@ -198,6 +205,14 @@ const Text2Hw = () => {
                   id="page-border-text2handwriting"
                 />
               </label>
+              <label className="random-line-checker">
+                <input
+                  type="checkbox"
+                  name="random-space"
+                  onChange={handleRandomLineChange}
+                  id="random-space-text2handwriting"
+                />
+              </label>
             </div>
           </div>
           <textarea
@@ -227,6 +242,7 @@ const Text2Hw = () => {
           customHwChecker={customHwChecker}
           customHw={customHw}
           pageBorder={pageBorder}
+          randomLine={randomLine}
         />
       </div>
     </section>
