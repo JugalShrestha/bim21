@@ -148,7 +148,7 @@ const Text2Hw = () => {
         <div className="sub-header opacity">
           how to add your own handwriting?
           <a
-            href={rootBranch + "/pdf/how-to-add-your-handwriting.pdf"}
+            href={"https://www.wherethesmileshavebeen.com/how-to-turn-your-handwriting-into-a-font-for-free/"}
             target="_blank"
           >
             click_here!
