@@ -1,6 +1,32 @@
 // this variable is used when a user clicks on a clickable having tag note inorder to open a single page for respective clickable
 
 const note = [
+  //5th sem notes
+  {
+    id: "IT228",
+    subject: "Artificial Intelligence",
+    link: "https://docs.google.com/document/d/1vjVAomVRb6mJUfUn34CP20h7uDnZqDgPU5yrtFdwVFI/edit?usp=sharing",
+  },
+  {
+    id: "IT242",
+    subject: "Software Design and Development",
+    link: "https://docs.google.com/document/d/1YYlIRSgTt9ETh1NGVAtRvxKQ5mYhR6VpcQxfz36GcT4/edit?usp=sharing",
+  },
+  {
+    id: "IT243",
+    subject: "Programming with python",
+    link: "https://docs.google.com/document/d/1NR6WoFMYkpojFO_QWJ2v-X0KR1VVDYeFUMpbXqaBDVA/edit?usp=sharing",
+  },
+  {
+    id: "IT244",
+    subject: "Information Security",
+    link: "https://docs.google.com/document/d/11DXovKCw7YR2H1LGHDBzgMN5LZY3ywgAhEeawt9lxaA/edit?usp=sharing",
+  },
+  {
+    id: "MKT201",
+    subject: "fundamental of Marketing",
+    link: "https://docs.google.com/document/d/1SdM7g5GgDOsSntDX16pxFlajlIHP5DG1HqDLrqI4uZ0/edit?usp=sharing",
+  },
   //4th sem notes
   {
     id: "IT239",

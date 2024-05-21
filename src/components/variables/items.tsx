@@ -72,6 +72,32 @@ const items = [
     tag: "note os 4sem",
     link: rootBranch + "/note?query=IT241",
   },
+  //5th sem notes
+  {
+    name: "Artificial Intelligence",
+    tag: "note ai 5sem",
+    link: rootBranch + "/note?query=IT228",
+  },
+  {
+    name: "Software Design and Development",
+    tag: "note 5sem",
+    link: rootBranch + "/note?query=IT242",
+  },
+  {
+    name: "Programming with python",
+    tag: "note 5sem",
+    link: rootBranch + "/note?query=IT243",
+  },
+  {
+    name: "Information Security",
+    tag: "note 5sem",
+    link: rootBranch + "/note?query=IT244",
+  },
+  {
+    name: "fundamental of Marketing",
+    tag: "note 5sem",
+    link: rootBranch + "/note?query=MKT201",
+  },
 ];
 
 //For sorting searchable items

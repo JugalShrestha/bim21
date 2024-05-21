@@ -941,7 +941,18 @@ body #everything .text-2-handwriting .text-2-handwriting-body .download:hover {
   background: var(--n2-color) !important;
 }
 
-@media (min-width: 940px) {
+@media (max-width: 1235px) {
+  :root {
+    --object-font-size: 1.7vh;
+  }
+  .tag-list {
+    grid-template-columns: auto auto auto !important;
+  }
+  .every-projects-body {
+    grid-template-columns: 30% auto 30% !important;
+  }
+}
+@media (min-width: 1024px) {
   .search-btn:hover {
     background: var(--n2-color) !important;
   }
@@ -983,7 +994,7 @@ body #everything .text-2-handwriting .text-2-handwriting-body .download:hover {
     border-bottom: 0.3vh solid var(--p1-color);
   }
 }
-@media (max-width: 940px) {
+@media (max-width: 1024px) {
   :root {
     --p-margin: 70%;
     --header-font-size:2vh;
@@ -991,7 +1002,7 @@ body #everything .text-2-handwriting .text-2-handwriting-body .download:hover {
     --big-font-size: 3vh;
   }
   .every-projects-body {
-    grid-template-columns: 30% 30% 30% !important;
+    grid-template-columns: 30% auto 30% !important;
   }
   .every-projects-body, .search-results {
     gap: 2vh !important;

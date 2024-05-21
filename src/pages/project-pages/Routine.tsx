@@ -27,7 +27,7 @@ const Routine = () => {
         <div className="header">
           <div className="main-header">Class Routine</div>
           <div className="sub-header">
-            Class routine for section A and section B
+            Class routine for section A and section B (to be updated soon!)
           </div>
         </div>
         <div className="class-routine-body">
