@@ -27,7 +27,7 @@ const Routine = () => {
         <div className="header">
           <div className="main-header">Class Routine</div>
           <div className="sub-header">
-            Class routine for section A and section B (to be updated soon!)
+            Class routine for section A and section B
           </div>
         </div>
         <div className="class-routine-body">
@@ -40,8 +40,8 @@ const Routine = () => {
               </tr>
               <tr>
                 <th>Days</th>
-                <th>6:35 - 7:45</th>
-                <th>7:55 - 8:30</th>
+                <th>6:15 - 7:35</th>
+                <th>7:45 - 9:05</th>
                 <th>9:30 - 11:00</th>
                 <th>11:10 - 12:40</th>
               </tr>
@@ -49,45 +49,45 @@ const Routine = () => {
             <tbody>
               <tr>
                 <td>Sun</td>
-                <td>EB</td>
-                <td>Web Tech II</td>
-                <td>OS</td>
-                <td>BDCCN</td>
+                <td>AI</td>
+                <td>IS</td>
+                <td>SDD</td>
+                <td></td>
               </tr>
               <tr>
                 <td>Mon</td>
-                <td>Web Tech II</td>
-                <td>DBMS</td>
-                <td>CMA</td>
-                <td>-</td>
+                <td>AI</td>
+                <td>IS</td>
+                <td>SDD</td>
+                <td></td>
               </tr>
               <tr>
                 <td>Tue</td>
-                <td>EB</td>
-                <td>DBMS</td>
-                <td>BDCCN</td>
-                <td>CMA</td>
+                <td>FOM</td>
+                <td>Python</td>
+                <td>SDD</td>
+                <td></td>
               </tr>
               <tr>
                 <td>Wed</td>
-                <td>EB</td>
-                <td>OS</td>
-                <td>CMA</td>
-                <td>-</td>
+                <td>FOM</td>
+                <td>Python</td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td>Thur</td>
-                <td>Web Tech II</td>
-                <td>OS</td>
-                <td>-</td>
-                <td>-</td>
+                <td>AI</td>
+                <td>IS</td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td>Fri</td>
-                <td>DBMS</td>
-                <td>BDCCN</td>
-                <td>-</td>
-                <td>-</td>
+                <td>FOM</td>
+                <td>Python</td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
@@ -100,8 +100,8 @@ const Routine = () => {
               </tr>
               <tr>
                 <th>Days</th>
-                <th>6:35 - 7:45</th>
-                <th>7:55 - 8:30</th>
+                <th>6:15 - 7:35</th>
+                <th>7:45 - 9:05</th>
                 <th>9:30 - 11:00</th>
                 <th>11:10 - 12:40</th>
               </tr>
@@ -109,45 +109,45 @@ const Routine = () => {
             <tbody>
               <tr>
                 <td>Sun</td>
-                <td>Web Tech II</td>
-                <td>EB</td>
-                <td>CMA</td>
-                <td>OS</td>
+                <td>FOM</td>
+                <td>AI</td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td>Mon</td>
-                <td>DBMS</td>
-                <td>Web Tech II</td>
-                <td>BDCCN</td>
-                <td>-</td>
+                <td>FOM</td>
+                <td>AI</td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <td>Tue</td>
-                <td>EB</td>
-                <td>OS</td>
-                <td>CMA</td>
-                <td>-</td>
+                <td>SDD</td>
+                <td>IS</td>
+                <td>Python</td>
+                <td></td>
               </tr>
               <tr>
                 <td>Wed</td>
-                <td>OS</td>
-                <td>DBMS</td>
-                <td>BDCCN</td>
-                <td>-</td>
+                <td>Python</td>
+                <td>IS</td>
+                <td>SDD</td>
+                <td></td>
               </tr>
               <tr>
                 <td>Thur</td>
-                <td>CMA</td>
-                <td>Web Tech II</td>
-                <td>BDCCN</td>
-                <td>-</td>
+                <td>FOM</td>
+                <td>AI</td>
+                <td>SDD</td>
+                <td></td>
               </tr>
               <tr>
                 <td>Fri</td>
-                <td>EB</td>
-                <td>DBMS</td>
-                <td>-</td>
-                <td>-</td>
+                <td>Python</td>
+                <td>IS</td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>

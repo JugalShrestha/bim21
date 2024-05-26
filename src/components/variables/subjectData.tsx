@@ -47,7 +47,7 @@ const subjectData = [
   },
   {
     name: "Object Oriented Programming (Java) [IT 234]",
-    teacher: "Mr. Mario",
+    teacher: "Er. Ramesh Shahi",
     title: "Lecturer",
     department: "Dept. of Computer Science",
     shortForm: "O.O.P. with Java [IT 234]",
@@ -155,6 +155,14 @@ const subjectData = [
     department: "Dept. of Management",
     sem: 4,
   },
+  //5th sem
+  {
+    name: "Programming with Python [IT 243]",
+    teacher: "Er. Ramesh Shahi",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 5,
+  }
 ];
 
 export default subjectData;
