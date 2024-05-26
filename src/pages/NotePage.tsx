@@ -17,10 +17,12 @@ const NotePage: React.FC<Props> = ({ noteId }) => {
   }
   let link = "";
   let name = "";
+  let lab = "";
   noteData.forEach((data) => {
     if (data.id == noteId) {
       link = data.link;
       name = data.subject;
+      data.lab?lab = data.lab:lab="";
     }
   });
 
@@ -60,6 +62,18 @@ const NotePage: React.FC<Props> = ({ noteId }) => {
               >
                 Open in Docs
               </a>
+              {
+                lab?
+                <a
+                  href={lab}
+                  className="iframe-controller"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Lab Reports
+                </a>:
+                ""
+              } 
             </div>
             <iframe src={link}></iframe>
           </div>

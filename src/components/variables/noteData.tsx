@@ -5,20 +5,24 @@ const note = [
   {
     id: "IT228",
     subject: "Artificial Intelligence",
+    lab: "https://docs.google.com/document/d/1OmVdUAW42M95cC9UXrWHxiZZipSLCn08BsTZOixGyeM/edit?usp=sharing",
     link: "https://docs.google.com/document/d/1vjVAomVRb6mJUfUn34CP20h7uDnZqDgPU5yrtFdwVFI/edit?usp=sharing",
   },
   {
     id: "IT242",
     subject: "Software Design and Development",
+    lab:"https://docs.google.com/document/d/1oLK3Lm7rL0vymHWTkLyZwkJg7PzdPrsqH0MNhtFR5Lo/edit?usp=sharing",
     link: "https://docs.google.com/document/d/1YYlIRSgTt9ETh1NGVAtRvxKQ5mYhR6VpcQxfz36GcT4/edit?usp=sharing",
   },
   {
     id: "IT243",
     subject: "Programming with python",
+    lab: "https://docs.google.com/document/d/1dE2MMaX0Ti1iruzB7tBdRl6rRQWBn23hOCe9dV23sYA/edit?usp=sharing",
     link: "https://docs.google.com/document/d/1NR6WoFMYkpojFO_QWJ2v-X0KR1VVDYeFUMpbXqaBDVA/edit?usp=sharing",
   },
   {
     id: "IT244",
+    lab: "https://docs.google.com/document/d/1XLscqmen4maLXJXEYhy2nReEvcSWZENA5hhA_yNjRx4/edit?usp=sharing",
     subject: "Information Security",
     link: "https://docs.google.com/document/d/11DXovKCw7YR2H1LGHDBzgMN5LZY3ywgAhEeawt9lxaA/edit?usp=sharing",
   },
@@ -31,6 +35,7 @@ const note = [
   {
     id: "IT239",
     subject: "Web Technology II",
+    lab:"https://docs.google.com/document/d/1QCS71RprkFUro0WsI4FGlzpl7_Puf3LDzjXuS1F6oJc/edit?usp=sharing",
     link: "https://docs.google.com/document/d/17KqnJW1vDqnMPR3UYNM0W0b3LunlylOCVj5LOOy4XI4/edit?usp=sharing",
   },
   {
@@ -46,6 +51,7 @@ const note = [
   {
     id: "IT220",
     subject: "Database Management System",
+    lab: "https://docs.google.com/document/d/1wJTbXy-529g0CQnUzcBexYJPnK6OvE8qmFYiEq_QaYE/edit?usp=sharing",
     link: "https://docs.google.com/document/d/1GysDiSkLa6PJ1XN39RvPRvwpKI8gUb6byzoP04g9sUk/edit?usp=sharing",
   },
   {
@@ -56,6 +62,7 @@ const note = [
   {
     id: "IT241",
     subject: "Operating System",
+    lab: "https://docs.google.com/document/d/1ity5V_USbiXRtii4lCzpf--v1BKCNNRcR0nbSOOUIU0/edit?usp=sharing",
     link: "https://docs.google.com/document/d/15xOQTmfE-uGKcrxx6dBoUR_UQdAMIGlXGw5qBNhOlmg/edit?usp=sharing",
   },
   //3rd sem notes
