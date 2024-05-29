@@ -17,7 +17,7 @@ const note = [
   {
     id: "IT243",
     subject: "Programming with python",
-    lab: "https://docs.google.com/document/d/1dE2MMaX0Ti1iruzB7tBdRl6rRQWBn23hOCe9dV23sYA/edit?usp=sharing",
+    lab: "https://docs.google.com/document/d/1GmQqqsMapY_0x-XDKW3pQkRnZqw6WJEYEVi_FLFklmE/edit?usp=sharing",
     link: "https://docs.google.com/document/d/1NR6WoFMYkpojFO_QWJ2v-X0KR1VVDYeFUMpbXqaBDVA/edit?usp=sharing",
   },
   {
