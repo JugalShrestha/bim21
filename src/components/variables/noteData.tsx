@@ -46,6 +46,7 @@ const note = [
   {
     id: "IT240",
     subject: "Business Data Communication and Networking",
+    lab: "https://drive.google.com/drive/folders/1PqBeoYgpvG1UxTO7cQBYK3grdbeG9U6v?usp=drive_link",
     link: "https://docs.google.com/document/d/13XwYcAMKdUJ67rAUTi7AJzTgtULTTE2cO1Rihht66j4/edit?usp=sharing",
   },
   {
