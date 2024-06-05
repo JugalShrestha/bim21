@@ -56,22 +56,22 @@ const Routine = () => {
               </tr>
               <tr>
                 <td>Mon</td>
-                <td>AI</td>
                 <td>IS</td>
+                <td>AI</td>
                 <td>SDD</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Tue</td>
-                <td>FOM</td>
                 <td>Python</td>
+                <td>FOM</td>
                 <td>SDD</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Wed</td>
-                <td>FOM</td>
                 <td>Python</td>
+                <td>FOM</td>
                 <td></td>
                 <td></td>
               </tr>
@@ -84,8 +84,8 @@ const Routine = () => {
               </tr>
               <tr>
                 <td>Fri</td>
-                <td>FOM</td>
                 <td>Python</td>
+                <td>FOM</td>
                 <td></td>
                 <td></td>
               </tr>
@@ -116,8 +116,8 @@ const Routine = () => {
               </tr>
               <tr>
                 <td>Mon</td>
-                <td>FOM</td>
                 <td>AI</td>
+                <td>FOM</td>
                 <td></td>
                 <td></td>
               </tr>
@@ -130,8 +130,8 @@ const Routine = () => {
               </tr>
               <tr>
                 <td>Wed</td>
-                <td>Python</td>
                 <td>IS</td>
+                <td>Python</td>
                 <td>SDD</td>
                 <td></td>
               </tr>
@@ -144,8 +144,8 @@ const Routine = () => {
               </tr>
               <tr>
                 <td>Fri</td>
-                <td>Python</td>
                 <td>IS</td>
+                <td>Python</td>
                 <td></td>
                 <td></td>
               </tr>
