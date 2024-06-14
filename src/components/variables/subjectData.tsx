@@ -170,20 +170,6 @@ const subjectData = [
     department: "Dept. of Computer Science",
     sem: 5,
   },
-  {
-    name: "Foundation of Management [MKT 2]",
-    teacher: "Mr. Sunil Subedi",
-    title: "Lecturer",
-    department: "Dept. of Computer Science",
-    sem: 5,
-  },
-  {
-    name: "Aashra Talks [AAS 8]",
-    teacher: "Ms. Aashra Pradhan",
-    title: "Speaker",
-    department: "Dept. of Computer Science",
-    sem: 5,
-  }
 ];
 
 export default subjectData;
