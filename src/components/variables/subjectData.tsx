@@ -164,7 +164,7 @@ const subjectData = [
     sem: 5,
   },
   {
-    name: "Foundation of Management [MKT 201]",
+    name: "Fundamental of Marketing [MKT 201]",
     teacher: "Mr. Sunil Subedi",
     title: "Lecturer",
     department: "Dept. of Computer Science",

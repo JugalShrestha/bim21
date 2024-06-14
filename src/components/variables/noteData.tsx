@@ -28,7 +28,7 @@ const note = [
   },
   {
     id: "MKT201",
-    subject: "fundamental of Marketing",
+    subject: "Fundamental of Marketing",
     link: "https://docs.google.com/document/d/1SdM7g5GgDOsSntDX16pxFlajlIHP5DG1HqDLrqI4uZ0/edit?usp=sharing",
   },
   //4th sem notes
