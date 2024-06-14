@@ -47,7 +47,7 @@ const subjectData = [
   },
   {
     name: "Object Oriented Programming (Java) [IT 234]",
-    teacher: "Er. Ramesh Shahi",
+    teacher: "Mr. Ramesh Shahi",
     title: "Lecturer",
     department: "Dept. of Computer Science",
     shortForm: "O.O.P. with Java [IT 234]",
@@ -160,6 +160,27 @@ const subjectData = [
     name: "Programming with Python [IT 243]",
     teacher: "Mr. Ramesh Shahi",
     title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 5,
+  },
+  {
+    name: "Foundation of Management [MKT ]",
+    teacher: "Mr. Sunil Subedi",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 5,
+  },
+  {
+    name: "Foundation of Management [MKT 2]",
+    teacher: "Mr. Sunil Subedi",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 5,
+  },
+  {
+    name: "Aashra Talks [AAS 8]",
+    teacher: "Ms. Aashra Pradhan",
+    title: "Speaker",
     department: "Dept. of Computer Science",
     sem: 5,
   }
