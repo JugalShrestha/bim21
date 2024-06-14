@@ -158,7 +158,7 @@ const subjectData = [
   //5th sem
   {
     name: "Programming with Python [IT 243]",
-    teacher: "Er. Ramesh Shahi",
+    teacher: "Mr. Ramesh Shahi",
     title: "Lecturer",
     department: "Dept. of Computer Science",
     sem: 5,
