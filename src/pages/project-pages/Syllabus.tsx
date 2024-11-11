@@ -32,6 +32,11 @@ const Syllabus = () => {
               5
             </Link>
           </li>
+          <li className="semester-option">
+            <Link to={rootBranch + "/pdf/syllabus/6th-sem.pdf"} target="_blank">
+              6
+            </Link>
+          </li>
           <li className="semester-option syllabus-1-8">
             <Link
               to={rootBranch + "/pdf/syllabus/whole-syllabus.pdf"}
