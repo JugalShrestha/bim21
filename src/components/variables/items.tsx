@@ -98,6 +98,34 @@ const items = [
     tag: "note 5sem",
     link: rootBranch + "/note?query=MKT201",
   },
+  //6th sem notes
+  {
+    name: "Business Information Systems",
+    tag: "note bis 6sem",
+    link: rootBranch + "/note?query=IT245",
+  },
+  {
+    name: "IT Ethics and Cybersecurity",
+    tag: "note 6sem",
+    link: rootBranch + "/note?query=IT246",
+  },
+  {
+    name: "Fundamentals of Corporate Finance",
+    tag: "note 6sem",
+    link: rootBranch + "/note?query=FIN229",
+  },
+  {
+    name: "Business Environment",
+    tag: "note 6sem",
+    link: rootBranch + "/note?query=MGT236",
+  },
+  {
+    name: "Business Research Methods",
+    tag: "note 6sem",
+    link: rootBranch + "/note?query=RCH201",
+  },
+
+
 ];
 
 //For sorting searchable items

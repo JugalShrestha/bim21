@@ -191,6 +191,42 @@ const subjectData = [
     department: "Dept. of Computer Science",
     sem: 5,
   },
+  //6th semester
+  {
+    name: "Business Information Systems [IT 245]",
+    teacher: "Er. Rabin Raj Ghimire",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 6,
+  },
+  {
+    name: "IT Ethics and Cybersecurity [IT 246]",
+    teacher: "Er. Anish Shrestha",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 6,
+  },
+  {
+    name: "Fundamentals of Corporate Finance [FIN 229]",
+    teacher: "Mr. Debendra Bhandari",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 6,
+  },
+  {
+    name: "Business Environment [MGT 236]",
+    teacher: "Mr. Pravin Ratna Shayka",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 6,
+  },
+  {
+    name: "Business Research Methods [RCH 201]",
+    teacher: "Mr. Niroj Duwal",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 6,
+  },
 ];
 
 export default subjectData;

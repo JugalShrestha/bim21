@@ -1,6 +1,38 @@
 // this variable is used when a user clicks on a clickable having tag note inorder to open a single page for respective clickable
 
 const note = [
+  //6th sem notes
+  {
+    id: "IT245",
+    subject: "Business Information Systems",
+    lab: "",
+    link: "https://docs.google.com/document/d/1bAAsOYt5QEJd-z17R3o_V4_5G3hmWtns7TdKZ8H-p5Y/edit?usp=sharing",
+  },
+  {
+    id: "IT246",
+    subject: "IT Ethics and Cybersecurity",
+    lab: "",
+    link: "https://docs.google.com/document/d/1UjOnDiH1bLULWf-5f-oY0Yh-g7dvHId4sHf_7uf-ypU/edit?usp=sharing",
+  },
+  {
+    id: "MGT236",
+    subject: "Business Environment",
+    lab: "",
+    link: "https://docs.google.com/document/d/1veI21i5n2ndGgNtUP7DN5XQcQH0f4_5d6hExrn_mzwE/edit?usp=sharing",
+  },
+  {
+    id: "FIN229",
+    subject: "Fundamentals of Corporate Finance",
+    lab: "",
+    link: "https://docs.google.com/document/d/19arN26WAHnLld5lkTbT6ILckX_zy7c7wk55KrZaxmYY/edit?usp=sharing",
+  },
+  {
+    id: "RCH201",
+    subject: "Business Research Methods",
+    lab: "",
+    link: "https://docs.google.com/document/d/1bgFL3R9VjHN-LtUO0rC20ypQRvdJA7tYOFKS1Wh_2qY/edit?usp=sharing",
+  },
+  
   //5th sem notes
   {
     id: "IT228",
