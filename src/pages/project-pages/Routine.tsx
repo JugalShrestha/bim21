@@ -49,43 +49,43 @@ const Routine = () => {
             <tbody>
               <tr>
                 <td>Sun</td>
-                <td>AI</td>
-                <td>IS</td>
-                <td>SDD</td>
+                <td>BIS</td>
+                <td>ITEC</td>
+                <td>BE</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Mon</td>
-                <td>IS</td>
-                <td>AI</td>
-                <td>SDD</td>
+                <td>ITEC</td>
+                <td>BIS</td>
+                <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Tue</td>
-                <td>Python</td>
-                <td>FOM</td>
-                <td>SDD</td>
+                <td>ITEC</td>
+                <td>BIS</td>
+                <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Wed</td>
-                <td>Python</td>
-                <td>FOM</td>
-                <td></td>
+                <td>BRS</td>
+                <td>FIN</td>
+                <td>BE</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Thur</td>
-                <td>AI</td>
-                <td>IS</td>
-                <td></td>
+                <td>BRS</td>
+                <td>FIN</td>
+                <td>BE</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Fri</td>
-                <td>Python</td>
-                <td>FOM</td>
+                <td>BRS</td>
+                <td>FIN</td>
                 <td></td>
                 <td></td>
               </tr>
@@ -109,43 +109,43 @@ const Routine = () => {
             <tbody>
               <tr>
                 <td>Sun</td>
-                <td>FOM</td>
-                <td>AI</td>
-                <td></td>
+                <td>BE</td>
+                <td>BRS</td>
+                <td>ITEC</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Mon</td>
-                <td>AI</td>
-                <td>FOM</td>
-                <td></td>
+                <td>BRS</td>
+                <td>ITEC</td>
+                <td>BE</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Tue</td>
-                <td>SDD</td>
-                <td>IS</td>
-                <td>Python</td>
+                <td>BRS</td>
+                <td>ITEC</td>
+                <td>BE</td>
                 <td></td>
               </tr>
               <tr>
                 <td>Wed</td>
-                <td>IS</td>
-                <td>Python</td>
-                <td>SDD</td>
+                <td>FIN</td>
+                <td>BIS</td>
+                <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Thur</td>
-                <td>FOM</td>
-                <td>AI</td>
-                <td>SDD</td>
+                <td>FIN</td>
+                <td>BIS</td>
+                <td></td>
                 <td></td>
               </tr>
               <tr>
                 <td>Fri</td>
-                <td>IS</td>
-                <td>Python</td>
+                <td>FIN</td>
+                <td>BIS</td>
                 <td></td>
                 <td></td>
               </tr>

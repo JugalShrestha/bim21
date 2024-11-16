@@ -691,6 +691,10 @@ body #everything .class-routine-page thead tr:nth-child(1) th {
 body #everything .class-routine-page thead th {
   color: var(--s1-color);
 }
+body #everything .class-routine-page td {
+  background: var(--s1-color);
+  font-weight: bold;
+}
 body #everything .class-routine-page td, body #everything .class-routine-page th {
   padding: 1vh;
   outline: 0.3vh solid var(--shadow);
