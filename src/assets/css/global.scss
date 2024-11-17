@@ -24,12 +24,12 @@
     --text-color: #1d1d1d;
 }
 .activeDay{
-    background: var(--s2-color) !important;
+    background: var(--n2-color) !important;
     td{
     font-size: var(--header-font-size) !important;
     }
     td:nth-child(1){
-        background: var(--n2-color);
+        background: var(--n2-color) !important;
         color: var(--s1-color);
         font-weight: bold;
     }
