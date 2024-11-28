@@ -179,7 +179,7 @@ const subjectData = [
   },
   {
     name: "Artificial Intelligence [IT 228]",
-    teacher: "Mr. Nischhal Shrestha",
+    teacher: "Mr. Nishchhal Shrestha",
     title: "Lecturer",
     department: "Dept. of Computer Science",
     sem: 5,
