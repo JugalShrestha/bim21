@@ -263,6 +263,10 @@ const studentData = [
     name: "Yojana Parajuli",
     rN: "021BIM066",
   },
+  {
+    name: "Kumar Bikram KC",
+    rN: "021BIM067",
+  },
 ];
 
 export default studentData;
