@@ -129,6 +129,34 @@ const note = [
     subject: "Discrete Structure",
     link: "https://docs.google.com/document/d/1sgv2F3dqrR8jN4sKiwvWvJLfBYQ5FnRfBzRxG-VBFB0/edit?usp=sharing",
   },
+  //7th sem notes
+  {
+    id: "IT247",
+    subject: "E-Commerce and Internet Marketing",
+    link: "https://docs.google.com/document/d/1sgv2F3dqrR8jN4sKiwvWvJLfBYQ5FnRfBzRxG-VBFB0/edit?usp=sharing",
+    lab: "https://docs.google.com/document/d/1eN2KpFG5ur1FlcfJkwQjS1Mr1KbInQCC4FYBBeCh9lg/edit?usp=sharing",
+  },
+  {
+    id: "IT274",
+    subject: "Data Warehousing and Data Mining",
+    link: "https://docs.google.com/document/d/1sgv2F3dqrR8jN4sKiwvWvJLfBYQ5FnRfBzRxG-VBFB0/edit?usp=sharing",
+    lab: "https://docs.google.com/document/d/1eN2KpFG5ur1FlcfJkwQjS1Mr1KbInQCC4FYBBeCh9lg/edit?usp=sharing",
+  },
+  {
+    id: "SOC203",
+    subject: "Sociology for Business Management",
+    link: "https://docs.google.com/document/d/1sgv2F3dqrR8jN4sKiwvWvJLfBYQ5FnRfBzRxG-VBFB0/edit?usp=sharing",
+  },
+  {
+    id: "MGT205",
+    subject: "Operations Management",
+    link: "https://docs.google.com/document/d/1sgv2F3dqrR8jN4sKiwvWvJLfBYQ5FnRfBzRxG-VBFB0/edit?usp=sharing",
+  },
+  {
+    id: "MGT240",
+    subject: "Strategic Management",
+    link: "https://docs.google.com/document/d/1sgv2F3dqrR8jN4sKiwvWvJLfBYQ5FnRfBzRxG-VBFB0/edit?usp=sharing",
+  },
 ];
 
 export default note;

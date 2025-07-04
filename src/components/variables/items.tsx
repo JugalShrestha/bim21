@@ -124,6 +124,32 @@ const items = [
     tag: "note 6sem",
     link: rootBranch + "/note?query=RCH201",
   },
+  //7th sem notes
+  {
+    name: "E-Commerce and Internet Marketing",
+    tag: "note 7sem",
+    link: rootBranch + "/note?query=IT247",
+  },
+  {
+    name: "Data Warehousing and Data Mining",
+    tag: "note 7sem",
+    link: rootBranch + "/note?query=IT274",
+  },
+  {
+    name: "Sociology for Business Management",
+    tag: "note 7sem",
+    link: rootBranch + "/note?query=SOC203",
+  },
+  {
+    name: "Operations Management",
+    tag: "note 7sem",
+    link: rootBranch + "/note?query=MGT205",
+  },
+  {
+    name: "Strategic Management",
+    tag: "note 7sem",
+    link: rootBranch + "/note?query=MGT240",
+  }
 
 
 ];

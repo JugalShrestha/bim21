@@ -201,7 +201,7 @@ const subjectData = [
   },
   {
     name: "IT Ethics and Cybersecurity [IT 246]",
-    teacher: "Er. Anish Shrestha",
+    teacher: "Mr. Anish Shrestha",
     title: "Lecturer",
     department: "Dept. of Computer Science",
     sem: 6,
@@ -227,6 +227,42 @@ const subjectData = [
     department: "Dept. of Computer Science",
     sem: 6,
   },
+  //7 semester
+  {
+    name: "E-Commerce and Internet Marketing [IT 247]",
+    teacher: "Er. Rabin Raj Ghimire",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 7
+  },
+  {
+    name: "Data Warehousing and Data Mining [IT 274]",
+    teacher: "Er. Anuj Shrestha",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 7
+  },
+  {
+    name: "Sociology for Business Management [SOC 203]",
+    teacher: "Dr. Sagar Shahi",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 7
+  },
+  {
+    name: "Operations Management [MGT 205]",
+    teacher: "Mr. Debindra Bhandari",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 7
+  },
+  {
+    name: "Strategic Management [MGT 240]",
+    teacher: "Mr. Pravin Ratna Shakya",
+    title: "Lecturer",
+    department: "Dept. of Computer Science",
+    sem: 7
+  }
 ];
 
 export default subjectData;
